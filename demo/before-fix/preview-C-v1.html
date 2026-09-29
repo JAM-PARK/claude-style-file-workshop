@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>품질보증팀 주간 보고</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 20mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    background: #FFFFFF;
+    color: #000000;
+  }
+
+  body {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 10.5pt;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    margin: 0;
+    background: #FFFFFF;
+  }
+
+  /* 제목 줄 */
+  .header {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 0.5pt solid #000000;
+  }
+
+  h1 {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 4px;
+    color: #4D4D4D;
+  }
+
+  .meta dt {
+    display: inline;
+    font-weight: 400;
+  }
+
+  .meta dd {
+    display: inline;
+    margin-left: 4px;
+    color: #000000;
+  }
+
+  h2 {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  section {
+    margin-bottom: 24px;
+  }
+
+  /* 요약 3줄 */
+  .summary {
+    background: #F0F0F0;
+    border-radius: 0;
+    padding: 12px 16px;
+  }
+
+  .summary ol {
+    list-style: none;
+  }
+
+  .summary li {
+    padding-left: 20px;
+    text-indent: -20px;
+  }
+
+  .summary li + li {
+    margin-top: 4px;
+  }
+
+  .summary .num {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    width: 20px;
+    text-indent: 0;
+  }
+
+  /* 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    line-height: 1.6;
+  }
+
+  thead th {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 700;
+    background: none;
+    border-top: 0.5pt solid #000000;
+    border-bottom: 0.5pt solid #000000;
+    padding: 8px 8px;
+    text-align: left;
+  }
+
+  tbody td {
+    border-bottom: 0.5pt solid #000000;
+    padding: 8px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th.n, td.n {
+    text-align: right;
+    font-family: "Gothic A1", sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+
+  td.n {
+    font-weight: 400;
+  }
+
+  .over {
+    color: #A61B1B;
+    font-weight: 700;
+  }
+
+  .status-over {
+    font-weight: 700;
+  }
+
+  .status-ok {
+    font-weight: 400;
+  }
+
+  .legend {
+    margin-top: 8px;
+    font-size: 9pt;
+    color: #4D4D4D;
+  }
+
+  .legend span + span {
+    margin-left: 16px;
+  }
+
+  /* 다음 할 일 */
+  .todo {
+    list-style: none;
+  }
+
+  .todo li {
+    display: grid;
+    grid-template-columns: 1fr 96px 96px;
+    gap: 12px;
+    padding: 4px 0;
+  }
+
+  .todo .who,
+  .todo .due {
+    color: #4D4D4D;
+  }
+
+  .todo .due {
+    font-family: "Gothic A1", sans-serif;
+    text-align: right;
+  }
+
+  @media print {
+    .page {
+      width: auto;
+      min-height: 0;
+      padding: 0;
+    }
+    section, table, tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+
+    <header class="header">
+      <h1>품질보증팀 주간 보고</h1>
+      <dl class="meta">
+        <div><dt>보고 주차</dt><dd>2026년 9월 넷째 주 (09.21–09.27)</dd></div>
+        <div><dt>작성자</dt><dd>품질보증팀 ○○○</dd></div>
+        <div><dt>작성일</dt><dd>2026-09-28</dd></div>
+      </dl>
+    </header>
+
+    <section>
+      <h2>요약</h2>
+      <div class="summary">
+        <ol>
+          <li><span class="num">1</span>전체 검사 수량 12,480개, 평균 불량률 0.62%로 전주 대비 0.08%p 낮아졌다.</li>
+          <li><span class="num">2</span>A2 가공 라인과 C1 도장 라인이 불량률 기준을 넘었다.</li>
+          <li><span class="num">3</span>A2 라인은 공구 마모, C1 라인은 건조 온도 편차가 주요 원인으로 추정된다.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>라인별 검사 결과</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>라인</th>
+            <th>공정</th>
+            <th class="n">검사 수량</th>
+            <th class="n">불량 수량</th>
+            <th class="n">불량률(%)</th>
+            <th class="n">기준(%)</th>
+            <th>상태</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A1</td>
+            <td>가공</td>
+            <td class="n">2,640</td>
+            <td class="n">11</td>
+            <td class="n">0.42</td>
+            <td class="n">0.80</td>
+            <td class="status-ok">− 기준 내</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>A2</td>
+            <td>가공</td>
+            <td class="n">2,310</td>
+            <td class="n over">▲ 28</td>
+            <td class="n over">▲ 1.21</td>
+            <td class="n">0.80</td>
+            <td class="status-over">▲ 초과</td>
+            <td>치수 불량 다수</td>
+          </tr>
+          <tr>
+            <td>B1</td>
+            <td>조립</td>
+            <td class="n">3,120</td>
+            <td class="n">14</td>
+            <td class="n">0.45</td>
+            <td class="n">0.60</td>
+            <td class="status-ok">− 기준 내</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>C1</td>
+            <td>도장</td>
+            <td class="n">1,980</td>
+            <td class="n over">▲ 19</td>
+            <td class="n over">▲ 0.96</td>
+            <td class="n">0.70</td>
+            <td class="status-over">▲ 초과</td>
+            <td>도막 들뜸</td>
+          </tr>
+          <tr>
+            <td>D1</td>
+            <td>최종 검사</td>
+            <td class="n">2,430</td>
+            <td class="n">5</td>
+            <td class="n">0.21</td>
+            <td class="n">0.50</td>
+            <td class="status-ok">− 기준 내</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>합계</strong></td>
+            <td></td>
+            <td class="n"><strong>12,480</strong></td>
+            <td class="n"><strong>77</strong></td>
+            <td class="n"><strong>0.62</strong></td>
+            <td class="n"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="legend"><span>▲ 기준 초과</span><span>− 기준 내</span></p>
+    </section>
+
+    <section>
+      <h2>다음 할 일</h2>
+      <ul class="todo">
+        <li><span>A2 라인 절삭 공구 교체 주기 점검 및 교체 기준 재설정</span><span class="who">생산기술 ○○○</span><span class="due">10.02</span></li>
+        <li><span>C1 라인 건조로 온도 기록 확인, 편차 구간 원인 분석</span><span class="who">설비보전 ○○○</span><span class="due">10.01</span></li>
+        <li><span>A2·C1 라인 다음 주 검사 비율 2배로 상향 운영</span><span class="who">품질보증 ○○○</span><span class="due">10.04</span></li>
+        <li><span>기준 초과 원인 조치 결과를 다음 주 보고에 반영</span><span class="who">품질보증 ○○○</span><span class="due">10.05</span></li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>

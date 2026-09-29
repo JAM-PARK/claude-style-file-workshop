@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정시로 도입 제안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #FFFFFF;
+    color: #2A2723;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  .slide {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 48px;
+    border-bottom: 1px solid #D9DDD3;
+  }
+
+  .inner {
+    width: 100%;
+    max-width: 720px;
+    text-align: left;
+  }
+
+  h1, h2 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  h3 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.75;
+  }
+
+  .label {
+    color: #6B665E;
+    margin-bottom: 16px;
+  }
+
+  .meta {
+    color: #6B665E;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #D9DDD3;
+  }
+
+  .page {
+    color: #6B665E;
+    margin-top: 48px;
+  }
+
+  /* 2장: 핵심 내용 */
+  .points {
+    list-style: none;
+    margin-top: 32px;
+  }
+
+  .points li {
+    padding: 24px 0;
+    border-top: 1px solid #D9DDD3;
+  }
+
+  .points li:last-child {
+    border-bottom: 1px solid #D9DDD3;
+  }
+
+  .points .num {
+    color: #6B665E;
+  }
+
+  .points p {
+    margin-top: 8px;
+  }
+
+  /* 3장: 다음 할 일 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 32px;
+  }
+
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 16px 16px 16px 0;
+    border-bottom: 1px solid #D9DDD3;
+  }
+
+  th {
+    color: #6B665E;
+    font-weight: 400;
+    border-top: 1px solid #D9DDD3;
+  }
+
+  td:last-child, th:last-child {
+    padding-right: 0;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 1장: 제목 -->
+  <section class="slide" id="s1">
+    <div class="inner">
+      <p class="label">도입 제안</p>
+      <h1>물류 관제 솔루션<br>정시로 도입 제안</h1>
+      <p class="meta">2026년 9월 28일 · 물류운영팀</p>
+      <p class="page">1 / 3</p>
+    </div>
+  </section>
+
+  <!-- 2장: 핵심 내용 3가지 -->
+  <section class="slide" id="s2">
+    <div class="inner">
+      <p class="label">핵심 내용</p>
+      <h2>정시로가 바꾸는 세 가지</h2>
+      <ol class="points">
+        <li>
+          <span class="num">01</span>
+          <h3>차량 위치와 도착 예정 시각을 한 화면에서</h3>
+          <p>운행 중인 배송 차량의 위치를 지도에 표시하고, 거래처별 도착 예정 시각을 자동으로 계산합니다. 기사에게 전화로 확인하던 일이 줄어듭니다.</p>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <h3>지연되기 전에 먼저 알림</h3>
+          <p>예정 시각보다 늦어질 조짐이 보이면 관제 담당자와 거래처에 바로 알립니다. 늦어진 뒤에 사과하는 대신 미리 일정을 조정할 수 있습니다.</p>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <h3>배송 기록이 건별로 자동 저장</h3>
+          <p>출발·도착·인수 시각이 배송 건마다 남습니다. 월말 정산과 클레임 대응 때 수기 기록을 찾지 않고 바로 확인합니다.</p>
+        </li>
+      </ol>
+      <p class="page">2 / 3</p>
+    </div>
+  </section>
+
+  <!-- 3장: 다음 할 일 -->
+  <section class="slide" id="s3">
+    <div class="inner">
+      <p class="label">다음 할 일</p>
+      <h2>파일럿부터 결정까지</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>할 일</th>
+            <th>담당</th>
+            <th>기한</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>파일럿 대상 노선 2개 선정</td>
+            <td>물류운영팀</td>
+            <td>10월 9일</td>
+          </tr>
+          <tr>
+            <td>기존 배송 관리 시스템과 연동 범위 확인</td>
+            <td>IT팀</td>
+            <td>10월 16일</td>
+          </tr>
+          <tr>
+            <td>4주 파일럿 운영, 도입 전후 지연 건수 비교</td>
+            <td>물류운영팀 · 정시로</td>
+            <td>11월 13일</td>
+          </tr>
+          <tr>
+            <td>전사 도입 여부 결정 회의</td>
+            <td>경영지원본부</td>
+            <td>11월 20일</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="page">3 / 3</p>
+    </div>
+  </section>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+
+  function currentIndex() {
+    const y = window.scrollY + window.innerHeight / 2;
+    let idx = 0;
+    slides.forEach((s, i) => { if (s.offsetTop <= y) idx = i; });
+    return idx;
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const i = currentIndex();
+    if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(e.key)) {
+      e.preventDefault();
+      slides[Math.min(i + 1, slides.length - 1)].scrollIntoView();
+    } else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key)) {
+      e.preventDefault();
+      slides[Math.max(i - 1, 0)].scrollIntoView();
+    }
+  });
+</script>
+</body>
+</html>

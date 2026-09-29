@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정시로 도입 제안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    background: #FFFFFF;
+    color: #2A2723;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 96px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide.active { display: flex; }
+
+  .inner {
+    width: 100%;
+    max-width: 720px;
+    text-align: left;
+  }
+
+  h1, h2 {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  p { font-size: 18px; }
+
+  .muted { color: #6B665E; }
+
+  /* 1장 */
+  .title-block h1 { margin-bottom: 32px; }
+  .title-block .lead { margin-bottom: 48px; }
+  .meta {
+    border-top: 1px solid #D9DDD3;
+    padding-top: 24px;
+  }
+  .meta dt { color: #6B665E; }
+  .meta dd { margin-bottom: 8px; }
+
+  /* 2장 */
+  .slide h2 { margin-bottom: 40px; }
+  .points { list-style: none; border-top: 1px solid #D9DDD3; }
+  .points li {
+    padding: 24px 0;
+    border-bottom: 1px solid #D9DDD3;
+  }
+  .points h3 { margin-bottom: 8px; }
+
+  /* 3장 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 16px 16px 16px 0;
+    border-bottom: 1px solid #D9DDD3;
+  }
+  thead th {
+    color: #6B665E;
+    font-weight: 400;
+    border-top: 1px solid #D9DDD3;
+  }
+  td.date { width: 136px; white-space: nowrap; }
+  td.owner { width: 128px; color: #6B665E; }
+  .note { margin-top: 32px; }
+
+  .pager {
+    position: fixed;
+    left: 96px;
+    bottom: 40px;
+    color: #6B665E;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<section class="slide active">
+  <div class="inner title-block">
+    <h1>물류 관제 솔루션<br>정시로 도입 제안</h1>
+    <p class="lead">배송 차량의 위치와 도착 예정 시각을 한 화면에서 보고, 늦어질 배송을 출발 전에 알아채기 위한 제안입니다.</p>
+    <dl class="meta">
+      <dt>제안 부서</dt>
+      <dd>물류운영팀</dd>
+      <dt>작성일</dt>
+      <dd>2026년 9월 28일</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <h2>정시로가 바꾸는 것</h2>
+    <ul class="points">
+      <li>
+        <h3>차량 위치를 지도 한 장에서 확인</h3>
+        <p>기사님께 전화로 위치를 묻던 일을 없앱니다. 운행 중인 모든 차량의 현재 위치와 남은 배송지 수가 관제 화면에 함께 나옵니다.</p>
+      </li>
+      <li>
+        <h3>늦어질 배송을 미리 알림</h3>
+        <p>교통 상황과 남은 경로로 도착 예정 시각을 다시 계산합니다. 약속 시각을 넘길 것 같으면 관제 담당자와 고객에게 먼저 알립니다.</p>
+      </li>
+      <li>
+        <h3>배차표를 주문 마감 뒤 자동으로 작성</h3>
+        <p>주문 주소, 차량 적재량, 기사 근무 시간을 반영해 다음 날 배차표 초안을 만듭니다. 담당자는 초안을 검토하고 고치기만 하면 됩니다.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <h2>다음 할 일</h2>
+    <table>
+      <thead>
+        <tr><th>날짜</th><th>할 일</th><th>담당</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="date">10월 2일</td>
+          <td>도입 여부 결정 회의</td>
+          <td class="owner">운영본부장</td>
+        </tr>
+        <tr>
+          <td class="date">10월 13일</td>
+          <td>수도권 동부 센터 차량으로 시범 운영 시작</td>
+          <td class="owner">물류운영팀</td>
+        </tr>
+        <tr>
+          <td class="date">11월 10일</td>
+          <td>시범 운영 결과 보고, 정시 도착 건수 비교</td>
+          <td class="owner">물류운영팀</td>
+        </tr>
+        <tr>
+          <td class="date">12월 1일</td>
+          <td>전 센터 확대 적용 여부 결정</td>
+          <td class="owner">운영본부장</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note muted">문의: 물류운영팀</p>
+  </div>
+</section>
+
+<div class="pager" id="pager">1 / 3</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const pager = document.getElementById('pager');
+  let current = 0;
+
+  function show(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === current));
+    pager.textContent = (current + 1) + ' / ' + slides.length;
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(current + 1); }
+    if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(slides.length - 1);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.clientX > window.innerWidth / 2) show(current + 1);
+    else show(current - 1);
+  });
+</script>
+</body>
+</html>

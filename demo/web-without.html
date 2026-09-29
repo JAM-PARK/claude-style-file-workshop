@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>골목찬장 · 동네 반찬 구독 서비스</title>
+  <style>
+    :root {
+      --bg: #fbf7f0;
+      --card: #ffffff;
+      --ink: #2e2a25;
+      --muted: #6f665b;
+      --accent: #c8553d;
+      --accent-soft: #f4e3d7;
+      --line: #e8dfd3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      padding: 88px 0 72px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: clamp(36px, 7vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .tagline {
+      font-size: clamp(18px, 3vw, 22px);
+      color: var(--muted);
+    }
+    .tagline strong { color: var(--ink); }
+
+    section { padding: 72px 0; }
+    h2 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      list-style: none;
+    }
+    .service {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    .service .icon {
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .service h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .service p { color: var(--muted); font-size: 15px; }
+
+    .contact {
+      background: var(--card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-list {
+      list-style: none;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .contact-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .contact-list li:last-child { border-bottom: none; }
+    .contact-list span { color: var(--muted); }
+    .contact-list a {
+      color: var(--ink);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-list a:hover { color: var(--accent); }
+    .cta {
+      display: block;
+      width: fit-content;
+      margin: 32px auto 0;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 999px;
+    }
+    .cta:hover { opacity: 0.9; }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <div class="logo">GOLMOK CHANJANG</div>
+      <h1>골목찬장</h1>
+      <p class="tagline">우리 동네 반찬가게의 손맛을 <strong>매주 우리 집 찬장</strong>으로 채워 드려요.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>골목찬장이 하는 일</h2>
+        <ul class="services">
+          <li class="service">
+            <div class="icon">🥢</div>
+            <h3>동네 반찬 큐레이션</h3>
+            <p>골목의 믿을 만한 반찬가게들과 함께 그 주에 가장 맛있는 반찬을 골라 구성해요.</p>
+          </li>
+          <li class="service">
+            <div class="icon">📦</div>
+            <h3>정기 구독 배달</h3>
+            <p>주 1회 또는 2회, 원하는 요일에 문 앞까지 신선하게 가져다 드려요.</p>
+          </li>
+          <li class="service">
+            <div class="icon">🌱</div>
+            <h3>다회용기 순환</h3>
+            <p>반찬은 다회용기에 담아 드리고, 다음 배달 때 빈 용기를 회수해 쓰레기를 줄여요.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="wrap">
+        <h2>연락하기</h2>
+        <ul class="contact-list">
+          <li><span>전화</span><a href="tel:010-0000-0000">010-0000-0000</a></li>
+          <li><span>이메일</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><span>인스타그램</span><a href="#">@golmok_chanjang</a></li>
+          <li><span>상담 시간</span><a>평일 10:00 – 18:00</a></li>
+        </ul>
+        <a class="cta" href="mailto:hello@example.com?subject=골목찬장 구독 문의">구독 문의하기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 골목찬장. 우리 동네 반찬, 우리 집 찬장으로.</div>
+  </footer>
+
+</body>
+</html>

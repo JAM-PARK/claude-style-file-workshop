@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>골목찬장 — 동네 반찬 구독</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    color: #2A2723;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0;
+    padding: 64px 40px 96px;
+    text-align: left;
+  }
+
+  h1, h2 {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 44px;
+    line-height: 1.4;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  a {
+    color: #A3294F;
+  }
+
+  .brand {
+    color: #6B665E;
+    margin-bottom: 16px;
+  }
+
+  .sub {
+    color: #6B665E;
+  }
+
+  header {
+    padding-bottom: 48px;
+    border-bottom: 1px solid #D9DDD3;
+  }
+
+  header p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  section {
+    padding: 48px 0;
+    border-bottom: 1px solid #D9DDD3;
+  }
+
+  ol.work {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ol.work li {
+    padding: 24px 0;
+    border-top: 1px solid #D9DDD3;
+  }
+
+  ol.work li:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  ol.work li p:last-child {
+    margin-bottom: 0;
+  }
+
+  .work-title {
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .num {
+    color: #6B665E;
+    margin-right: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #F1F3EF;
+    margin: 24px 0 16px;
+  }
+
+  th, td {
+    padding: 16px;
+    border: 1px solid #D9DDD3;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 400;
+  }
+
+  thead th {
+    color: #6B665E;
+  }
+
+  tbody th {
+    white-space: nowrap;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 16px 32px;
+    background: #A3294F;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 18px;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  dl div {
+    display: flex;
+    gap: 24px;
+    padding: 8px 0;
+  }
+
+  dt {
+    color: #6B665E;
+    min-width: 96px;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  footer {
+    padding-top: 48px;
+    color: #6B665E;
+  }
+
+  @media (max-width: 560px) {
+    main {
+      padding: 48px 24px 80px;
+    }
+
+    th, td {
+      padding: 8px;
+    }
+
+    dl div {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <p class="brand">골목찬장 · 동네 반찬 구독</p>
+    <h1>그날 아침 골목 부엌에서 무친 반찬을, 점심 전에 문 앞까지 가져다드립니다.</h1>
+    <p class="sub" style="margin-top: 24px;">망원동 한 골목의 작은 부엌에서 매일 아침 두 가지 반찬을 만듭니다. 걸어서 15분 안쪽 동네에만 배달합니다.</p>
+  </header>
+
+  <section>
+    <h2>골목찬장이 하는 일</h2>
+    <ol class="work">
+      <li>
+        <p class="work-title"><span class="num">1</span>평일 아침에 만든 반찬을 그날 배달합니다</p>
+        <p>월요일부터 금요일까지 오전 7시에 반찬을 만들기 시작해 오전 11시 전에 문 앞에 둡니다. 용기 뚜껑에 만든 날짜를 적어 드립니다.</p>
+      </li>
+      <li>
+        <p class="work-title"><span class="num">2</span>일주일 식단과 재료를 미리 알려드립니다</p>
+        <p>매주 금요일에 다음 주 반찬과 들어가는 재료를 올립니다. 못 드시는 재료가 있으면 그날 반찬만 바꿔 드립니다.</p>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">요일</th>
+              <th scope="col">반찬 이름</th>
+              <th scope="col">재료</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">월 9.28</th>
+              <td>무생채, 두부조림</td>
+              <td>가을무, 쪽파, 고춧가루, 부침두부, 국간장</td>
+            </tr>
+            <tr>
+              <th scope="row">화 9.29</th>
+              <td>시금치나물, 멸치볶음</td>
+              <td>시금치, 참기름, 잔멸치, 호두, 조청</td>
+            </tr>
+            <tr>
+              <th scope="row">수 9.30</th>
+              <td>애호박볶음, 달걀장조림</td>
+              <td>애호박, 새우젓, 달걀, 꽈리고추, 진간장</td>
+            </tr>
+            <tr>
+              <th scope="row">목 10.1</th>
+              <td>숙주나물, 우엉조림</td>
+              <td>숙주, 다진 마늘, 우엉, 통깨, 조청</td>
+            </tr>
+            <tr>
+              <th scope="row">금 10.2</th>
+              <td>오이소박이, 감자조림</td>
+              <td>백오이, 부추, 햇감자, 양파, 진간장</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="sub">재료는 망원시장 채소가게 두 곳과 성산동 두부집에서 전날 저녁에 받아 옵니다.</p>
+      </li>
+      <li>
+        <p class="work-title"><span class="num">3</span>빈 유리 용기를 다시 가져갑니다</p>
+        <p>반찬은 유리 용기에 담아 드립니다. 다 드신 용기는 헹궈서 문 앞에 두시면 다음 배달 때 가져가 끓는 물에 소독해 다시 씁니다.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="contact">
+    <h2>연락 방법</h2>
+    <p>구독 신청과 반찬 변경은 문자나 이메일로 받습니다. 부엌에 들르셔도 됩니다.</p>
+    <dl>
+      <div>
+        <dt>문자·전화</dt>
+        <dd><a href="tel:010-0000-0000">010-0000-0000</a> (평일 오후 2시~6시)</dd>
+      </div>
+      <div>
+        <dt>이메일</dt>
+        <dd><a href="mailto:hello@golmokchanjang.kr">hello@golmokchanjang.kr</a></dd>
+      </div>
+      <div>
+        <dt>부엌</dt>
+        <dd>서울 마포구 망원로 00길 12, 1층</dd>
+      </div>
+    </dl>
+    <p style="margin-top: 32px; margin-bottom: 0;">
+      <a class="button" href="mailto:hello@golmokchanjang.kr?subject=이번 주 받아보기">이번 주 받아보기</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>골목찬장 · 다음 주 식단은 금요일 오후에 올라옵니다.</p>
+  </footer>
+
+</main>
+</body>
+</html>

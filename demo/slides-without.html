@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정시로 도입 제안</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #0f2a47;
+    --blue: #1f6feb;
+    --teal: #14b8a6;
+    --light: #f5f8fc;
+    --gray: #5b6b7f;
+  }
+  html, body {
+    width: 100%; height: 100%;
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    background: #0b1d33;
+    overflow: hidden;
+  }
+  .deck { width: 100%; height: 100%; position: relative; }
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 6vh 8vw;
+    background: var(--light);
+    color: var(--navy);
+    opacity: 0; visibility: hidden;
+    transform: translateX(40px);
+    transition: opacity .5s ease, transform .5s ease, visibility .5s;
+  }
+  .slide.active { opacity: 1; visibility: visible; transform: translateX(0); }
+
+  /* 1장: 제목 */
+  .title-slide {
+    background: linear-gradient(135deg, var(--navy) 0%, #16406e 60%, var(--blue) 100%);
+    color: #fff;
+  }
+  .title-slide .tag {
+    display: inline-block; align-self: flex-start;
+    padding: .5em 1.2em; border: 1px solid rgba(255,255,255,.4);
+    border-radius: 999px; font-size: clamp(12px, 1.4vw, 18px);
+    letter-spacing: .1em; margin-bottom: 3vh;
+  }
+  .title-slide h1 {
+    font-size: clamp(36px, 6.5vw, 96px); font-weight: 800; line-height: 1.15;
+  }
+  .title-slide h1 span { color: #7dd3fc; }
+  .title-slide .sub {
+    margin-top: 3vh; font-size: clamp(16px, 2.2vw, 30px);
+    font-weight: 300; opacity: .9;
+  }
+  .title-slide .route {
+    margin-top: 7vh; display: flex; align-items: center; gap: 1vw;
+    font-size: clamp(12px, 1.3vw, 18px); opacity: .85;
+  }
+  .route .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--teal); }
+  .route .line { flex: 0 0 18vw; height: 2px; background: repeating-linear-gradient(90deg, #fff 0 10px, transparent 10px 18px); }
+  .title-slide .meta {
+    position: absolute; bottom: 6vh; left: 8vw;
+    font-size: clamp(12px, 1.2vw, 16px); opacity: .7;
+  }
+
+  /* 공통 헤더 */
+  .slide h2 {
+    font-size: clamp(28px, 4vw, 56px); font-weight: 800; margin-bottom: 1.5vh;
+  }
+  .slide .lead {
+    font-size: clamp(14px, 1.6vw, 22px); color: var(--gray); margin-bottom: 5vh;
+  }
+  .bar { width: 64px; height: 6px; background: var(--blue); border-radius: 3px; margin-bottom: 3vh; }
+
+  /* 2장: 핵심 내용 */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5vw; }
+  .card {
+    background: #fff; border-radius: 18px; padding: 4vh 2vw;
+    box-shadow: 0 10px 30px rgba(15,42,71,.08);
+    border-top: 6px solid var(--blue);
+  }
+  .card:nth-child(2) { border-top-color: var(--teal); }
+  .card:nth-child(3) { border-top-color: #f59e0b; }
+  .card .num {
+    font-size: clamp(28px, 3.5vw, 48px); font-weight: 800; color: #cbd5e1; margin-bottom: 1.5vh;
+  }
+  .card h3 { font-size: clamp(18px, 2vw, 28px); margin-bottom: 1.5vh; }
+  .card p { font-size: clamp(13px, 1.3vw, 18px); line-height: 1.7; color: var(--gray); }
+
+  /* 3장: 다음 할 일 */
+  .steps { list-style: none; display: flex; flex-direction: column; gap: 2.5vh; }
+  .steps li {
+    display: flex; align-items: center; gap: 2vw;
+    background: #fff; border-radius: 14px; padding: 2.5vh 2.5vw;
+    box-shadow: 0 6px 20px rgba(15,42,71,.06);
+  }
+  .steps .badge {
+    flex: 0 0 auto; width: clamp(40px, 4vw, 60px); height: clamp(40px, 4vw, 60px);
+    border-radius: 50%; background: var(--blue); color: #fff;
+    display: grid; place-items: center; font-weight: 800;
+    font-size: clamp(16px, 1.8vw, 24px);
+  }
+  .steps h4 { font-size: clamp(16px, 1.9vw, 26px); margin-bottom: .4vh; }
+  .steps p { font-size: clamp(12px, 1.3vw, 18px); color: var(--gray); }
+  .steps .when {
+    margin-left: auto; font-size: clamp(12px, 1.2vw, 16px); font-weight: 700;
+    color: var(--blue); background: #e8f0fe; padding: .4em 1em; border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  /* 내비게이션 */
+  .nav {
+    position: fixed; bottom: 3vh; right: 3vw; z-index: 10;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .nav button {
+    width: 40px; height: 40px; border-radius: 50%; border: none; cursor: pointer;
+    background: rgba(15,42,71,.15); color: var(--navy); font-size: 18px;
+    transition: background .2s;
+  }
+  .nav button:hover { background: rgba(15,42,71,.3); }
+  .nav .count { font-size: 14px; color: var(--gray); min-width: 44px; text-align: center; }
+  body.dark-nav .nav button { background: rgba(255,255,255,.2); color: #fff; }
+  body.dark-nav .nav .count { color: rgba(255,255,255,.8); }
+  .progress {
+    position: fixed; top: 0; left: 0; height: 4px; background: var(--teal);
+    transition: width .4s ease; z-index: 10;
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="deck">
+
+  <!-- 1장: 제목 -->
+  <section class="slide title-slide active">
+    <div class="tag">도입 제안</div>
+    <h1>물류 관제 솔루션<br><span>정시로</span></h1>
+    <p class="sub">모든 배송을 제시간에, 한 화면에서 관리합니다</p>
+    <div class="route">
+      <span>출고</span><div class="dot"></div><div class="line"></div>
+      <div class="dot"></div><span>배송 완료</span>
+    </div>
+    <div class="meta">물류운영팀 · 2026</div>
+  </section>
+
+  <!-- 2장: 핵심 내용 -->
+  <section class="slide">
+    <div class="bar"></div>
+    <h2>왜 정시로인가</h2>
+    <p class="lead">정시로 도입으로 얻는 세 가지 핵심 효과</p>
+    <div class="cards">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>실시간 통합 관제</h3>
+        <p>차량 위치, 배송 진행 상황, 창고 입출고 현황을 하나의 대시보드에서 실시간으로 확인합니다.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>지연 사전 예측·알림</h3>
+        <p>교통·기상·작업 데이터를 바탕으로 지연 위험을 미리 감지하고 담당자에게 즉시 알립니다.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>운영 비용 절감</h3>
+        <p>경로 최적화와 배차 자동화로 공차 운행과 수작업 확인을 줄여 운영 효율을 높입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3장: 다음 할 일 -->
+  <section class="slide">
+    <div class="bar"></div>
+    <h2>다음 할 일</h2>
+    <p class="lead">도입 결정을 위한 단계별 실행 계획</p>
+    <ul class="steps">
+      <li>
+        <div class="badge">1</div>
+        <div><h4>현황 진단 및 요구사항 정리</h4><p>현재 관제 방식과 기존 시스템 연동 범위를 파악합니다</p></div>
+        <span class="when">1단계</span>
+      </li>
+      <li>
+        <div class="badge">2</div>
+        <div><h4>시범 운영(PoC)</h4><p>일부 권역·노선에 우선 적용해 효과를 검증합니다</p></div>
+        <span class="when">2단계</span>
+      </li>
+      <li>
+        <div class="badge">3</div>
+        <div><h4>성과 검토 및 도입 결정</h4><p>시범 운영 결과를 바탕으로 전사 확대 여부를 결정합니다</p></div>
+        <span class="when">3단계</span>
+      </li>
+    </ul>
+  </section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="이전">&#8592;</button>
+  <span class="count" id="count">1 / 3</span>
+  <button id="next" aria-label="다음">&#8594;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const count = document.getElementById('count');
+  const progress = document.getElementById('progress');
+  let current = 0;
+
+  function show(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === current));
+    count.textContent = `${current + 1} / ${slides.length}`;
+    progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+    document.body.classList.toggle('dark-nav', slides[current].classList.contains('title-slide'));
+  }
+
+  document.getElementById('prev').addEventListener('click', () => show(current - 1));
+  document.getElementById('next').addEventListener('click', () => show(current + 1));
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); show(current + 1); }
+    if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); show(current - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(slides.length - 1);
+  });
+
+  show(0);
+</script>
+</body>
+</html>

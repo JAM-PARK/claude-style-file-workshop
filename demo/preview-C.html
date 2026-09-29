@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>새벽정밀 품질보증팀 주간 보고 — 2026년 39주차</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 20mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    background: #FFFFFF;
+    color: #000000;
+  }
+
+  body {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 10.5pt;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 170mm;
+    margin: 0 auto;
+    padding: 20mm 0;
+  }
+
+  /* 제목 줄 */
+  .title-line {
+    padding-bottom: 8px;
+    border-bottom: 0.5pt solid #000000;
+  }
+
+  h1 {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .meta {
+    color: #4D4D4D;
+  }
+
+  h2 {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 24px 0 8px;
+  }
+
+  /* 요약 3줄 */
+  .summary {
+    background: #F0F0F0;
+    padding: 12px 16px;
+    border-radius: 0;
+  }
+
+  .summary ol {
+    list-style: decimal;
+    padding-left: 20px;
+  }
+
+  /* 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    line-height: 1.6;
+  }
+
+  th, td {
+    padding: 4px 8px;
+    border-top: 0.5pt solid #000000;
+    border-bottom: 0.5pt solid #000000;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 700;
+    background: none;
+  }
+
+  .num {
+    font-family: "Gothic A1", sans-serif;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .status {
+    white-space: nowrap;
+  }
+
+  .status-over {
+    font-weight: 700;
+  }
+
+  .over {
+    color: #A61B1B;
+    font-weight: 700;
+  }
+
+  tr.total td {
+    font-weight: 700;
+  }
+
+  .legend {
+    margin-top: 4px;
+    font-size: 9pt;
+    color: #4D4D4D;
+  }
+
+  /* 다음 할 일 */
+  .todo {
+    list-style: decimal;
+    padding-left: 20px;
+  }
+
+  .todo li + li {
+    margin-top: 4px;
+  }
+
+  .todo .who {
+    color: #4D4D4D;
+  }
+
+  @media print {
+    .page {
+      width: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page, table, tr, .summary, .todo {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="title-line">
+    <h1>새벽정밀 품질보증팀 주간 보고</h1>
+    <p class="meta">보고 주차: 2026년 39주차 (9월 21일–9월 27일) · 작성자: ○○○ · 작성일: 2026-09-28</p>
+  </header>
+
+  <section>
+    <h2>요약</h2>
+    <div class="summary">
+      <ol>
+        <li>전체 불량률은 0.23%로, 전주 0.27%보다 0.04%p 낮아졌다.</li>
+        <li>가공 2라인 내경 치수와 연삭 표면 거칠기, <strong class="over">▲ 2개</strong> 항목이 기준을 넘었다.</li>
+        <li>가공 2라인은 공구 마모가 원인으로 보여 9월 29일에 공구를 교체한다.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>공정별 불량 현황</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>공정</th>
+          <th>검사 항목</th>
+          <th class="num">검사 수량</th>
+          <th class="num">불량 수량</th>
+          <th class="num">불량률(%)</th>
+          <th class="num">기준(%)</th>
+          <th>상태</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>가공 1라인</td>
+          <td>외경 치수</td>
+          <td class="num">12,480</td>
+          <td class="num">18</td>
+          <td class="num">0.14</td>
+          <td class="num">0.30</td>
+          <td class="status">− 기준 내</td>
+        </tr>
+        <tr>
+          <td>가공 2라인</td>
+          <td>내경 치수</td>
+          <td class="num">11,920</td>
+          <td class="num">46</td>
+          <td class="num"><span class="over">▲ 0.39</span></td>
+          <td class="num">0.30</td>
+          <td class="status status-over">▲ 초과</td>
+        </tr>
+        <tr>
+          <td>열처리</td>
+          <td>경도</td>
+          <td class="num">6,200</td>
+          <td class="num">9</td>
+          <td class="num">0.15</td>
+          <td class="num">0.20</td>
+          <td class="status">− 기준 내</td>
+        </tr>
+        <tr>
+          <td>연삭</td>
+          <td>표면 거칠기</td>
+          <td class="num">9,840</td>
+          <td class="num">31</td>
+          <td class="num"><span class="over">▲ 0.32</span></td>
+          <td class="num">0.25</td>
+          <td class="status status-over">▲ 초과</td>
+        </tr>
+        <tr>
+          <td>조립</td>
+          <td>체결 토크</td>
+          <td class="num">4,560</td>
+          <td class="num">5</td>
+          <td class="num">0.11</td>
+          <td class="num">0.20</td>
+          <td class="status">− 기준 내</td>
+        </tr>
+        <tr>
+          <td>출하 검사</td>
+          <td>외관</td>
+          <td class="num">4,500</td>
+          <td class="num">3</td>
+          <td class="num">0.07</td>
+          <td class="num">0.10</td>
+          <td class="status">− 기준 내</td>
+        </tr>
+        <tr class="total">
+          <td>합계</td>
+          <td></td>
+          <td class="num">49,500</td>
+          <td class="num">112</td>
+          <td class="num">0.23</td>
+          <td class="num"></td>
+          <td class="status">▲ 초과 2건</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="legend">▲ 기준 초과 · − 기준 내 · 불량률 = 불량 수량 ÷ 검사 수량 × 100</p>
+  </section>
+
+  <section>
+    <h2>다음 할 일</h2>
+    <ol class="todo">
+      <li>가공 2라인 내경 가공 공구 교체 후 첫 500개 전수 검사 <span class="who">— 생산기술팀, 9월 29일</span></li>
+      <li>연삭 숫돌 드레싱 주기 단축(8시간 → 6시간) 시험 적용 <span class="who">— 연삭반, 10월 1일</span></li>
+      <li>초과 2개 항목의 개선 전후 불량률 비교를 다음 주 보고에 싣기 <span class="who">— 품질보증팀, 10월 5일</span></li>
+    </ol>
+  </section>
+
+</main>
+</body>
+</html>

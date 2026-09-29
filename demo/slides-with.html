@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정시로 도입 제안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Sunflower:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EDEEEA;
+    --surface: #FFFFFF;
+    --text: #111311;
+    --text-sub: #555A54;
+    --accent: #F2B705;
+    --line: #C9CCC5;
+    --u: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    transform-origin: top left;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    grid-template-columns: 1fr 2fr;
+    column-gap: calc(var(--u) * 12);
+    padding: calc(var(--u) * 16) calc(var(--u) * 16);
+    background: var(--bg);
+  }
+
+  .slide.is-active { display: grid; }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--u) * 4);
+  }
+
+  .eyebrow {
+    font-size: 28px;
+    color: var(--text-sub);
+  }
+
+  h1, h2 {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text);
+    word-break: keep-all;
+  }
+
+  .desc {
+    font-size: 28px;
+    color: var(--text-sub);
+    word-break: keep-all;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .figure-label {
+    font-size: 32px;
+    color: var(--text-sub);
+    margin-bottom: calc(var(--u) * 2);
+  }
+
+  .figure {
+    display: flex;
+    align-items: baseline;
+    gap: calc(var(--u) * 2);
+  }
+
+  .figure-number {
+    position: relative;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text);
+    z-index: 0;
+  }
+
+  .figure-number::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--u) * 7);
+    height: calc(var(--u) * 6);
+    background: var(--accent);
+    z-index: -1;
+  }
+
+  .figure-unit {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .figure-note {
+    font-size: 28px;
+    color: var(--text-sub);
+    margin-top: calc(var(--u) * 2);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+
+  th, td {
+    text-align: left;
+    padding: calc(var(--u) * 3) calc(var(--u) * 4);
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+    word-break: keep-all;
+  }
+
+  th {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-sub);
+  }
+
+  td {
+    font-size: 28px;
+    color: var(--text);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .num {
+    font-family: 'Sunflower', sans-serif;
+    font-weight: 700;
+  }
+
+  .tag-delay {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--text);
+    padding: 0 var(--u);
+    margin-left: var(--u);
+    font-size: 28px;
+  }
+</style>
+</head>
+<body>
+
+<div class="stage" id="stage">
+
+  <section class="slide is-active">
+    <div class="side">
+      <p class="eyebrow">정시로 도입 제안</p>
+      <h1>시범 센터의 배차 지연이 38% 줄었습니다</h1>
+      <p class="desc">경기 광주 센터 12주 시범 운영 결과<br>하루 평균 배차 1,240건 기준</p>
+    </div>
+    <div class="main">
+      <p class="figure-label">배차 지연 건수 감소율</p>
+      <div class="figure">
+        <span class="figure-number">38</span>
+        <span class="figure-unit">%</span>
+      </div>
+      <p class="figure-note">하루 지연 212건에서 131건으로</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="side">
+      <h2>대기와 오차가 모두 3분의 1로 줄었습니다</h2>
+      <p class="desc">같은 센터, 같은 물량으로 비교<br>도입 전 12주와 도입 후 12주 평균</p>
+    </div>
+    <div class="main">
+      <table>
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>도입 전</th>
+            <th>도입 후</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>배차 확정까지 걸린 시간</td>
+            <td><span class="num">42</span>분</td>
+            <td><span class="num">16</span>분</td>
+          </tr>
+          <tr>
+            <td>상차 도크 대기 시간</td>
+            <td><span class="num">35</span>분<span class="tag-delay">지연</span></td>
+            <td><span class="num">12</span>분</td>
+          </tr>
+          <tr>
+            <td>도착 예정 시각 오차</td>
+            <td><span class="num">48</span>분</td>
+            <td><span class="num">15</span>분</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="side">
+      <h2>11월 13일에 전면 도입 여부를 결정합니다</h2>
+      <p class="desc">두 센터에서 4주 동안 추가 검증<br>결과는 오늘과 같은 기준으로 보고</p>
+    </div>
+    <div class="main">
+      <table>
+        <thead>
+          <tr>
+            <th>시기</th>
+            <th>할 일</th>
+            <th>담당</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="num">10</span>월 <span class="num">9</span>일까지</td>
+            <td>시범 센터 두 곳 선정</td>
+            <td>물류운영팀</td>
+          </tr>
+          <tr>
+            <td><span class="num">10</span>월 <span class="num">12</span>일부터</td>
+            <td>4주 시범 운영</td>
+            <td>물류운영팀과 정시로</td>
+          </tr>
+          <tr>
+            <td><span class="num">11</span>월 <span class="num">13</span>일</td>
+            <td>결과 보고와 도입 결정</td>
+            <td>경영지원본부</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const stage = document.getElementById('stage');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  let current = 0;
+
+  function fit() {
+    const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    const x = (window.innerWidth - 1920 * scale) / 2;
+    const y = (window.innerHeight - 1080 * scale) / 2;
+    stage.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  function show(index) {
+    current = Math.max(0, Math.min(slides.length - 1, index));
+    slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) show(current + 1);
+    if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) show(current - 1);
+  });
+
+  document.addEventListener('click', (e) => {
+    show(e.clientX > window.innerWidth / 2 ? current + 1 : current - 1);
+  });
+
+  window.addEventListener('resize', fit);
+  fit();
+</script>
+</body>
+</html>

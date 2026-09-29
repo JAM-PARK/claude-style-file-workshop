@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>버튼 상태 확인</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Sunflower:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #EDEEEA;
+      --color-surface: #FFFFFF;
+      --color-text: #111311;
+      --color-text-muted: #555A54;
+      --color-accent: #F2B705;
+      --color-border: #C9CCC5;
+      --space-1: 8px;          /* 기본 간격. 나머지는 이 값의 배수 */
+      --radius-button: 0px;
+      --radius-card: 0px;
+      --font-body: "Nanum Gothic", sans-serif;
+      --font-display: "Sunflower", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: calc(var(--space-1) * 8);
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .states {
+      display: flex;
+      gap: calc(var(--space-1) * 8);
+      align-items: flex-start;
+    }
+
+    .state {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--space-1) * 2);
+    }
+
+    .state-label {
+      color: var(--color-text-muted);
+    }
+
+    /* 버튼 */
+    .button {
+      position: relative;
+      padding: calc(var(--space-1) * 2) calc(var(--space-1) * 4);
+      border: 0;
+      border-radius: var(--radius-button);
+      background: var(--color-text);
+      color: var(--color-surface);
+      font-family: var(--font-body);
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    /* 호버: 바탕은 그대로, 아래에 강조색 4px 띠 */
+    .button::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: var(--color-accent);
+      visibility: hidden;
+    }
+
+    .button:hover:not(:disabled)::after,
+    .button.is-hover::after {
+      visibility: visible;
+    }
+
+    /* 포커스(키보드): 글자색 3px 외곽선, 3px 띄움 */
+    .button:focus {
+      outline: none;
+    }
+
+    .button:focus-visible,
+    .button.is-focus {
+      outline: 3px solid var(--color-text);
+      outline-offset: 3px;
+    }
+
+    /* 비활성: 보조 글자색 바탕, 흰 글자, 커서 금지 표시. 투명도 쓰지 않음 */
+    .button:disabled {
+      background: var(--color-text-muted);
+      color: var(--color-surface);
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="states">
+    <div class="state">
+      <span class="state-label">기본</span>
+      <button type="button" class="button">배차 확정</button>
+    </div>
+    <div class="state">
+      <span class="state-label">호버</span>
+      <button type="button" class="button is-hover">배차 확정</button>
+    </div>
+    <div class="state">
+      <span class="state-label">포커스</span>
+      <button type="button" class="button is-focus">배차 확정</button>
+    </div>
+    <div class="state">
+      <span class="state-label">비활성</span>
+      <button type="button" class="button" disabled>배차 확정</button>
+    </div>
+  </div>
+</body>
+</html>

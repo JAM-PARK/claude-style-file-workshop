@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>골목찬장</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Sunflower:wght@700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background: #EDEEEA;
+  }
+
+  body {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #111311;
+    background: #EDEEEA;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    min-height: 100vh;
+    padding: 64px;
+    border-top: 1px solid #C9CCC5;
+  }
+
+  .section:first-child {
+    border-top: 0;
+  }
+
+  .side {
+    align-self: start;
+  }
+
+  .brand {
+    font-family: "Sunflower", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  h1,
+  h2 {
+    font-family: "Sunflower", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .desc {
+    color: #555A54;
+  }
+
+  .main {
+    align-self: center;
+  }
+
+  .figure {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    isolation: isolate;
+    font-family: "Sunflower", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .figure::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    right: -16px;
+    bottom: 16px;
+    height: 48px;
+    background: #F2B705;
+    z-index: -1;
+  }
+
+  .figure-number {
+    font-size: 200px;
+  }
+
+  .figure-unit {
+    font-size: 32px;
+  }
+
+  .figure-caption {
+    margin-top: 32px;
+    color: #555A54;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    border: 1px solid #C9CCC5;
+  }
+
+  th,
+  td {
+    padding: 24px 32px;
+    border-bottom: 1px solid #C9CCC5;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  thead th {
+    color: #555A54;
+    font-weight: 400;
+  }
+
+  tbody th {
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  a {
+    color: #111311;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+
+  a:focus-visible {
+    outline: 2px solid #111311;
+    outline-offset: 8px;
+  }
+
+  @media (max-width: 960px) {
+    .section {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      min-height: auto;
+      padding: 48px 24px;
+    }
+
+    th,
+    td {
+      padding: 16px;
+    }
+
+    tbody th {
+      white-space: normal;
+    }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <section class="section" aria-labelledby="intro-title">
+    <div class="side">
+      <p class="brand">골목찬장</p>
+      <h1 id="intro-title">동네 반찬을 일주일에 두 번 문 앞에 둡니다</h1>
+      <p class="desc">우리 동네 반찬가게에서 그날 만든 반찬을<br>구독으로 받아보세요.</p>
+    </div>
+    <div class="main">
+      <p class="figure" aria-label="주 2회">
+        <span class="figure-number">2</span>
+        <span class="figure-unit">회</span>
+      </p>
+      <p class="figure-caption">일주일에 받는 반찬 배달 횟수</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="work-title">
+    <div class="side">
+      <h2 id="work-title">고르고, 담고, 가져다 드립니다</h2>
+      <p class="desc">골목찬장이 하는 일은 세 가지입니다.<br>반찬은 동네 가게가 만듭니다.</p>
+    </div>
+    <div class="main">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">하는 일</th>
+            <th scope="col">내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">고르기</th>
+            <td>동네 반찬가게에서 그날 만든 반찬을 한 주 식단에 맞춰 고릅니다.</td>
+          </tr>
+          <tr>
+            <th scope="row">담기</th>
+            <td>한 번에 네 가지 반찬을 돌려쓰는 용기에 담습니다.</td>
+          </tr>
+          <tr>
+            <th scope="row">가져다 드리기</th>
+            <td>화요일과 금요일 아침 7시 전에 문 앞에 둡니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="contact-title">
+    <div class="side">
+      <h2 id="contact-title">문의는 전화와 이메일로 받습니다</h2>
+      <p class="desc">평일 오전 9시부터 오후 6시까지 답합니다.<br>구독 신청도 같은 곳에서 받습니다.</p>
+    </div>
+    <div class="main">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">연락 방법</th>
+            <th scope="col">연락처</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">전화</th>
+            <td><a href="tel:010-0000-0000">010-0000-0000</a></td>
+          </tr>
+          <tr>
+            <th scope="row">이메일</th>
+            <td><a href="mailto:hello@golmokchanjang.kr">hello@golmokchanjang.kr</a></td>
+          </tr>
+          <tr>
+            <th scope="row">카카오톡</th>
+            <td>채널에서 골목찬장을 검색하세요.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
