@@ -189,6 +189,12 @@ def build(ROOT, between, qr_svg, site_url):
     r = lambda p: (ROOT / p).read_text(encoding='utf-8')
     doc = r('handout/index.html')
     Ids.n = 0
+    why = r('template/why.md').split('\n', 2)[2]
+    ab = ''.join(f'<figure><div class="swatch">{img(ROOT / p, alt)}</div><figcaption class="tag">{cap}</figcaption></figure>' for p, alt, cap in [
+        ('slides/assets/ab-web-without.webp', '스타일 파일 없이 만든 반찬 구독 소개 웹페이지: 크림 배경, 가운데 정렬, 이모지 카드 3개, 주황 둥근 버튼', '파일 없이'),
+        ('slides/assets/ab-web-with.webp', '예시 A 스타일 파일을 설정하고 만든 웹페이지: 흰 바탕, 왼쪽 정렬 명조 제목, 오미자색 버튼 하나', '예시 A 파일을 설정하고'),
+    ])
+    doc = between(doc, 'WHY', md(why, shift=1).replace('<p>[[AB]]</p>', ab))
     tpl = r('template/design-system.md')
     doc = between(doc, 'TEMPLATE', ds_card(tpl, copy_text=blank(tpl), hints=True))
     examples = [

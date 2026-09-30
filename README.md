@@ -30,7 +30,7 @@ tools/.venv/bin/python tools/build.py
 ```
 
 - 원본: `slides/design-system.md`, `template/`, `examples/`, `prompts/prompts.md`, `advanced/`
-- 배포 페이지의 "결과물 가져가기"는 `template/take-home.md`, 예시 미리보기 그림은 `handout/.previews/`에 있다.
+- 배포 페이지의 "스타일 파일이 뭔가요"는 `template/why.md`, "결과물 가져가기"는 `template/take-home.md`, 예시 미리보기 그림은 `handout/.previews/`에 있다.
 - 배포 주소는 `tools/site-url.txt`에 있다 (현재 https://session02-handout.vercel.app). 바꾸면 다시 만든다. 장표 8번, 배포 페이지, 러닝시트의 QR이 함께 바뀐다.
 - A/B 시연을 다시 만들려면 `tools/gen-demo.sh`를 쓴다. `demo/README.md`를 참고한다.
 

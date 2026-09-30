@@ -23,6 +23,7 @@
 | `slides-with.html` | (같음) | 예시 B |
 | `preview-C.html` | 품질보증팀 주간 보고 서식을 HTML 파일 하나로 만들어줘. 구성: 제목, 요약 3줄, 표 1개, 다음 할 일. A4 한 장에 인쇄되게 해줘. | 예시 C (배포 페이지 미리보기용) |
 | `check-web-B.html`, `check-slides-A.html` | 위와 같음 | 서로 바꾼 예시 (11장 검수용) |
+| `detail-export.html` | `raw/detail-export.prompt.txt` (배포 페이지 "결과물 가져가기" 2번 문장). 앞 대화의 `detail-with.html` 코드를 함께 보냈다 | 없음. Chrome에서 file://로 열어 사진 한 장을 넣고 저장해 860×5432 PNG가 받아지는 것을 확인 (2026-09-30) |
 | `detail-with.html` | 시작 3 프롬프트(`prompts/prompts.md`)에 골목찬장 상품 정보를 채운 문장. 원문은 `raw/detail-with.prompt.txt` | 예시 A (2026-09-30판, 배포 페이지 미리보기용) |
 
 `detail-with`는 "지어내지 말고 [ ]로 비워 둬"를 지켜 가격, 원산지, 문의 등 13칸을 [ ]로 남겼다. 전체 캡처는 `shots/detail-with-full.png`(가로 860px)다.
