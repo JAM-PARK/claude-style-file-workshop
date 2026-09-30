@@ -146,8 +146,14 @@ def ds_card(text, copy_text=None, hints=False):
     parts.append('</div>')
     cid = Ids.next()
     raw = text if copy_text is None else copy_text
-    return (f'<div class="src-wrap"><button class="copy" type="button" data-target="{cid}" aria-label="파일 전체 복사">복사</button>'
+    return (f'<div class="src-wrap"><div class="actions"><button class="copy" type="button" data-target="{cid}" aria-label="파일 전체 복사">복사</button>'
+            f'<button class="save" type="button" data-target="{cid}" data-name="design-system.md">파일로 받기</button></div>'
             + ''.join(parts) + f'<textarea hidden id="{cid}">{E(raw)}</textarea></div>')
+
+
+SAVER = ('<div class="saver"><label class="tag" for="saver-code">결과물 코드 붙여 넣는 칸</label>'
+         '<textarea id="saver-code" spellcheck="false" autocomplete="off" placeholder="&lt;!doctype html&gt; 로 시작하는 코드를 여기에 붙여 넣으세요"></textarea>'
+         '<button class="save" type="button" data-target="saver-code" data-name="index.html">index.html로 받기</button></div>')
 
 
 def chips(text):
@@ -190,12 +196,15 @@ def build(ROOT, between, qr_svg, site_url):
         ('EXB', 'examples/b-logistics-b2b.md', 'handout/.previews/B.webp', '예시 B 파일을 설정하고 만든 물류 제안 슬라이드 첫 장'),
         ('EXC', 'examples/c-quality-report.md', 'handout/.previews/C.webp', '예시 C 파일을 설정하고 만든 품질 주간 보고 서식'),
     ]
+    doc = between(doc, 'EXADIMG', img(ROOT / 'handout/.previews/A-detail.webp', '예시 A 파일을 설정하고 시작 3 프롬프트로 만든 반찬 구독 상세페이지 (가로 860px)'))
     for key, path, prev, alt in examples:
         t = r(path)
         doc = between(doc, key + 'CHIPS', chips(t))
         doc = between(doc, key + 'IMG', img(ROOT / prev, alt))
         doc = between(doc, key, ds_card(t))
     doc = between(doc, 'PROMPTS', prompt_blocks(r('prompts/prompts.md')))
+    take = re.sub(r'<!--.*?-->\n', '', r('template/take-home.md').split('\n', 2)[2])  # md 원본용 주석은 빼고
+    doc = between(doc, 'TAKEHOME', md(take, shift=1).replace('<p>[[SAVER]]</p>', SAVER))
     setup = r('template/README.md').split('\n', 2)[2]  # 첫 제목 줄 제외
     doc = between(doc, 'SETUP', md(setup, shift=1))
     guide = r('advanced/track-guide.md').split('\n', 2)[2]

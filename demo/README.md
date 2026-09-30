@@ -6,7 +6,7 @@
 - 스크립트: `tools/gen-demo.sh <이름> <web|slides|report> [예시 md]`. HTML은 `tools/extract-demo.py`로 꺼냈다. 코드 블록만 떼어 내고 내용은 고치지 않는다.
 - 사용자 설정이 섞이지 않게 **빈 설정 폴더**(`CLAUDE_CONFIG_DIR`)와 빈 작업 폴더에서 `claude -p`를 실행했다. CLAUDE.md, 훅, 플러그인, 메모리가 없는 것을 확인했다.
   - 처음 계획은 `claude --bare`였다. 그런데 이 옵션은 API 키(`ANTHROPIC_API_KEY`)로만 로그인할 수 있어서 이 방법으로 바꿨다. HANDOFF 12장 9번에 적어 두었다.
-- 모델은 claude-opus-5-5, 생성일은 2026-09-28이다. 원본 응답은 `raw/*.json`에 있다.
+- 모델은 claude-opus-5-5, 생성일은 2026-09-28이다(`detail-with`만 2026-09-30). 예시 A는 09-30에 상세페이지 레이아웃 줄이 더해졌고, 그 전의 `web-with`는 09-28판으로 만들었다. 원본 응답은 `raw/*.json`에 있다.
 
 ## 두 쪽의 차이는 딱 하나
 두 쪽에 **똑같은 프롬프트**를 보냈다. 오른쪽(with)만 claude.ai 프로젝트 설정을 흉내 낸 시스템 프롬프트를 더했다.
@@ -23,6 +23,9 @@
 | `slides-with.html` | (같음) | 예시 B |
 | `preview-C.html` | 품질보증팀 주간 보고 서식을 HTML 파일 하나로 만들어줘. 구성: 제목, 요약 3줄, 표 1개, 다음 할 일. A4 한 장에 인쇄되게 해줘. | 예시 C (배포 페이지 미리보기용) |
 | `check-web-B.html`, `check-slides-A.html` | 위와 같음 | 서로 바꾼 예시 (11장 검수용) |
+| `detail-with.html` | 시작 3 프롬프트(`prompts/prompts.md`)에 골목찬장 상품 정보를 채운 문장. 원문은 `raw/detail-with.prompt.txt` | 예시 A (2026-09-30판, 배포 페이지 미리보기용) |
+
+`detail-with`는 "지어내지 말고 [ ]로 비워 둬"를 지켜 가격, 원산지, 문의 등 13칸을 [ ]로 남겼다. 전체 캡처는 `shots/detail-with-full.png`(가로 860px)다.
 
 설정한 쪽 결과물에 나오는 수치("배차 지연 38% 감소" 등)와 주소, 연락처는 AI가 지어낸 가상 값이다. 화면에는 "가상 브랜드, 가상 수치"로 표기한다.
 

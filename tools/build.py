@@ -90,7 +90,7 @@ def subset_fonts(text):
     chars = set(text) | set(' 0123456789:/.,()-+%#·"\'!?')
     out = {}
     for fname, family, weight in FONTS:
-        f = TTFont(SRC_FONTS / fname)
+        f = TTFont(SRC_FONTS / fname, recalcTimestamp=False)  # 만들 때마다 바이트가 바뀌지 않게
         opts = subset.Options(); opts.flavor = 'woff2'; opts.layout_features = ['*']
         sub = subset.Subsetter(opts); sub.populate(text=''.join(chars)); sub.subset(f)
         if family == 'S2 Mono':
