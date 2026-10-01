@@ -9,7 +9,7 @@
 | B. 참가자 배포 페이지 | `handout/index.html` | 휴대폰 (QR). 파일 하나라 어디에 올려도 동작 |
 | C. 심화 트랙 자료 | `advanced/` | 배포 페이지 심화 탭에 같은 내용 |
 | D. A/B 시연 | `demo/` | 생성 기록은 `demo/README.md` |
-| E. 러닝시트 | `runsheet/index.html` | A4 한 장 인쇄 |
+| E. 러닝시트 | `runsheet/index.html` | A4 한 장 인쇄. 진행 해설은 `runsheet/guide.md` |
 
 세 HTML 모두 인터넷 없이 열린다. 폰트는 파일 안에 들어 있다. 폰트 라이선스(OFL)는 `slides/assets/fonts/`에 있다.
 
