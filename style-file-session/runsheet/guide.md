@@ -10,7 +10,7 @@
 
 장표는 인터넷에 올리지 않았습니다. 배포 페이지 주소로는 열리지 않습니다.
 
-장표 파일 위치: `claude-style-file-workshop` 폴더 → `slides` 폴더 → `index.html`
+장표 파일 위치: `claude-style-file-workshop` 폴더 → `style-file-session` 폴더 → `slides` 폴더 → `index.html`
 
 ## 장표 조작 키
 

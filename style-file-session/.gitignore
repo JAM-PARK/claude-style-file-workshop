@@ -1,0 +1,20 @@
+# 파이썬 가상환경과 원본 폰트 (tools/fetch-fonts.sh로 다시 받는다)
+tools/.venv/
+tools/fonts-src/
+
+# 작업용 스크린샷과 검수 산출물
+.review/
+.playwright-mcp/
+
+# impeccable 결정 페이지 로그
+.impeccable/questions/
+
+# 내부 기획 문서 (로컬 전용)
+HANDOFF.md
+
+# Vercel 연결 정보와 토큰
+.vercel/
+.env*
+
+.DS_Store
+__pycache__/
