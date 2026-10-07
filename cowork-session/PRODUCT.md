@@ -44,6 +44,9 @@ web
 - 예약 작업은 매시간, 매일, 매주, 평일, 수동 중에서 주기를 고르고, 필요할 때 바로 실행할 수도 있다.
 - 여러 단계 작업은 짧은 질문보다 사용량을 더 쓴다.
 - 파일을 영구 삭제하기 전에는 Claude가 명시적으로 허락을 구한다.
+- 데스크톱에서는 연결한 폴더의 내 컴퓨터 파일을 업로드·다운로드 없이 직접 읽고 쓸 수 있다 ("read from and write to your local files without manual uploads or downloads").
+- Windows에서는 최신 버전 Claude 앱이 필요하다 (claude.com/download, HANDOFF 2장 출처).
+- 웹 사이트가 필요한 일에서는 사이트를 열고, 페이지를 읽고, 클릭·입력·양식 작성을 할 수 있다.
 - 복잡한 일은 작은 일로 나누고, 나란히 진행되는 작업 줄기를 조율해 처리한다 ("breaks complex work into smaller tasks and coordinates parallel workstreams"). 작업 여러 개를 동시에 띄우는 것은 별개로 미확인.
 - 예약 작업 메뉴의 영어 이름: 왼쪽 사이드바 "Scheduled", "New task" 버튼, "Create with Claude" / "Set up manually", 관리 화면의 "Run a task on demand" (예약 작업 문서). 한국어 화면 이름은 미확인.
 
