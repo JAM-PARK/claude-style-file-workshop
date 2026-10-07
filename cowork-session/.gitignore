@@ -7,3 +7,7 @@ __pycache__/
 .impeccable/questions/
 .impeccable/decision/
 .impeccable/review/
+
+# 배포할 때 gen_samples.py가 복사해 넣는 샘플 묶음
+practice-page/cowork-samples.zip
+practice-page/.vercel/

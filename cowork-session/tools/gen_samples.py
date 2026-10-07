@@ -35,6 +35,8 @@ DIRS = {
     'm': OUT / '04_회의녹취',
 }
 rng = random.Random(20260907)
+# 다시 만들어도 파일이 바이트 단위로 같도록 문서 안 생성 시각을 고정한다
+FIXED = dt.datetime(2026, 9, 1, 9, 0, 0)
 
 
 def won(n):
@@ -192,7 +194,7 @@ pdfmetrics.registerFont(TTFont('NGB', str(FONTS / 'NanumGothic-Bold.ttf')))
 
 def pdf_doc(path, title, blocks, footnotes=(), small_footnotes=True):
     """blocks: ('p', text) / ('h', text) / ('table', rows, col_widths_mm) / ('gap', mm)"""
-    c = canvas.Canvas(str(path), pagesize=A4)
+    c = canvas.Canvas(str(path), pagesize=A4, invariant=1)
     W, H = A4
     x0, y = 20 * mm, H - 25 * mm
     c.setFont('NGB', 20)
@@ -359,6 +361,18 @@ def build_meeting():
 # 02 다운로드폴더_정리전
 # 각 항목: 파일 이름, 날짜, 프로젝트, 문서 종류, 기대 새 이름, 내용 만드는 함수
 # ---------------------------------------------------------------------------
+def normalize_office(path):
+    """docx·xlsx는 안이 zip이라 저장 시각이 들어간다. 시각을 고정해 다시 묶는다."""
+    import re
+    with zipfile.ZipFile(path) as z:
+        items = [(i.filename, z.read(i.filename)) for i in z.infolist()]
+    with zipfile.ZipFile(path, 'w', zipfile.ZIP_DEFLATED) as z:
+        for name, data in items:
+            if name == 'docProps/core.xml':
+                data = re.sub(rb'(<dcterms:(created|modified)[^>]*>)[^<]*', rb'\g<1>2026-09-01T09:00:00Z', data)
+            z.writestr(zipfile.ZipInfo(name, date_time=(2026, 9, 1, 9, 0, 0)), data, zipfile.ZIP_DEFLATED)
+
+
 def make_docx(path, title, paras):
     doc = Document()
     st = doc.styles['Normal']
@@ -368,7 +382,12 @@ def make_docx(path, title, paras):
         doc.add_heading(title, level=1)
     for p in paras:
         doc.add_paragraph(p)
+    doc.core_properties.created = FIXED
+    doc.core_properties.modified = FIXED
+    doc.core_properties.last_modified_by = ''
+    doc.core_properties.author = ''
     doc.save(path)
+    normalize_office(path)
 
 
 def make_xlsx(path, sheet, rows, widths=None):
@@ -381,7 +400,11 @@ def make_xlsx(path, sheet, rows, widths=None):
         c.font = Font(bold=True)
     for i, w in enumerate(widths or []):
         ws.column_dimensions[chr(65 + i)].width = w
+    wb.properties.created = FIXED
+    wb.properties.modified = FIXED
+    wb.properties.creator = ''
     wb.save(path)
+    normalize_office(path)
 
 
 def make_image(path, title, lines, size=(1200, 900), bg=(236, 228, 214)):
@@ -527,6 +550,7 @@ def build_downloads():
                 for nm, title in [('무화과깜파뉴.jpg', '무화과 깜파뉴'), ('흑임자스콘.jpg', '흑임자 스콘'), ('얼그레이쿠키.jpg', '얼그레이 쿠키')]:
                     tmp = OUT / '_tmp.jpg'
                     make_image(tmp, title, ['신메뉴 사진'])
+                    set_mtime(tmp, '2026-09-08')
                     z.write(tmp, nm)
                     tmp.unlink()
         else:
@@ -545,6 +569,7 @@ def write_notice():
         '- 03_견적서비교: 홈페이지 제작 견적 세 곳 → 비교표 만들기 (미션 C)\n'
         '- 04_회의녹취: 회의 받아쓰기 → 회의록과 할 일 표 (미션 D)\n\n'
         '원본을 지키고 싶으면 폴더를 복사해서 복사본을 Cowork에 맡기세요.\n', encoding='utf-8')
+    set_mtime(OUT / '읽어주세요.txt', '2026-09-30')
 
 
 def make_zip():
@@ -570,6 +595,8 @@ def main():
     secs = build_meeting()
     write_notice()
     zp = make_zip()
+    # 실습 페이지와 함께 배포한다 (저장소에는 samples/ 쪽만 올린다)
+    shutil.copy(zp, ROOT / 'practice-page/cowork-samples.zip')
     print(f'영수증 {len(list(DIRS["r"].iterdir()))}장, 다운로드 {len(list(DIRS["d"].iterdir()))}개, '
           f'견적 {len(list(DIRS["q"].iterdir()))}개, 녹취 {secs // 60}분 {secs % 60}초, zip {zp.stat().st_size // 1024} KB')
 

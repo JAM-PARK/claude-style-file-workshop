@@ -7,7 +7,7 @@
 | --- | --- | --- |
 | 진행용 장표 | `slides/index.html` | 완성 (리허설 후 캡처·QR·일시 채우기) |
 | 샘플 파일 | `samples/` (배포용 묶음 `samples/cowork-samples.zip`) | 완성. 정답은 `facilitator/answer-keys.md` |
-| 실습 페이지 | `practice-page/index.html` | 만들 예정 |
+| 실습 페이지 | `practice-page/index.html` | 완성 (배포 주소 정해지면 장표 QR에 넣기) |
 | 진행자 문서 | `facilitator/` | 정답지 완성, 나머지 만들 예정 |
 | 안내 메시지·치트시트 | `comms/` | 만들 예정 |
 
@@ -35,5 +35,15 @@ cd tools
 ../tools/.venv/bin/python gen_answer_keys.py   # facilitator/answer-keys.md 다시 만들기
 ../tools/.venv/bin/python verify_samples.py    # 샘플 파일을 열어 정답지 숫자와 대조
 ```
+
+## 실습 페이지 배포 (Vercel)
+`practice-page/` 폴더 하나를 그대로 올린다. 샘플 묶음은 `gen_samples.py`가 `practice-page/cowork-samples.zip`으로 복사해 두므로 같은 폴더에서 받아진다 (저장소에는 올리지 않음).
+
+```
+cd practice-page
+vercel deploy --prod
+```
+
+배포 주소가 정해지면 장표의 QR 자리와 `[주소 진행자 기입]`을 채운다.
 
 폰트 라이선스(OFL)는 `slides/assets/fonts/`에 있다.
