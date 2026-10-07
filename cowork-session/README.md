@@ -8,7 +8,7 @@
 | 진행용 장표 | `slides/index.html` | 완성 (리허설 후 캡처·QR·일시 채우기) |
 | 샘플 파일 | `samples/` (배포용 묶음 `samples/cowork-samples.zip`) | 완성. 정답은 `facilitator/answer-keys.md` |
 | 실습 페이지 | `practice-page/index.html` | 완성 (배포 주소 정해지면 장표 QR에 넣기) |
-| 진행자 문서 | `facilitator/` | 완성: 큐시트, 정답지, FAQ, 문제 해결 |
+| 진행자 문서 | `facilitator/` | 완성: 세션 전 할 일(`before-session.md`), 큐시트, 정답지, FAQ, 문제 해결 |
 | 안내 메시지·치트시트 | `comms/` | 완성: D-3·D-1 메시지(`pre-session.md`), 다음 날 아침 메시지(`post-session.md`), A4 치트시트(`cheat-sheet.html`) |
 
 장표 조작: ← → 스페이스로 넘김, F 전체화면, N 발표자 노트, Home·End 처음·끝. 9번과 16번은 → 한 번에 빈칸이 하나씩 채워진다. 12번 휴식은 Enter로 타이머 시작·멈춤, R로 처음으로. 주소 뒤에 `#9`처럼 붙이면 그 장부터 연다.

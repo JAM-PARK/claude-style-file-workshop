@@ -44,7 +44,7 @@ def receipts():
         o = by_id[r['dup_of']]
         L.append(f"- `{r['file']}`는 `{o['file']}`와 같은 영수증이다 ({o['date']} {o['store']} {won(D.receipt_total(o))}). "
                  '사진 파일 날짜는 다르지만 상호·일시·금액이 같다. 중복을 빼지 않으면 합계가 '
-                 f'{won(total + D.receipt_total(o))}로 나온다.')
+                 f'{won(total + D.receipt_total(o))}이 나온다.')
     L += ['', '### 잘 됐는지 확인하는 법',
           f'- 행이 {len(uniq)}개인가 (사진 {len(D.RECEIPTS)}장이 아니라)',
           f'- 합계가 {won(total)}인가',
