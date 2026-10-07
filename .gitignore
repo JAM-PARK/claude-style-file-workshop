@@ -7,3 +7,6 @@ HANDOFF.md
 .omc/
 
 .DS_Store
+
+# 브라우저 자동화 기록
+.playwright-mcp/

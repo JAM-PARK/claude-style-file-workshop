@@ -1,0 +1,9 @@
+# 파이썬 가상환경과 원본 폰트 (tools/fetch-fonts.sh로 다시 받는다)
+tools/.venv/
+tools/fonts-src/
+__pycache__/
+
+# impeccable 작업 기록과 검수 캡처
+.impeccable/questions/
+.impeccable/decision/
+.impeccable/review/

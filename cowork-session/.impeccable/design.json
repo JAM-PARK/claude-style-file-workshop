@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T04:59:38+00:00",
+  "title": "Design System: Cowork 입문 세션",
+  "extensions": {
+    "colorMeta": {
+      "glass": {
+        "role": "neutral",
+        "displayName": "유리문 (Door Glass)",
+        "canonical": "oklch(32.1% 0.011 168.0)",
+        "tonalRamp": [
+          "#070D0A",
+          "#1F2623",
+          "#3A423F",
+          "#58605C",
+          "#7A827F",
+          "#9EA7A3",
+          "#C4CDC9",
+          "#E8F1ED"
+        ]
+      },
+      "vinyl": {
+        "role": "neutral",
+        "displayName": "시트지 흰색 (Vinyl White)",
+        "canonical": "oklch(96.5% 0.003 145.5)",
+        "tonalRamp": [
+          "#0A0C0A",
+          "#232423",
+          "#3F403F",
+          "#5C5E5C",
+          "#7F817F",
+          "#A3A5A3",
+          "#C9CBC9",
+          "#EDEFED"
+        ]
+      },
+      "vinyl-dim": {
+        "role": "neutral",
+        "displayName": "흐린 시트지 (Faded Vinyl)",
+        "canonical": "oklch(75.5% 0.012 167.7)",
+        "tonalRamp": [
+          "#070D0A",
+          "#1F2623",
+          "#3A423E",
+          "#58605C",
+          "#7A827F",
+          "#9EA7A3",
+          "#C4CDC9",
+          "#E8F1ED"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "종이 (Paper)",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#808080",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "먹 (Ink)",
+        "canonical": "oklch(19.1% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#808080",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "red": {
+        "role": "semantic-warning",
+        "displayName": "주의 빨강 (Warning Red)",
+        "canonical": "oklch(55.8% 0.207 29.1)",
+        "tonalRamp": [
+          "#1F0000",
+          "#4B0000",
+          "#7A0906",
+          "#B20001",
+          "#E1382B",
+          "#FC7564",
+          "#FEB6AA",
+          "#FEE9E5"
+        ]
+      },
+      "tape": {
+        "role": "neutral",
+        "displayName": "테이프 (Tape)",
+        "canonical": "rgba(240, 238, 222, 0.72)",
+        "tonalRamp": [
+          "#0D0B03",
+          "#262418",
+          "#424033",
+          "#605E51",
+          "#838172",
+          "#A7A596",
+          "#CDCBBC",
+          "#F1EFDF"
+        ],
+        "note": "렌더링 결과: 유리 위 약 #BABAAE, 종이 위 약 #F4F3E7. 토큰이 아니다."
+      }
+    },
+    "typographyMeta": {
+      "display-lead": {
+        "displayName": "Display Lead",
+        "purpose": "한 장에 한 문장만 크게 거는 장(훅 질문, 결론 문장)."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "표지 훅 제목, 휴식 장 제목."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "보통 안내문의 제목."
+      },
+      "headline-portrait": {
+        "displayName": "Headline (세로 안내문)",
+        "purpose": "세로 안내문 두 장 비교 장의 제목."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "큰 제목 아래 부제 한 줄."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "문단."
+      },
+      "row": {
+        "displayName": "Row",
+        "purpose": "괘선 줄 목록의 줄."
+      },
+      "row-title": {
+        "displayName": "Row Title",
+        "purpose": "괘선 줄 목록의 굵은 이름."
+      },
+      "formula-label": {
+        "displayName": "Formula Label",
+        "purpose": "문장 공식 양식의 칸 이름."
+      },
+      "formula-value": {
+        "displayName": "Formula Value",
+        "purpose": "문장 공식 양식의 채운 값."
+      },
+      "warning-row": {
+        "displayName": "Warning Row",
+        "purpose": "맡기면 안 되는 일 표."
+      },
+      "coupon": {
+        "displayName": "Coupon",
+        "purpose": "절취선 아래 뜯어가는 문장."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "머리 칸, 쪽지 이름표, QR 설명. 장표의 가장 작은 글자(28px)."
+      },
+      "door": {
+        "displayName": "Door",
+        "purpose": "유리 진행표."
+      },
+      "timer": {
+        "displayName": "Timer",
+        "purpose": "휴식 타이머 숫자."
+      },
+      "notes": {
+        "displayName": "Notes",
+        "purpose": "진행자 노트 패널. 진행자 전용이라 28px 기준의 예외."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "sheet-post",
+        "value": "180ms cubic-bezier(.16, 1, .3, 1); from opacity 0, translateY(-12px)",
+        "purpose": "장 넘김: 새 안내문을 붙이는 짧은 동작. prefers-reduced-motion: reduce면 없음."
+      },
+      {
+        "name": "step-reveal",
+        "value": "none (visibility 전환만)",
+        "purpose": "공식 칸 채우기와 단계 공개는 동작 없이 바로 나타난다."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stage",
+        "value": "1920x1080",
+        "purpose": "장표 판. 화면에 맞춰 통째로 비율 조정(1366x768에서 약 0.71배). 글자가 다시 흐르지 않는다."
+      },
+      {
+        "name": "practice-min",
+        "value": "375px",
+        "purpose": "실습 페이지 최소 폭. 가로 스크롤 없음, 본문 16px 이상. (미검증: 아직 만들지 않음)"
+      }
+    ],
+    "strokes": [
+      {
+        "name": "rule-heavy",
+        "value": "4px solid #141414",
+        "purpose": "머리 칸 아래, 공식 양식 위, 진행자 노트 위."
+      },
+      {
+        "name": "rule-warning",
+        "value": "4px solid #D2261C",
+        "purpose": "금지 표 위. 유일한 빨강 선."
+      },
+      {
+        "name": "rule-underline",
+        "value": "3px solid #141414",
+        "purpose": "공식 양식 빈칸 밑줄."
+      },
+      {
+        "name": "rule-row",
+        "value": "2px solid #141414",
+        "purpose": "줄 목록 괘선."
+      },
+      {
+        "name": "cut-heavy",
+        "value": "4px dashed #141414",
+        "purpose": "절취선, 쪽지 줄 위 칼집."
+      },
+      {
+        "name": "cut-fill",
+        "value": "3px dashed #141414",
+        "purpose": "쪽지 사이 칼집, 진행자 기입 빈칸, 사진·QR 자리."
+      }
+    ],
+    "snippetScale": "components의 html/css 견본은 미리보기용으로 장표 판(1920) 값의 절반 크기로 그렸다. 실제 값은 DESIGN.md 머리말 토큰을 따른다. 견본의 14~15px 글자는 실습 페이지 값이 아니다(실습 페이지 본문은 16px 이상, 크기는 아직 정하지 않음).",
+    "tape": {
+      "size": "150-186px x 48px",
+      "overhang": "64px",
+      "rotation": "귀퉁이 ±38deg, 위 가운데 0deg, 장마다 ±4deg 고정 흔들림",
+      "purpose": "유일하게 기울고 유일하게 투명한 요소. 실습 페이지에서 64px 삐져나옴은 375px 가로 스크롤 위험(미해결)."
+    }
+  },
+  "components": [
+    {
+      "name": "안내문 종이와 머리 칸",
+      "kind": "custom",
+      "refersTo": "notice-sheet",
+      "description": "유리 위에 테이프로 붙인 흰 A4 안내문. 맨 위에 같은 세 칸 머리 칸과 4px 먹 괘선.",
+      "html": "<div class=\"ds-glass\"><div class=\"ds-sheet\"><i class=\"ds-tape ds-tl\"></i><i class=\"ds-tape ds-tr\"></i><div class=\"ds-head\"><span>Cowork 입문</span><span>시연 1 0:10–0:20</span><span>7 / 20</span></div><h2 class=\"ds-h\">일 맡기는 문장 공식</h2><p class=\"ds-body\">폴더와 도구를 쥐여 주면, 정리해서 <b>파일로</b> 돌려줍니다.</p></div></div>",
+      "css": ".ds-glass { background: var(--glass, #2E3532); padding: 40px 48px; } .ds-sheet { position: relative; background: var(--paper, #FFFFFF); color: var(--ink, #141414); padding: 28px 40px 32px; border-radius: 0; } .ds-tape { position: absolute; width: 84px; height: 24px; background: var(--tape, rgba(240,238,222,0.72)); } .ds-tl { left: -32px; top: -3px; transform: rotate(-38deg); } .ds-tr { right: -32px; top: -3px; transform: rotate(38deg); } .ds-head { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; font-size: 14px; font-weight: 700; line-height: 1.3; padding-bottom: 8px; border-bottom: 2px solid var(--ink, #141414); margin-bottom: 24px; font-variant-numeric: tabular-nums; font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-head span:nth-child(2) { font-weight: 400; } .ds-h { font-family: \"CW Display\", \"Black Han Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 24px; word-break: keep-all; } .ds-body { font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-size: 21px; line-height: 1.6; margin: 0; word-break: keep-all; } .ds-body b { font-weight: 800; }"
+    },
+    {
+      "name": "먹 판",
+      "kind": "custom",
+      "refersTo": "ink-plate",
+      "description": "한 화면에 많아야 하나인 강조. 먹 바탕에 흰 글씨, 직각.",
+      "html": "<p class=\"ds-lead\">AI한테 마지막으로<br><span class=\"ds-plate\">시킨 일</span>이 뭐였나요?</p>",
+      "css": ".ds-lead { font-family: \"CW Display\", \"Black Han Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-weight: 400; font-size: 52px; line-height: 1.2; letter-spacing: -0.015em; color: var(--ink, #141414); background: var(--paper, #FFFFFF); padding: 24px; margin: 0; word-break: keep-all; } .ds-plate { background: var(--ink, #141414); color: var(--paper, #FFFFFF); padding: 1px 8px 2px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }"
+    },
+    {
+      "name": "절취선 쪽지",
+      "kind": "custom",
+      "refersTo": "coupon",
+      "description": "종이 맨 아래 뜯어가는 문장. 4px 먹 점선 위에 이름표. 실습 페이지에서는 복사 버튼이 붙을 자리(미검증).",
+      "html": "<div class=\"ds-paper\"><div class=\"ds-coupon\"><span class=\"ds-cut\">뜯어가는 문장</span><p>01_영수증 폴더에 있는 영수증 사진을 날짜·분류·금액별로 정리해서 엑셀 지출표로 만들어 줘.</p></div></div>",
+      "css": ".ds-paper { background: var(--paper, #FFFFFF); color: var(--ink, #141414); padding: 32px 24px 24px; } .ds-coupon { position: relative; border-top: 2px dashed var(--ink, #141414); padding-top: 12px; } .ds-cut { position: absolute; top: -12px; left: 16px; background: var(--paper, #FFFFFF); padding: 0 8px; font-size: 14px; font-weight: 700; font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-coupon p { font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-size: 18px; line-height: 1.5; font-weight: 700; margin: 0; padding-top: 4px; word-break: keep-all; }"
+    },
+    {
+      "name": "문장 공식 양식",
+      "kind": "custom",
+      "refersTo": "formula-row",
+      "description": "칸 이름과 밑줄 빈칸. 한 칸씩 채워지고 먹 판이 채운 값으로 옮겨 간다.",
+      "html": "<dl class=\"ds-form\"><div><dt>언제</dt><dd>매일 아침 7시에</dd></div><div><dt>+ 무엇을 찾아서</dt><dd><span class=\"ds-plate-f\">우리 업종 새 소식을 찾아서</span></dd></div><div><dt>+ 어떤 형식으로</dt><dd></dd></div></dl>",
+      "css": ".ds-form { background: var(--paper, #FFFFFF); color: var(--ink, #141414); border-top: 2px solid var(--ink, #141414); margin: 0; padding: 0 24px 16px; font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-form > div { display: grid; grid-template-columns: 180px 1fr; align-items: last baseline; min-height: 50px; padding: 6px 0; } .ds-form dt { font-size: 21px; font-weight: 800; } .ds-form dd { margin: 0; font-size: 23px; font-weight: 700; line-height: 1.4; border-bottom: 2px solid var(--ink, #141414); min-height: 33px; padding: 0 4px 4px; } .ds-plate-f { background: var(--ink, #141414); color: var(--paper, #FFFFFF); padding: 1px 6px 2px; }"
+    },
+    {
+      "name": "괘선 줄 목록",
+      "kind": "custom",
+      "refersTo": "ruled-row",
+      "description": "번호 줄. 줄마다 2px 먹 괘선, 숫자는 CW Display.",
+      "html": "<ol class=\"ds-rows\"><li><span>예약 작업을 하나 만든다</span></li><li><span>지금 바로 한 번 돌려 본다</span></li><li><span>결과를 보고 문장을 고친다</span></li></ol>",
+      "css": ".ds-rows { list-style: none; counter-reset: n; margin: 0; padding: 0 24px; background: var(--paper, #FFFFFF); color: var(--ink, #141414); font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-rows > li { display: grid; grid-template-columns: 52px 1fr; align-items: baseline; padding: 16px 0; border-top: 1px solid var(--ink, #141414); font-size: 22px; line-height: 1.5; } .ds-rows > li:last-child { border-bottom: 1px solid var(--ink, #141414); } .ds-rows > li::before { counter-increment: n; content: counter(n); font-family: \"CW Display\", \"Black Han Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-weight: 400; font-size: 32px; line-height: 1; }"
+    },
+    {
+      "name": "금지 표",
+      "kind": "custom",
+      "refersTo": "warning-row",
+      "description": "맡기면 안 되는 일. 4px 빨강 윗괘선과 빨강 X. X는 이 표에서만 쓴다.",
+      "html": "<ul class=\"ds-no\"><li><svg viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M6 6 34 34M34 6 6 34\" stroke=\"#D2261C\" stroke-width=\"6\" fill=\"none\"/></svg><span>결제와 송금</span></li><li><svg viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M6 6 34 34M34 6 6 34\" stroke=\"#D2261C\" stroke-width=\"6\" fill=\"none\"/></svg><span>계정 비밀번호</span></li></ul>",
+      "css": ".ds-no { list-style: none; margin: 0; padding: 0 24px; background: var(--paper, #FFFFFF); color: var(--ink, #141414); border-top: 2px solid var(--red, #D2261C); font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-no li { display: grid; grid-template-columns: 48px 1fr; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--ink, #141414); font-size: 26px; font-weight: 800; line-height: 1.4; } .ds-no svg { width: 24px; height: 24px; }"
+    },
+    {
+      "name": "뜯는 쪽지 줄",
+      "kind": "custom",
+      "refersTo": "tear-strip",
+      "description": "표지·마무리 종이 아래 세로쓰기 쪽지 10칸. 뜯긴 칸은 유리색.",
+      "html": "<div class=\"ds-strips\"><div><p>실습 페이지<br><span>주소 [진행자 기입]</span></p></div><div><p>실습 페이지<br><span>주소 [진행자 기입]</span></p></div><div class=\"ds-gone\"></div><div><p>실습 페이지<br><span>주소 [진행자 기입]</span></p></div><div><p>실습 페이지<br><span>주소 [진행자 기입]</span></p></div></div>",
+      "css": ".ds-strips { display: grid; grid-template-columns: repeat(5, 1fr); height: 156px; border-top: 2px dashed var(--ink, #141414); background: var(--paper, #FFFFFF); color: var(--ink, #141414); font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-strips div { border-left: 2px dashed var(--ink, #141414); display: flex; justify-content: center; padding: 12px 6px 0; } .ds-strips div:first-child { border-left: 0; } .ds-strips .ds-gone { background: var(--glass, #2E3532); } .ds-strips p { writing-mode: vertical-rl; white-space: nowrap; font-size: 15px; line-height: 1.35; font-weight: 800; margin: 0; } .ds-strips p span { font-weight: 400; font-size: 14px; }"
+    },
+    {
+      "name": "유리 진행표",
+      "kind": "nav",
+      "refersTo": "door-schedule",
+      "description": "유리에 붙은 시트지 진행표. 지금 구간만 시트지 흰색 800.",
+      "html": "<aside class=\"ds-door\"><h3>진행 시간</h3><ol><li><span>0:00</span><span>오프닝</span></li><li class=\"ds-now\"><span>0:10</span><span>시연 1</span></li><li><span>0:20</span><span>실습 1</span></li></ol><p>1:30 끝</p></aside>",
+      "css": ".ds-door { background: var(--glass, #2E3532); color: var(--vinyl-dim, #A9B2AE); padding: 32px; width: 220px; font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-door h3 { font-family: \"CW Display\", \"Black Han Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-weight: 400; font-size: 22px; line-height: 1.2; color: var(--vinyl, #F2F4F2); margin: 0 0 16px; } .ds-door ol { list-style: none; margin: 0; padding: 0; } .ds-door li { display: grid; grid-template-columns: 56px 1fr; font-size: 16px; line-height: 1.3; padding: 6px 0; font-variant-numeric: tabular-nums; } .ds-door li.ds-now { color: var(--vinyl, #F2F4F2); font-weight: 800; } .ds-door p { margin: 16px 0 0; font-size: 16px; }"
+    },
+    {
+      "name": "휴식 타이머",
+      "kind": "custom",
+      "refersTo": "break-timer-done",
+      "description": "작은 안내문 위 큰 숫자. 끝나면 먹 판 \"다시 시작합니다\". 소리 없음.",
+      "html": "<div class=\"ds-paper-t\"><div class=\"ds-timer\">4:12</div><div class=\"ds-timer ds-done\">다시 시작합니다</div></div>",
+      "css": ".ds-paper-t { background: var(--paper, #FFFFFF); color: var(--ink, #141414); padding: 24px; } .ds-timer { font-family: \"CW Display\", \"Black Han Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-weight: 400; font-size: 96px; line-height: 1; font-variant-numeric: tabular-nums; } .ds-timer.ds-done { background: var(--ink, #141414); color: var(--paper, #FFFFFF); font-size: 48px; padding: 20px 16px; margin-top: 20px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "가게 유리문 안내문",
+    "overview": "사장님이 가게 유리문 안쪽에 테이프로 붙여 두는 A4 안내문이 이 세계의 전부다. 짙은 녹회색 유리 위에 흰 종이가 한 장씩 붙고, 종이에는 먹 글씨로 오늘 할 일이 적힌다. 가져갈 문장은 전단 아래 칼집 낸 쪽지처럼 \"뜯어가는\" 모양으로 둔다. 유리 오른쪽에는 영업시간 시트지처럼 90분 진행표가 흰 글자로 붙어 있고, 지금 구간만 굵게 보인다.\n\n화면은 강의 장표가 아니라 붙여 둔 공지처럼 읽혀야 한다. 제목은 왼쪽 위에서 시작하고, 내용은 괘선(종이에 그은 가로줄)으로 나눈다. 강조는 색이 아니라 먹을 뒤집은 검은 판 하나로 한다. 빨강은 \"멈춰서 보라\"는 뜻에만 남겨 둔다. 그림자, 둥근 모서리, 카드 격자, 가운데 정렬 큰 제목, 기술 행사 키노트 같은 장표는 이 세계에 없다.\n\n이 문서는 다 만든 장표(`slides/index.html`)에서 실제로 쓴 값만 적었다. 아직 만들지 않은 실습 페이지와 치트시트에 대한 내용은 장표와 방향 계약이 뒷받침하는 만큼만 적고, 그런 문장에는 **(미검증: 아직 만들지 않음)** 표시를 붙인다. 이 표시는 제품 사실이 불확실하다는 뜻의 `[확인 필요]`와 다르다. `[확인 필요]`는 화면에 빨강으로 찍히는 내용 표시이고, (미검증)은 디자인 규칙이 아직 실제 화면으로 검증되지 않았다는 이 문서 안의 표시다.\n\n용어: 이 문서에서 **토큰**은 색이나 크기 같은 디자인 값에 붙인 이름이다(예: `ink`는 #141414). 맨 위 YAML 머리말(`---` 사이의 기계용 목록)에 적힌 값이 기준이고, 본문은 그 값을 어디에 왜 쓰는지 설명한다. **px**은 화면 점 단위다. 장표의 px은 모두 1920×1080 판 기준이다(Layout 참고).",
+    "keyCharacteristics": [
+      "짙은 녹회색 유리(바탕) 위에 흰 A4 종이, 먹 글씨. 종이 안의 색은 흰색, 먹, 빨강뿐이다.",
+      "강조는 먹을 뒤집은 검은 판 하나. 한 화면에 많아야 하나다.",
+      "빨강은 주의, 금지, `[확인 필요]`에만 쓴다.",
+      "모든 안내문 맨 위에 같은 세 칸짜리 머리 칸과 굵은 먹 괘선이 있다.",
+      "기울어지는 것은 반투명 테이프뿐이다. 종이와 글자는 수평이다.",
+      "그림자, 둥근 모서리, 카드가 없다. 깊이는 유리와 종이의 밝기 차이와 테이프가 겹친 자리로만 보인다.",
+      "점선은 \"뜯는 선\"과 \"채울 자리\"에만 쓴다."
+    ],
+    "rules": [
+      {
+        "name": "The One Plate Rule (먹 판 하나)",
+        "body": "한 화면에 먹을 뒤집은 판은 많아야 하나다. 판이 없는 화면도 있다(휴식 타이머가 도는 동안). 공식 장표(9번, 16번)에서는 판이 단계를 따라 움직인다. 0단계에서는 첫 칸 이름(\"무엇을\", \"언제\")에, 그다음엔 방금 채운 값에, 마지막엔 뜯어가는 문장에 판이 놓인다. 세로 안내문 두 장을 나란히 붙인 화면에서는 오른쪽 종이에만 판이 있다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Means Stop Rule (빨강은 멈춤)",
+        "body": "빨강은 주의, 금지, `[확인 필요]`에만 쓴다. 제목 강조, 숫자 강조, 버튼, 링크에 빨강을 쓰지 않는다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gray Stays On Glass Rule (회색은 유리에만)",
+        "body": "종이 안에는 흰색, 먹, 빨강만 있다. 회색 글씨나 회색 괘선을 종이 안에 넣지 않는다. 흐린 시트지 색은 유리 위 진행표에서만 쓴다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Seven Colors Rule (색은 일곱 개)",
+        "body": "머리말의 일곱 값만 쓴다. 디자인 도구용 부속 파일(`.impeccable/design.json`)에 있는 단계별 색 띠는 견본으로 보여 주는 용도일 뿐, 그 안의 중간 회색을 화면에 쓰면 안 된다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule (목소리 둘)",
+        "body": "CW Display는 제목, 한 줄 결론, 큰 숫자(줄 번호, 타이머)에만 쓴다. 문단, 머리 칸, 표, 쪽지는 CW Gothic이다. CW Display는 굵기가 하나뿐이니 굵게 만들지 않는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The 28px Floor Rule (28px 바닥)",
+        "body": "참석자가 보는 장표 글자는 1920 판 기준 28px 이상이다. 1366×768 화면에서는 판 전체가 약 0.71배로 줄어 28px이 약 20px로 보인다. 그래서 28px보다 작게 만들 여유가 없다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bold Is 800 Rule (굵게는 800)",
+        "body": "본문 속 강조 낱말(`b`, `strong`)은 800으로 한다. 700은 부제, 머리 칸, 쪽지처럼 한 줄 전체가 굵은 자리에 쓴다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tape Is The Only Tilt Rule (기우는 건 테이프뿐)",
+        "body": "기울어지는 요소는 테이프뿐이다. 귀퉁이 테이프는 약 ±38도, 위 가운데 테이프는 0도에서 장마다 ±4도 안쪽으로 조금씩 다르게 붙는다(폭 150~186px, 같은 장은 늘 같은 모양). 종이, 제목, 판, 사진 자리는 기울이지 않는다.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Shadow Rule (그림자 없음)",
+        "body": "종이가 유리에서 떠 보이게 하려고 그림자를 넣지 않는다. 테이프가 이미 \"붙어 있다\"는 사실을 말해 준다.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Dashed Means Cut-or-Fill Rule (점선은 뜯거나 채우거나)",
+        "body": "점선은 \"여기를 뜯어 가세요\"(절취선, 쪽지)와 \"여기를 채울 겁니다\"(진행자 기입 빈칸, 사진 자리, QR 자리)에만 쓴다. 장식용 점선은 없다.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Ruled Not Boxed Rule (상자 말고 괘선)",
+        "body": "종이 안에서 내용을 묶으려고 실선 상자를 두르지 않는다. 가로 괘선으로 나눈다. 종이 안에서 테두리가 있는 칸은 점선으로 된 \"채울 자리\"뿐이다.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Same Three Cells Rule (같은 세 칸)",
+        "body": "머리 칸을 빼거나 칸 순서를 바꾸지 않는다. 참석자는 머리 칸만 보고 지금이 어느 구간 몇 쪽인지 안다.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** 바탕은 유리(#2E3532), 내용은 그 위에 붙인 흰 종이 안에 둔다.",
+      "**Do** 한 화면의 강조는 먹 판 하나로 하고, 공식 장에서는 판을 단계와 함께 옮긴다.",
+      "**Do** 모든 안내문 맨 위에 같은 세 칸 머리 칸(세션 이름, 구간과 시간, 쪽 번호)과 4px 먹 괘선을 둔다.",
+      "**Do** 가져갈 문장은 종이 맨 아래 4px 먹 점선 절취선 쪽지로 둔다.",
+      "**Do** 내용은 가로 괘선(2px 먹)으로 나누고, 제목과 문단은 왼쪽 정렬로 둔다.",
+      "**Do** 장표 글자는 1920 판 기준 28px 이상(진행자 노트 패널만 24px), 실습 페이지 본문은 16px 이상으로 한다.",
+      "**Do** 글자 대비는 WCAG AA 이상으로 맞춘다(먹/종이 18.4, 빨강/종이 5.21, 흐린 시트지/유리 5.78).",
+      "**Do** 장 넘김 동작은 운영체제의 동작 줄이기 설정을 따른다.",
+      "**Do** 제목, 결론 문장, 큰 숫자는 CW Display, 나머지는 CW Gothic으로 쓴다.",
+      "**Do** 장표 글을 고치면 `tools/build.py`로 폰트 서브셋을 다시 만든다."
+    ],
+    "donts": [
+      "**Don't** 파랑, 남색, 보라 계열을 메인 컬러로 쓰지 않는다.",
+      "**Don't** 보라에서 파랑으로 가는 그라디언트를 쓰지 않는다. 그라디언트 자체를 쓰지 않는다.",
+      "**Don't** 둥근 카드, 그림자, 카드 격자를 쓰지 않는다. 모서리는 모두 직각이다.",
+      "**Don't** 이모지나 아이콘을 쓰지 않는다. 금지 표의 빨강 X만 예외다.",
+      "**Don't** 빨강을 강조나 장식에 쓰지 않는다. 주의, 금지, `[확인 필요]`에만 쓴다.",
+      "**Don't** 회색을 종이 안에 넣지 않는다. 흐린 시트지 색은 유리 위 진행표에만 쓴다.",
+      "**Don't** 한 화면에 먹 판을 둘 이상 두지 않는다.",
+      "**Don't** 테이프 말고는 아무것도 기울이지 않는다.",
+      "**Don't** 테이프 말고는 반투명 색을 쓰지 않는다. 장 넘김 때 종이가 잠깐 흐려졌다 나타나는 것은 동작이지 색이 아니라서 예외다.",
+      "**Don't** 먹 글씨를 유리 위에 바로 쓰지 않는다(대비 1.47:1).",
+      "**Don't** 가운데 정렬 큰 제목이나 기술 행사 키노트식 장표를 만들지 않는다.",
+      "**Don't** 종이 안에서 실선 상자로 내용을 묶지 않는다. 점선 칸은 뜯거나 채울 자리에만 쓴다.",
+      "**Don't** CW Display를 굵게 만들거나 문단에 쓰지 않는다.",
+      "**Don't** 머리말의 일곱 색 말고 다른 색을 쓰지 않는다. 부속 파일의 색 띠는 견본일 뿐이다."
+    ]
+  }
+}
