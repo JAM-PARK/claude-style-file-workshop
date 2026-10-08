@@ -11,9 +11,11 @@
 장표 글을 손으로 고친 뒤에는 `tools/.venv/bin/python tools/build.py`로 폰트를 다시 넣는다.
 
 ## 2. 실습 페이지 배포와 주소 채우기
-- [ ] `practice-page/cowork-samples.zip`이 `index.html` 옆에 있는지 본다. 없으면 `cd tools && ../tools/.venv/bin/python gen_samples.py`
-- [ ] `practice-page/` 폴더에서 `vercel deploy --prod`
-- [ ] 배포 주소로 `tools/.venv/bin/python tools/set_url.py https://배포주소` 한 줄 실행. 장표 10번·20번 QR, 표지·마무리 쪽지 줄, 치트시트 QR, 두 안내 메시지의 주소가 한 번에 채워진다.
+배포 주소: https://session03-cowork.vercel.app (Vercel 프로젝트 `session03-cowork`, jampark's projects 팀)
+
+- [x] `practice-page/cowork-samples.zip`이 `index.html` 옆에 있는지 본다. 없으면 `cd tools && ../tools/.venv/bin/python gen_samples.py`
+- [x] `practice-page/` 폴더에서 `vercel deploy --prod`. 실습 페이지나 샘플을 고치면 다시 실행한다.
+- [x] 배포 주소로 `tools/.venv/bin/python tools/set_url.py https://배포주소` 한 줄 실행. 장표 10번·20번 QR, 표지·마무리 쪽지 줄, 치트시트 QR, 두 안내 메시지의 주소가 한 번에 채워진다. (QR 세 개 모두 이 주소로 읽히는 것 확인)
 - [ ] 휴대폰으로 장표 QR을 찍어 실습 페이지와 샘플 다운로드가 되는지 본다
 
 ## 3. 후기 받을 곳
