@@ -28,11 +28,11 @@ def text_of(path):
     return re.sub(r'/\*FONTS-START\*/.*?/\*FONTS-END\*/', '', s, flags=re.S)
 
 
-# 장표: 본 장표 20장, 장마다 노트와 예상 시간
+# 장표: 본 장표 19장, 장마다 노트와 예상 시간
 s = text_of('slides/index.html')
 slides = re.findall(r'<section class="slide" data-seg="(-?\d)" data-time="([^"]+)">(.*?)</section>', s, re.S)
 main = [x for x in slides if x[0] != '-1']
-check(len(main) == 20, f'본 장표 {len(main)}장, 부록 {len(slides) - len(main)}장')
+check(len(main) == 19, f'본 장표 {len(main)}장, 부록 {len(slides) - len(main)}장')
 check(all('class="notes"' in x[2] for x in slides), '모든 장에 발표자 노트')
 mins = sum(int(re.match(r'\d+', t).group()) for _, t, _ in main)
 check(mins <= 90, f'장표 예상 시간 합계 {mins}분 (90분 이내)')

@@ -536,7 +536,7 @@
       "kind": "custom",
       "refersTo": "notice-sheet",
       "description": "유리 위에 테이프로 붙인 흰 A4 안내문. 맨 위에 같은 세 칸 머리 칸과 4px 먹 괘선.",
-      "html": "<div class=\"ds-glass\"><div class=\"ds-sheet\"><i class=\"ds-tape ds-tl\"></i><i class=\"ds-tape ds-tr\"></i><div class=\"ds-head\"><span>Cowork 입문</span><span>시연 1 0:10–0:20</span><span>7 / 20</span></div><h2 class=\"ds-h\">일 맡기는 문장 공식</h2><p class=\"ds-body\">폴더와 도구를 쥐여 주면, 정리해서 <b>파일로</b> 돌려줍니다.</p></div></div>",
+      "html": "<div class=\"ds-glass\"><div class=\"ds-sheet\"><i class=\"ds-tape ds-tl\"></i><i class=\"ds-tape ds-tr\"></i><div class=\"ds-head\"><span>Cowork 입문</span><span>시연 1 0:10–0:20</span><span>6 / 19</span></div><h2 class=\"ds-h\">일 맡기는 문장 공식</h2><p class=\"ds-body\">폴더와 도구를 쥐여 주면, 정리해서 <b>파일로</b> 돌려줍니다.</p></div></div>",
       "css": ".ds-glass { background: var(--glass, #2E3532); padding: 40px 48px; } .ds-sheet { position: relative; background: var(--paper, #FFFFFF); color: var(--ink, #141414); padding: 28px 40px 32px; border-radius: 0; } .ds-tape { position: absolute; width: 84px; height: 24px; background: var(--tape, rgba(240,238,222,0.72)); } .ds-tl { left: -32px; top: -3px; transform: rotate(-38deg); } .ds-tr { right: -32px; top: -3px; transform: rotate(38deg); } .ds-head { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; font-size: 14px; font-weight: 700; line-height: 1.3; padding-bottom: 8px; border-bottom: 2px solid var(--ink, #141414); margin-bottom: 24px; font-variant-numeric: tabular-nums; font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; } .ds-head span:nth-child(2) { font-weight: 400; } .ds-h { font-family: \"CW Display\", \"Black Han Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-weight: 400; font-size: 40px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 24px; word-break: keep-all; } .ds-body { font-family: \"CW Gothic\", \"Nanum Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif; font-size: 21px; line-height: 1.6; margin: 0; word-break: keep-all; } .ds-body b { font-weight: 800; }"
     },
     {
@@ -659,7 +659,7 @@
     "rules": [
       {
         "name": "The One Plate Rule (먹 판 하나)",
-        "body": "한 화면에 먹을 뒤집은 판은 많아야 하나다. 판이 없는 화면도 있다(휴식 타이머가 도는 동안). 공식 장표(9번, 16번)에서는 판이 단계를 따라 움직인다. 0단계에서는 첫 칸 이름(\"무엇을\", \"언제\")에, 그다음엔 방금 채운 값에, 마지막엔 뜯어가는 문장에 판이 놓인다. 세로 안내문 두 장을 나란히 붙인 화면에서는 오른쪽 종이에만 판이 있다. 실습 페이지는 종이가 위아래로 이어지는 긴 페이지라 화면 대신 종이 한 장을 단위로 센다. 판은 종이 한 장에 많아야 하나이고, 지금은 샘플(3번), 예약 작업(8번), 문장 공식(9번) 종이에 하나씩 있다. 치트시트는 종이 한 장에 판 하나로, 공식 두 개 아래 문장의 \"고칠 부분만\"에 있다. 버튼에 마우스를 올리거나 누르는 동안 먹으로 뒤집히는 것은 잠깐의 상태라 판으로 세지 않는다.",
+        "body": "한 화면에 먹을 뒤집은 판은 많아야 하나다. 판이 없는 화면도 있다(휴식 타이머가 도는 동안). 공식 장표(8번, 15번)에서는 판이 단계를 따라 움직인다. 0단계에서는 첫 칸 이름(\"무엇을\", \"언제\")에, 그다음엔 방금 채운 값에, 마지막엔 뜯어가는 문장에 판이 놓인다. 세로 안내문 두 장을 나란히 붙인 화면에서는 오른쪽 종이에만 판이 있다. 실습 페이지는 종이가 위아래로 이어지는 긴 페이지라 화면 대신 종이 한 장을 단위로 센다. 판은 종이 한 장에 많아야 하나이고, 지금은 샘플(3번), 예약 작업(8번), 문장 공식(9번) 종이에 하나씩 있다. 치트시트는 종이 한 장에 판 하나로, 공식 두 개 아래 문장의 \"고칠 부분만\"에 있다. 버튼에 마우스를 올리거나 누르는 동안 먹으로 뒤집히는 것은 잠깐의 상태라 판으로 세지 않는다.",
         "section": "colors"
       },
       {

@@ -31,12 +31,12 @@ def main(url):
     t = t.replace('<div class="qr">QR 자리<br>[주소 진행자 기입]</div>', f'<div class="qr" style="border: 0; padding: 0">{qr_svg(url)}</div>')
     t = t.replace('[주소 진행자 기입]', short)
     # 세로 쪽지 칸에는 12자까지만 들어간다. 긴 주소는 QR 쪽으로 안내한다
-    cover, rest = t.split('<!-- 20 마무리 -->', 1)
+    cover, rest = t.split('<!-- 19 마무리 -->', 1)
     fit = len(short) <= 12
     qr = '<span class="up">QR</span>'  # 세로쓰기에서 QR이 옆으로 눕지 않게 세운다
     cover = cover.replace('<span>주소 [진행자 기입]</span>', f'<span>{short if fit else "마지막 장 " + qr}</span>')
     rest = rest.replace('<span>주소 [진행자 기입]</span>', f'<span>{short if fit else qr + " 옆 주소"}</span>')
-    t = cover + '<!-- 20 마무리 -->' + rest
+    t = cover + '<!-- 19 마무리 -->' + rest
     s.write_text(t, encoding='utf-8')
 
     c = ROOT / 'comms/cheat-sheet.html'

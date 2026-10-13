@@ -7,7 +7,7 @@ related_targets: ["practice-page/index.html","comms/cheat-sheet.html"]
 
 # Cowork 세션 장표 (slides/index.html)
 
-범위: 프로젝터 1920×1080 장표 20장 + 부록. 모드 Read (참석자가 이해하고 바로 따라 한다). 같은 세계를 실습 페이지(휴대폰, practice-page/index.html)와 치트시트(A4 인쇄, comms/cheat-sheet.html)가 물려받는다.
+범위: 프로젝터 1920×1080 장표 19장 + 부록. 모드 Read (참석자가 이해하고 바로 따라 한다). 같은 세계를 실습 페이지(휴대폰, practice-page/index.html)와 치트시트(A4 인쇄, comms/cheat-sheet.html)가 물려받는다.
 청중: 코딩 경험 없는 1인 사업자·소상공인·전문직. 진행자는 장표와 시연 화면을 자주 오간다.
 미결: 실습 페이지 주소(QR), 시연 결과 캡처(리허설 후), 세션 일시·장소.
 
