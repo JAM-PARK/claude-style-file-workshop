@@ -1,0 +1,4 @@
+도메인 후보
+slowoven-bakery.test
+neurin-oven.test
+(둘 다 실습용 가상 주소)
