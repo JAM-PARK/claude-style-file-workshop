@@ -5,7 +5,7 @@
 ## 여는 법
 | 자료 | 파일 | 상태 |
 | --- | --- | --- |
-| 진행용 장표 | `slides/index.html` | 완성 (리허설 후 캡처·QR·일시 채우기) |
+| 진행용 장표 | `slides/index.html` | 완성 (일시 채우기) |
 | 샘플 파일 | `samples/` (배포용 묶음 `samples/cowork-samples.zip`) | 완성. 정답은 `facilitator/answer-keys.md` |
 | 실습 페이지 | `practice-page/index.html` | 완성 (배포 주소 정해지면 장표 QR에 넣기) |
 | 진행자 문서 | `facilitator/` | 완성: 세션 전 할 일(`before-session.md`), 큐시트, 정답지, FAQ, 문제 해결 |
