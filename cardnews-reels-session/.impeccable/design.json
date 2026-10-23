@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-23T03:44:56.319651+00:00",
+  "generatedAt": "2026-10-23T06:16:27.670078+00:00",
   "title": "Design System: 카드 뉴스·릴스 세션 자료",
   "extensions": {
     "colorMeta": {
@@ -230,6 +230,30 @@
       "strip-mark": {
         "displayName": "띠 마크",
         "purpose": "오선 띠 위 파트 이름, 작은 복사 버튼."
+      },
+      "web-heading": {
+        "displayName": "실습 제목",
+        "purpose": "실습 페이지 실습 제목. clamp 32→48px, 900."
+      },
+      "web-lead": {
+        "displayName": "실습 리드·소제목",
+        "purpose": "리드 문장, 도구 선택 소제목, 레일 위 페이지 이름(900)."
+      },
+      "web-body": {
+        "displayName": "실습 본문",
+        "purpose": "실습 페이지 본문, 기준선 줄, 프롬프트 단 본문."
+      },
+      "web-small": {
+        "displayName": "실습 작은 글",
+        "purpose": "레일·띠, 빈칸/예시 전환, 기준 표시, TODO, 내려받기. 실습 페이지의 가장 작은 글."
+      },
+      "web-button": {
+        "displayName": "실습 복사 버튼",
+        "purpose": "실습 페이지 복사 버튼과 작은 버튼의 실패 문구."
+      },
+      "web-button-small": {
+        "displayName": "실습 작은 복사 버튼",
+        "purpose": "막히면 줄의 한 줄 문장 옆 복사 버튼."
       }
     },
     "shadows": [],
@@ -243,9 +267,25 @@
         "name": "copy-feedback",
         "value": "성공 1800ms, 실패 4000ms 뒤 원래 글자로",
         "purpose": "복사 버튼 상태 표시 시간. 움직임 없이 글자와 바탕만 바뀜."
+      },
+      {
+        "name": "practice-rail-slide",
+        "value": "transform, width, height 320ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "실습 페이지에서 실습을 옮길 때 레일·띠의 지금 칸이 새 마디로 미끄러짐. 첫 표시·창 크기 변경·prefers-reduced-motion에서는 즉시."
       }
     ],
-    "breakpoints": [],
+    "breakpoints": [
+      {
+        "name": "practice-band",
+        "value": "899px",
+        "purpose": "max-width 899px: 세로 오선 레일이 위쪽 sticky 가로 띠로 접히고, 내려받기는 본문 뒤로."
+      },
+      {
+        "name": "practice-stack",
+        "value": "640px",
+        "purpose": "max-width 640px: 기준선 줄 이름 칸이 위로 쌓이고, 장면 계획표가 세로로, 프롬프트 들여쓰기 28px."
+      }
+    ],
     "stage": {
       "width": "1920px",
       "height": "1080px",
@@ -292,7 +332,15 @@
         "value": "2px solid paint",
         "meaning": "보통 구분"
       }
-    ]
+    ],
+    "practicePage": {
+      "sections": "실습 하나만 보이고 나머지 hidden. #실습N 또는 #N이 그 실습을 열고 기본은 실습 1. 옮기면 맨 위로, h1에 포커스, aria-live로 제목 알림.",
+      "rail": "900px 이상: 왼쪽 260px sticky 레일, 38px 폭 세로 오선 다섯 줄, 실습 하나 = 마디 하나(최소 72px), 지금 마디 aria-current=step.",
+      "band": "899px 이하: 위쪽 sticky 가로 띠, 다섯 칸 높이 24px, 마디 아래 '실습 N'과 시간 또는 '유료', 제목은 화면 읽기용.",
+      "paidMark": "유료 실습: 레일에 분홍 700 '유료', 제목 아래 분홍 700 한 줄 + 흐린 16px 덧붙임.",
+      "print": "@page A4, margin 14mm; 실습마다 page break; 레일·전환 버튼·복사·다음 링크 숨김; 빈칸판만 찍음; print-color-adjust: exact.",
+      "fills": "노랑·분홍 전면 구획과 board-deep을 쓰지 않음."
+    }
   },
   "components": [
     {
@@ -312,6 +360,14 @@
       "css": ".ds-ground { background: #1E3A2F; padding: 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-mini { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 2px solid rgba(236,239,230,0.42); } .ds-mini span { font-size: 26px; } .ds-copy-s { font: inherit; font-size: 24px; font-weight: 700; color: #1E3A2F; background: #F3D35B; padding: 6px 20px; border: 0; cursor: pointer; } .ds-copy-s:hover { background: #F7DF85; } .ds-copy-s:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; }"
     },
     {
+      "name": "실습 페이지 복사 버튼",
+      "kind": "button",
+      "refersTo": "web-copy-button",
+      "description": "실습 페이지 크기: 기본 19px 700(7px 24px), 작은 버튼 16px 700(4px 16px), 실패 문구는 19px로 한 줄 전체.",
+      "html": "<div class=\"ds-ground\"><button class=\"ds-copy\" type=\"button\">복사</button> <button class=\"ds-copy ds-small\" type=\"button\">복사</button> <button class=\"ds-copy ds-done\" type=\"button\">복사했어요</button></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; display: flex; gap: 20px; align-items: center; } .ds-copy { font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif; font-size: 19px; font-weight: 700; line-height: 1.4; color: #1E3A2F; background: #F3D35B; padding: 7px 24px; border: 0; border-radius: 0; white-space: nowrap; cursor: pointer; } .ds-copy.ds-small { font-size: 16px; padding: 4px 16px; } .ds-copy:hover { background: #F7DF85; } .ds-copy:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; } .ds-copy.ds-done { background: #ECEFE6; }"
+    },
+    {
       "name": "프롬프트 단",
       "kind": "custom",
       "refersTo": "slot",
@@ -321,11 +377,11 @@
     },
     {
       "name": "프롬프트 예시 탭",
-      "kind": "tabs",
+      "kind": "custom",
       "refersTo": "prompt-system",
-      "description": "프롬프트 단 머리 줄의 '빈칸 / 예시: 골목 한그릇' 글자 탭. 고른 탭은 노랑 3px 밑줄. 복사는 보이는 판, E 키로 전환, 인쇄는 빈칸판만.",
-      "html": "<div class=\"ds-ground\"><div class=\"ds-tabs\"><button class=\"on\">빈칸</button><button>예시: 골목 한그릇</button></div></div>",
-      "css": ".ds-ground { background: #1E3A2F; padding: 32px; } .ds-tabs { display: flex; gap: 28px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-tabs button { font: inherit; font-size: 24px; color: rgba(236,239,230,0.68); background: none; border: 0; border-bottom: 3px solid transparent; padding: 4px 0; } .ds-tabs button.on { color: #ECEFE6; font-weight: 700; border-bottom-color: #F3D35B; }"
+      "description": "프롬프트 단 머리 줄의 '빈칸 / 예시: 골목 한그릇' 누름 버튼 묶음. role=group + aria-label '프롬프트 보기', button aria-pressed(탭 역할 아님). 고른 쪽은 [aria-pressed=true]로 글자색 700과 노랑 3px 밑줄. 장표 24px·간격 28px·E 키로 전환, 실습 페이지 16px·간격 22px·호버 분필 흰색. 복사는 보이는 판, 인쇄는 빈칸판만.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-tabs\" role=\"group\" aria-label=\"프롬프트 보기\"><button type=\"button\" aria-pressed=\"true\">빈칸</button><button type=\"button\" aria-pressed=\"false\">예시: 골목 한그릇</button></div></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; } .ds-tabs { display: flex; gap: 28px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-tabs button { font: inherit; font-size: 24px; color: rgba(236,239,230,0.68); background: none; border: 0; border-bottom: 3px solid transparent; padding: 4px 0; cursor: pointer; } .ds-tabs button[aria-pressed=\"true\"] { color: #ECEFE6; font-weight: 700; border-bottom-color: #F3D35B; } .ds-tabs button:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; }"
     },
     {
       "name": "확실도 선 줄",
@@ -374,6 +430,14 @@
       "description": "굵은 칸 이름과 4px 실선, 직접 그린 화살표로 잇는 세 칸.",
       "html": "<div class=\"ds-ground\"><div class=\"ds-formula\"><div><b>1장은 훅</b><p>멈추게 하는 첫 문장</p></div><span class=\"ds-arr\"><svg viewBox=\"0 0 64 32\" aria-hidden=\"true\"><path d=\"M4 16 H56 M44 5 L58 16 L44 27\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><div><b>메시지 하나</b><p>제목 1줄, 본문 2줄</p></div></div></div>",
       "css": ".ds-ground { background: #1E3A2F; padding: 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-formula { display: grid; grid-template-columns: 1fr 80px 1fr; align-items: start; } .ds-formula b { display: block; font-size: 44px; font-weight: 900; line-height: 1.2; padding-bottom: 20px; border-bottom: 4px solid currentColor; } .ds-formula p { margin: 24px 0 0; font-size: 24px; } .ds-arr { padding-top: 14px; } .ds-arr svg { width: 64px; height: 32px; }"
+    },
+    {
+      "name": "세로 오선 레일",
+      "kind": "nav",
+      "refersTo": "web-staff-rail",
+      "description": "실습 페이지 왼쪽 260px sticky 레일. 실습 하나 = 마디 하나, 지금 마디는 노랑 칸, 유료 실습은 분홍 '유료'. 899px 이하에서는 위쪽 가로 띠.",
+      "html": "<nav class=\"ds-staff\" aria-label=\"실습 목록\"><div class=\"ds-lines\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i><i></i></div><ol><li><a href=\"#\" aria-current=\"step\"><span class=\"ds-cell\"><span class=\"ds-now\"></span></span><span class=\"ds-lbl\"><span class=\"ds-l1\"><b>실습 1</b><span class=\"ds-min\">10분</span></span><span>프로젝트 지침 만들기</span></span></a></li><li><a href=\"#\"><span class=\"ds-cell\"></span><span class=\"ds-lbl\"><span class=\"ds-l1\"><b>실습 2</b><span class=\"ds-min\">15분</span></span><span>3단계로 카드 뉴스 만들기</span></span></a></li><li><a href=\"#\"><span class=\"ds-cell\"></span><span class=\"ds-lbl\"><span class=\"ds-l1\"><b>실습 3</b><span class=\"ds-min\">10분</span></span><span>매일 아침 초안 받기</span><span class=\"ds-pay\">유료</span></span></a></li></ol></nav>",
+      "css": ".ds-staff { position: relative; width: 260px; background: #1E3A2F; color: #ECEFE6; padding: 28px 18px 16px 28px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif; font-size: 16px; line-height: 1.45; } .ds-staff ol { list-style: none; margin: 0; padding: 0; } .ds-lines { position: absolute; left: 28px; top: 28px; bottom: 16px; width: 38px; display: flex; justify-content: space-between; pointer-events: none; } .ds-lines i { width: 2px; background: rgba(236,239,230,0.42); } .ds-staff a { display: grid; grid-template-columns: 38px minmax(0, 1fr); column-gap: 14px; min-height: 72px; color: inherit; text-decoration: none; } .ds-cell { position: relative; border-top: 2px solid rgba(236,239,230,0.42); } .ds-staff li:last-child .ds-cell { border-bottom: 7px double #ECEFE6; } .ds-staff a:hover .ds-cell { background: rgba(236,239,230,0.12); } .ds-staff a:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; } .ds-now { position: absolute; inset: 3px; background: #F3D35B; } .ds-lbl { display: block; padding: 7px 0 9px; } .ds-lbl > span { display: block; } .ds-l1 { display: flex !important; justify-content: space-between; gap: 8px; } .ds-min { color: rgba(236,239,230,0.68); } .ds-staff a[aria-current] .ds-lbl > span:nth-child(2) { font-weight: 700; } .ds-pay { color: #F2A0A0; font-weight: 700; }"
     }
   ],
   "narrative": {

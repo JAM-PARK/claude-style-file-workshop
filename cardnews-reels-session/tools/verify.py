@@ -75,12 +75,12 @@ def main() -> int:
         if not (ROOT / rel).exists():
             continue
         body = text_of(rel)
-        if rel == "slides/index.html":
+        if True:  # 장표와 실습 가이드 모두 인터넷 없이 열려야 한다
             for m in EXTERNAL.finditer(body):
                 problems.append(f"{rel}: 외부 주소를 불러와요 ({m.group(0)})")
             for word in ("speaker", "발표자 노트", "Direction contract", "seed:"):
                 if word in body:
-                    problems.append(f"{rel}: 장표에 들어가면 안 되는 '{word}'")
+                    problems.append(f"{rel}: 참석자 자료에 들어가면 안 되는 '{word}'")
         pres = len(re.findall(r'<div class="sys"', body))
         copies = len(re.findall(r'<div class="sys-h">.*?class="copy', body))
         if pres != copies:

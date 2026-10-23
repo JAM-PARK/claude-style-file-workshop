@@ -88,6 +88,37 @@ typography:
     fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif"
     fontSize: "24px"
     fontWeight: 700
+  web-heading:
+    fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(32px, 2.4vw + 14px, 48px)"
+    fontWeight: 900
+    lineHeight: 1.15
+    letterSpacing: "-0.01em"
+  web-lead:
+    fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, sans-serif"
+    fontSize: "22px"
+    fontWeight: 700
+    lineHeight: 1.5
+  web-body:
+    fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, sans-serif"
+    fontSize: "19px"
+    fontWeight: 400
+    lineHeight: 1.6
+  web-small:
+    fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.45
+  web-button:
+    fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, sans-serif"
+    fontSize: "19px"
+    fontWeight: 700
+    lineHeight: 1.4
+  web-button-small:
+    fontFamily: "Slide Sans, Malgun Gothic, Apple SD Gothic Neo, sans-serif"
+    fontSize: "16px"
+    fontWeight: 700
+    lineHeight: 1.4
 rounded:
   none: "0"
   bracket-hook: "16px"
@@ -104,6 +135,18 @@ spacing:
   row-gap: "48px"
   row-pad: "24px 0 22px"
   prompt-indent: "44px"
+  web-rail: "260px"
+  web-rail-pad: "28px 18px 16px 28px"
+  web-measure-min: "72px"
+  web-main-pad: "52px 72px 96px 64px"
+  web-main-pad-narrow: "32px 16px 56px"
+  web-content-max: "880px"
+  web-label: "160px"
+  web-label-gap: "28px"
+  web-row-pad: "11px 0 10px"
+  web-block-gap: "40px"
+  web-prompt-indent: "40px"
+  web-prompt-indent-narrow: "28px"
 components:
   slide:
     backgroundColor: "{colors.board}"
@@ -140,6 +183,26 @@ components:
     textColor: "{colors.board}"
     typography: "{typography.strip-mark}"
     padding: "6px 20px"
+  web-copy-button:
+    backgroundColor: "{colors.yellow-chalk}"
+    textColor: "{colors.board}"
+    typography: "{typography.web-button}"
+    rounded: "{rounded.none}"
+    padding: "7px 24px"
+  web-copy-button-small:
+    backgroundColor: "{colors.yellow-chalk}"
+    textColor: "{colors.board}"
+    typography: "{typography.web-button-small}"
+    rounded: "{rounded.none}"
+    padding: "4px 16px"
+  web-staff-rail:
+    backgroundColor: "{colors.board}"
+    textColor: "{colors.chalk}"
+    typography: "{typography.web-small}"
+    padding: "{spacing.web-rail-pad}"
+    width: "{spacing.web-rail}"
+  paid-mark:
+    textColor: "{colors.pink-chalk}"
   slot:
     textColor: "{colors.yellow-chalk}"
   practice-mark:
@@ -223,7 +286,7 @@ components:
 
 **Character:** 한 벌의 고딕을 무게 셋(400, 700, 900)으로만 나눠 써요. 칠판 글씨처럼 굵고 또렷한 900 제목과 담담한 400 본문의 대비가 전부예요.
 
-장표 글꼴은 쓰인 글자만 잘라 파일 안에 넣어서(`font-display: block`) 인터넷 없이 열려요. 모든 글에 `word-break: keep-all`을 걸어 한국어 낱말이 중간에서 끊기지 않아요. 아래 크기는 1920×1080 무대 기준이고, 화면 크기에 맞춰 무대 전체가 함께 줄어들어요.
+장표 글꼴은 쓰인 글자만 잘라 파일 안에 넣어서(`font-display: block`) 인터넷 없이 열려요. 모든 글에 `word-break: keep-all`을 걸어 한국어 낱말이 중간에서 끊기지 않아요. 아래 크기는 1920×1080 무대 기준이고, 화면 크기에 맞춰 무대 전체가 함께 줄어들어요. 실습 페이지의 웹 크기 단계(`web-*`)는 Layout의 "실습 페이지 (웹)"에 따로 있어요.
 
 ### Hierarchy
 - **Cover Display** (900, 112px, 1.12): 표지 제목 한 곳.
@@ -253,13 +316,31 @@ components:
 
 **The 한 장 한 페이지 Rule.** 인쇄하면 장표 한 장이 한 페이지(1920×1080, 여백 0)가 되고, 색은 화면 그대로 찍혀요. 복사 버튼과 화면 읽기 전용 글은 인쇄에서 숨기고, 지금 마디 칸은 움직임 없이 제자리에 찍혀요.
 
-### 실습 페이지에 옮길 때
+### 실습 페이지 (웹)
 
-실습 페이지(`practice/index.html`)는 노트북과 휴대폰에서 스크롤하며 읽는 웹 페이지라서 16:9 무대가 아니에요. 아래는 장표에서 가져갈 것과 새로 정해야 할 것을 나눈 것이고, 새로 정할 값은 그 페이지를 만들기 전에 이 문서에 먼저 더해요.
+실습 페이지(`practice/index.html`)는 노트북과 휴대폰에서 스크롤하며 읽는 웹 페이지라서 16:9 무대가 아니에요. 위의 px 값은 1920 무대를 통째로 줄이는 전제라 이 페이지에는 쓰지 않고, 아래 웹 값을 따로 써요.
 
 **그대로 가져가요:** 칠판·분필 색과 색 역할(세 분필 규칙, 칠판 그늘은 바깥 여백에만. 단, 전면 장표용 흐린 색 dim-on-yellow·dim-on-pink는 1920 무대의 24px 이상 글자 전용이라 실습 페이지 본문에는 쓰지 않아요), 확실도 선 세 가지와 범례, 프롬프트 브래킷 단과 노랑 슬롯 표시, 복사 버튼의 모양·상태·실패 문구, 직각과 평평함(그림자 없음), Noto Sans KR 한 벌 400·700·900과 `word-break: keep-all`, 파트 문자 A~D와 한글 이름, 직접 그린 악보 기호, 노랑 포커스 테두리, 동작 줄이기 존중.
 
-**새로 정해야 해요 (아직 값 없음):** 이 문서의 px 값은 모두 1920 무대를 통째로 줄이는 전제라 웹 페이지에 그대로 옮기면 안 돼요. 웹 글자 크기 단계(본문 16px 이상, PRODUCT.md), 375px 폭에서 가로 스크롤 없는 배치, 프롬프트 단과 복사 버튼의 좁은 화면 배치, 그리고 길잡이를 정해야 해요. 장표 한 장 = 마디 하나인 오선 띠는 스크롤 페이지에 그대로 맞지 않으니, 실습 단위로 어떻게 옮길지(또는 쓰지 않을지)를 정해 이 문서에 더해요. 전면 노랑·분홍 장표를 웹 구획에 쓸지도 정해지지 않았어요.
+**웹 글자 크기 (frontmatter `web-*`):** 본문 19px(1.6), 작은 글 16px(레일, 버전 전환, 기준 표시, TODO, 작은 복사 버튼), 리드와 소제목 22px 700, 제목은 `clamp(32px, 2.4vw + 14px, 48px)` 900·1.15·-0.01em(`text-wrap: balance`). 단계 번호 900 22px, 실습 표시(늘임표 40×26px + "실습 N분") 노랑 700 22px, 레일 위 페이지 이름 900 22px. 16px보다 작은 글은 없어요.
+
+**세로 오선 레일 (900px 이상):** 왼쪽 260px 칸에 화면 높이로 고정(sticky)된 레일이에요. 장표의 오선 띠를 세로로 세운 것으로, 38px 폭에 페인트 2px 세로선 다섯 줄, 실습 하나가 마디 하나(최소 높이 72px, 위 2px 페인트 마디줄, 마지막 마디 아래 7px 겹줄 끝마침표)예요. 지금 실습 마디는 노랑 칸(마디 안쪽 3px 띄움)으로 칠하고 링크에 `aria-current="step"`, 제목은 700이 돼요. 마디 옆에는 "실습 N"(700)과 흐린 시간, 실습 제목을 적어요. 마우스를 올리면 마디가 분필 흰색 12%로 비쳐요. 레일 위에는 페이지 이름, 아래에는 내려받기 목록이 있어요.
+
+**좁은 화면 띠 (899px 이하):** 레일이 위쪽 가로 띠로 접혀 `position: sticky; top: 0`으로 붙어 다녀요. 다섯 마디를 같은 폭으로 나눈 높이 24px 가로 오선(왼쪽 2px 마디줄, 마지막은 오른쪽 7px 겹줄)에 지금 칸을 칠하고, 마디 아래에는 "실습 N"과 시간(유료 실습은 시간 대신 "유료")만 16px로 보여요. 실습 제목은 화면 읽기용으로만 남겨요. 띠 아래는 2px 페인트 선. 본문 여백은 32px 16px 56px예요.
+
+**640px 이하:** 기준선 줄의 왼쪽 이름 칸(160px + 28px 간격)이 줄 위로 올라가 쌓이고, 프롬프트 단 들여쓰기가 40px에서 28px로 줄며, 단 이름이 한 줄을 다 차지해요. 장면 계획표는 세 칸 가로 마디에서 한 줄씩 세로로 쌓이고(왼쪽 92px 시간 칸 + 설명), 도구 선택 줄은 화살표와 이름 아래로 설명이 내려가요. 막히면 줄의 작은 복사 버튼은 문장 아래로 내려가요.
+
+**실습 하나씩:** 본문(최대 폭 880px, 여백 52px 72px 96px 64px)에는 실습 하나만 보이고 나머지는 `hidden`이에요. 주소 `#실습N`(또는 `#N`)이 그 실습을 열고, 없으면 실습 1이에요. 레일 마디나 맨 아래 "다음: 실습 N. …" 링크(위 2px 페인트 선, 64px 띄움, 직접 그린 화살표)로 옮기면 맨 위로 올라가 제목에 포커스를 두고, 화면 읽기 도구에 제목을 알려요. 지금 칸은 320ms 동안 새 마디로 미끄러지고(위치·폭·높이), 동작 줄이기 설정에서는 즉시 옮겨요.
+
+**"유료" 표시:** 유료 플랜이 필요한 실습은 레일 마디에 분홍 700 "유료", 제목 아래에 분홍 700 한 줄과 흐린 16px 덧붙임으로 표시해요(분홍의 "주의" 역할).
+
+**기준선 줄과 단:** 장표와 같은 기준선 규칙이에요. 이름 칸 160px, 간격 28px, 줄 여백 11px 0 10px, 아래 2px 페인트 선, 묶음 사이 40px. 프롬프트 단은 40px 들여쓰고 본문 19px·1.6, 단 사이 48px. 글 안 링크는 페인트 2px 밑줄(4px 띄움)이고, 마우스를 올리면 글자색 밑줄이 돼요.
+
+**내려받기 목록:** 레일 맨 아래(899px 이하에서는 본문 뒤, 위 2px 페인트 선)에 "내려받기"(700 16px)와 줄마다 2px 페인트 선을 그은 목록이에요. 묶음 이름은 흐린 글로 위에 적고, 링크는 `download` 속성을 달아요.
+
+**전면 색면 없음:** 실습 페이지는 노랑·분홍 전면 구획을 쓰지 않아요. 바탕은 언제나 칠판색이고, 칠판 그늘도 쓰지 않아요.
+
+**인쇄:** A4, 여백 14mm. 실습마다 새 페이지에 모두 찍고, 레일·버전 전환·복사 버튼·다음 링크는 숨기며, 프롬프트는 빈칸판만 찍어요. 색은 화면 그대로예요. 장표의 "한 장 한 페이지" 규칙은 장표에만 해당해요.
 
 ## Elevation & Depth
 
@@ -281,6 +362,7 @@ components:
 - **Hover / Focus:** 마우스를 올리면 밝은 노랑. 키보드 포커스는 노랑 3px 테두리를 4px 띄워 둘러요.
 - **Done:** 복사하면 1.8초 동안 분필 흰색 바탕에 "복사했어요"로 바뀌어요. 실패하면 4초 동안 "복사가 안 됐어요. 글자를 끌어 선택해 복사해 주세요"를 보여 줘요.
 - **Small:** 한 줄짜리 고쳐 달라는 문장 옆에는 24px, 여백 6px 20px의 작은 복사 버튼을 써요.
+- **실습 페이지:** 기본 19px 700, 여백 7px 24px. 작은 버튼 16px 700, 여백 4px 16px. 실패 문구는 작은 버튼도 19px로 키우고 한 줄을 다 차지해 줄바꿈해요.
 - **Print:** 인쇄와 PDF에서는 숨겨요.
 
 ### 프롬프트 단 (Signature)
@@ -290,7 +372,7 @@ Claude에게 보낼 문장을 악보 한 단처럼 왼쪽 브래킷으로 묶어
 - **Body:** 같은 고딕 400, 기본 24px(글이 짧으면 30px까지), 줄 높이 1.5, 줄바꿈 유지.
 - **Slot:** 바꿔 쓸 `[대괄호]` 자리는 노랑 글자에 노랑 2px 밑줄. 단계 설명 안에서 같은 자리를 가리킬 때도 같은 모양이에요.
 - **Stacking:** 단이 여러 개면 40px 간격으로 쌓아요.
-- **예시 탭:** `[대괄호]`가 있는 단은 머리 줄에 글자 탭 두 개("빈칸", "예시: 골목 한그릇")를 두고 빈칸판과 예시판을 바꿔 봐요. 탭은 흐린 분필 24px 글자, 고른 탭은 글자색과 노랑 3px 밑줄(지금 위치 규칙). 예시판에서 채운 값은 대괄호 없이 slot과 같은 노랑 글자·밑줄이에요. 복사 버튼은 보이는 판을 복사하고, 키보드 E는 그 장표의 단을 모두 함께 바꿔요. 인쇄에서는 탭을 숨기고 빈칸판만 찍어요.
+- **예시 탭:** `[대괄호]`가 있는 단은 머리 줄에 글자 버튼 두 개("빈칸", "예시: 골목 한그릇")를 두고 빈칸판과 예시판을 바꿔 봐요. 탭 목록이 아니라 누름 버튼 묶음이에요: `<div class="tabs" role="group" aria-label="프롬프트 보기">` 안의 `<button type="button" aria-pressed>` 두 개이고, 고른 쪽 상태는 `[aria-pressed="true"]`로만 그려요. 버튼은 흐린 분필 글자, 고른 쪽은 글자색 700과 노랑 3px 밑줄(지금 위치 규칙). 장표는 24px·간격 28px(전면 장표에서는 글자색이 칠판색), 실습 페이지는 16px·간격 22px이고 마우스를 올리면 분필 흰색이 돼요. 예시판에서 채운 값은 대괄호 없이 slot과 같은 노랑 글자·밑줄이에요. 복사 버튼은 보이는 판을 복사해요. 장표에서는 키보드 E가 그 장표의 단을 모두 함께 바꾸고, 실습 페이지에는 이 단축키가 없어요. 인쇄에서는 전환 버튼을 숨기고 빈칸판만 찍어요.
 
 ### 확실도 선 (Certainty Lines)
 줄 아래 선의 모양이 사실이 얼마나 확실한지를 말해요. 굵은 실선, 가는 실선, 끊긴 선 세 가지예요.
@@ -310,6 +392,7 @@ Claude에게 보낼 문장을 악보 한 단처럼 왼쪽 브래킷으로 묶어
 - **Repeat:** 매일 반복(예약 작업) 파트의 처음과 끝 마디에 도돌이표(6px 막대와 점 두 개).
 - **Keyboard:** ←/→, PageUp/PageDown, 스페이스, Home/End로 넘기고 F로 전체 화면. 주소 끝 `#번호`로 그 장표를 열어요.
 - **Motion:** 바로 옆 장표로 넘길 때만 지금 칸이 320ms 동안 한 마디 미끄러져요. 건너뛰기, 주소 이동, 동작 줄이기 설정에서는 즉시 옮겨요. 이 화면에서 움직이는 것은 이 칸 하나뿐이에요.
+- **실습 페이지:** 같은 오선이 세로 레일(900px 이상)과 위쪽 가로 띠(899px 이하)가 되고, 마디 하나는 실습 하나예요. 값은 Layout의 "실습 페이지 (웹)"에 있어요.
 
 ### 리허설 문자 (파트 오프너)
 - 파트 오프너 오른쪽 위(위 192px, 오른쪽 96px)에 8px 테두리의 150px 정사각형, 안에 900 104px 글자. 코다 오프너는 테두리 없이 그린 코다 기호를 같은 크기로 놓아요.
