@@ -35,6 +35,13 @@ BANNED = [
     r"인기가 많아",
     r"꼭 켜세요",
 ]
+# 진행자 결정으로 참석자 자료에서 뺀 내용 (PRODUCT.md "진행자 확정 사항", 2026-10-23)
+DECIDED_OUT = [
+    r"Canva",
+    r"자동으로 올리",
+    r"자동 게시",
+    r"연주자",
+]
 # 가격·크레딧 수치 (진행자 노트에만)
 PRICE = re.compile(r"\d[\d,]*\s?(?:크레딧|원\b|달러)|크레딧\s?\d|\$\s?\d|월\s?[\d,]+\s?원")
 EXTERNAL = re.compile(r"""(?:src|href)\s*=\s*["'](?:https?:)?//""")
@@ -54,6 +61,9 @@ def main() -> int:
             for m in re.finditer(pat, body):
                 problems.append(f"{rel}: 쓰면 안 되는 설명 '{m.group(0)}'")
         if rel != NOTES:
+            for pat in DECIDED_OUT:
+                for m in re.finditer(pat, body):
+                    problems.append(f"{rel}: 진행자 결정으로 뺀 내용 '{m.group(0)}'")
             for m in PRICE.finditer(body):
                 problems.append(f"{rel}: 가격·크레딧 수치 '{m.group(0)}' (진행자 노트에만)")
         for line_no, line in enumerate(body.splitlines(), 1):

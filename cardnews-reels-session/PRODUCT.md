@@ -51,7 +51,7 @@ web
 | 코워크 통합 | 2026-09-16부터 코워크와 채팅이 하나로 합쳐지는 중. Pro/Max부터 순차 적용, Team/Free는 이후. 별도 탭 없이 대화창에서 일을 맡긴다. Code 탭은 따로 남는다 | 공식 | https://claude.com/blog/cowork-is-now-claude |
 | Docs·Slides·Design | 2026-10-08 기준 Free 포함 모든 플랜에서 쓸 수 있다 | 공식 | https://claude.com/resources/articles/dashboards-and-motion |
 | Design 내보내기 | zip, PDF, PPTX, Canva로 보내기, HTML. PNG로 바로 내보내기는 공식 문서에 없다 | 서드파티 | https://horadecodar.com.br/claude-design-download/ |
-| Canva 커넥터 | Claude가 Canva에서 디자인을 만들고 PNG·JPG·PDF·PPTX·MP4로 내보낼 수 있다. 브랜드 키트 자동 적용은 Canva Enterprise 기능이라는 리뷰 | 서드파티 | https://aitoolsreview.co.uk/insights/canva-claude-connector |
+| Canva 커넥터 (자료에 쓰지 않음, 2026-10-23 진행자 결정) | Claude가 Canva에서 디자인을 만들고 PNG·JPG·PDF·PPTX·MP4로 내보낼 수 있다. 브랜드 키트 자동 적용은 Canva Enterprise 기능이라는 리뷰 | 서드파티 | https://aitoolsreview.co.uk/insights/canva-claude-connector |
 | 예약 작업 | 유료 플랜 전용. 클라우드에서 실행되어 컴퓨터가 꺼져 있어도 된다. 내 컴퓨터 파일이 필요한 작업은 앱이 켜져 있어야 한다. 왼쪽 사이드바에서 관리 | 공식 | Claude 도움말 (예약 작업 문서) |
 | Claude Motion | 2026-10-08 베타 출시. Team/Enterprise 전용(Team 기본 켜짐, Enterprise는 관리자가 켬). Free/Pro/Max는 포함되지 않고 개인 플랜 출시 일정은 발표되지 않았다. 코드로 애니메이션을 만들고 편집기에서 고친 뒤 MP4로 받는다. 실사 장면·AI 인물은 없다. 별도 요금 없이 플랜 사용량에서 차감 | 공식 | https://support.claude.com/en/articles/17454997-get-started-with-claude-motion , https://claude.com/resources/articles/dashboards-and-motion |
 | Motion 세부 | "코드 실행 및 파일 생성"이 필요하다. 시작할 때 스타일·색·길이를 묻는다. 기본 30초까지, 최대 5분. 세로로 요청하면 잘라내지 않고 다시 구성한다 | 서드파티 | https://ruben.substack.com/p/claude-motion-and-dashboards |
@@ -59,6 +59,8 @@ web
 | Motion 결과물 연계 | Adobe, Descript, HeyGen, Higgsfield, invideo, Luma AI, Runway에서 열어 이어서 작업할 수 있다 | 공식 | https://claude.com/resources/articles/dashboards-and-motion |
 | 개인 플랜 대안 | 채팅에서 애니메이션 페이지를 요청하면 약 2분, MP4는 없음(화면 녹화 필요). Claude Code + 애니메이션 스킬은 렌더링 포함 약 13분 | 서드파티 | https://www.iart.ai/blog/claude-motion-alternative |
 | 채팅 렌더링 제한 | 일반 채팅은 명령 하나가 약 5분에서 끊겨 렌더링을 나눠 진행한 사례. 완성 MP4는 비율을 바꿀 수 없어 처음에 필요한 비율을 모두 요청 | 서드파티 | https://aimeetsgirlboss.substack.com/p/make-animations-claude |
+| 예약 작업 메뉴 이름 | 한국어 화면은 왼쪽 사이드바 "예약됨" (영어 "Scheduled") | 진행자 확인 | 2026-10-23 |
+| Claude Code 플랜 | Free 플랜은 못 쓰고 Pro부터 쓴다 | 진행자 확인 | 2026-10-23 |
 | 무료 플랜 한도 | 공식 메시지 수는 없고 수요에 따라 바뀌며 5시간마다 리셋 | 공식 | support.claude.com |
 
 ### Remotion
@@ -77,7 +79,7 @@ web
 | 저장·음악 | 저장이 알고리즘에서 중요하다는 분석, 음악을 넣으면 릴스 탭에 노출될 수 있다는 가이드(인스타그램 공식 발표 아님) | 서드파티 | 강의 전 재확인 |
 | 단계 분할 | 카드 뉴스는 구성 → 문구 → 이미지 순으로 나누면 오류가 줄어든다 | 서드파티 | https://wikidocs.net/blog/@tasol_blog/20407/ |
 | 이미지 AI 한글 | 짧은 한글은 정확하고 긴 문장은 오류가 많다는 측정 | 서드파티 | https://inmarketing.kr/?p=11286 |
-| 인스타 자동 게시 | 예약 게시 도구 커넥터와 비즈니스/크리에이터 계정이 필요하다. 초안·검토 단계를 거치는 방식 | 서드파티 | https://postfa.st/blog/connect-claude-to-instagram , https://www.planoly.com/blog/can-claude-post-to-instagram-ai-connector |
+| 인스타 자동 게시 (자료에서 언급하지 않음, 2026-10-23 진행자 결정) | 예약 게시 도구 커넥터와 비즈니스/크리에이터 계정이 필요하다. 초안·검토 단계를 거치는 방식 | 서드파티 | https://postfa.st/blog/connect-claude-to-instagram , https://www.planoly.com/blog/can-claude-post-to-instagram-ai-connector |
 
 ### 규제
 | 항목 | 내용 | 신뢰도 | 출처 |
@@ -111,9 +113,21 @@ web
 ### 문장 충돌 정리
 - HANDOFF 3장의 "개인 플랜부터 순차 적용"은 쓰지 않는다. Free도 개인 플랜인데 적용이 늦기 때문이다. 11장 문장 "Pro/Max부터 순차 적용, Team/Free는 이후"를 쓴다.
 
+### 진행자 확정 사항 (2026-10-23 장표 검토)
+HANDOFF와 다르면 이쪽을 따른다.
+- 표지: 모임 이름은 "AI 스터디 모임 · 초급"(회차 표기 없음), 진행자는 "페이블조아(박재민)".
+- Canva(커넥터, Canva로 보내기)는 장표와 실습 자료에 쓰지 않는다. 카드 뉴스 도구는 Claude Design과 이미지 AI 두 가지로 소개한다.
+- 인스타그램 자동 게시는 언급하지 않는다. "올리기 전에 사람이 확인한다"는 메시지만 남긴다. 실습 3 프롬프트에서도 자동 게시 문장을 뺀다.
+- 금지 표현 목록 = 우리 업종 광고에 쓰면 안 되는 말. 장표에 바꿔 쓰는 표현 예시를 함께 싣되, 예시이고 실제 광고 전에 기준을 확인해야 한다고 밝힌다. 실습 1 프롬프트에 "바꿔 쓸 표현"도 넣는다.
+- 영상 원리는 악보·연주자·녹음 비유를 쓰지 않고 쉬운 말로 설명한다(Claude가 애니메이션 페이지를 만들고 → 브라우저에서 재생되고 → 영상 파일로 저장). 링크 공유는 영상 파일을 만드는 방법으로 소개하지 않는다.
+- 모든 프롬프트는 `[대괄호]` 빈칸판과, 골목 한그릇(가상 브랜드) 식당 홍보로 채운 예시판을 함께 둔다.
+- 화면 녹화는 참석자용 Windows 방법과 진행자 시연용 Mac 방법(Shift + Command + 5, macOS 기본 화면 기록)을 함께 싣는다. 진행자는 맥북으로 진행한다.
+- 실습 5의 영상 AI 프롬프트에는 쓸 영상 AI 모델 이름을 적는 칸을 둔다(예: Gemini Omni Flash). 시연은 Gemini로 한다.
+- 17번에서 빠진 "2026년 4월 광고업무정지 2개월 처분" 보도는 진행자 노트로 옮긴다.
+
 ### 강의 전 진행자가 확인할 것 (자료에는 TODO로 남긴다)
-1. 카드 뉴스를 PNG로 저장하는 경로: Design → PDF 내보내기 → Claude에게 장별 PNG 변환 요청, 또는 Canva로 보내기 → PNG 다운로드 중 실제로 되는 방법
-2. 예약 작업: 프로젝트 안에서 예약이 걸리는지, 한국어 화면의 예약 목록 메뉴 이름
+1. 카드 뉴스를 PNG로 저장하는 경로: Design → PDF 내보내기 → Claude에게 장별 PNG 변환 요청이 실제로 되는지
+2. 예약 작업: 프로젝트 안에서 예약이 걸리는지 (메뉴 이름은 "예약됨"으로 확인됨)
 3. Windows 화면 녹화 방법: 캡처 도구(Snipping Tool) 녹화 또는 Xbox Game Bar(Win+Alt+R) 중 실제로 되는 것
 4. Motion 시연 여부: Team 계정으로 시연할 수 있는지 (안 되면 소개만)
 5. Remotion 시연 환경: 노트북에 Node.js 설치, 첫 렌더링 미리 해 두기
@@ -126,8 +140,8 @@ web
   - 식당 **골목 한그릇**: 동네 국밥집, 30~50대 직장인, 따뜻하고 친근한 톤
 - 실존 브랜드명, 실존 브랜드의 로고·색상 체계를 쓰지 않는다. 가상 브랜드의 로고·제품 이미지는 단순한 SVG/PNG로 만들고, 사진처럼 보이는 이미지는 만들지 않는다.
 - 참석자 개인 정보(이름, 이메일, 소속 회사명)는 어떤 자료에도 넣지 않는다.
-- 말투: 공지와 같은 친절한 존댓말("~해요", "~해 보세요"). 전문 용어는 처음 나올 때 쉬운 말로 풀어 쓴다. 예: "프롬프트(Claude에게 보내는 요청 문장)". 비유를 권한다: 애니메이션 페이지 = 악보, 브라우저 = 연주자, MP4 = 녹음된 음원.
-- 운영 체제 표기는 Windows 기준(메뉴 경로, 단축키).
+- 말투: 공지와 같은 친절한 존댓말("~해요", "~해 보세요"). 전문 용어는 처음 나올 때 쉬운 말로 풀어 쓴다. 예: "프롬프트(Claude에게 보내는 요청 문장)". 악보·연주자·녹음 비유는 쓰지 않는다(진행자 결정, 2026-10-23). 쉬운 말로 순서대로 풀어 쓴다.
+- 운영 체제 표기는 Windows 기준(메뉴 경로, 단축키). 진행자는 맥북으로 시연하므로 화면 녹화처럼 시연이 필요한 곳은 Mac 방법도 싣는다.
 - 플랜: Team/Enterprise 전용 기능(Claude Motion)은 실습으로 쓰지 않고 "이런 기능도 있다"는 소개만 한다.
 
 ## Evidence on Hand

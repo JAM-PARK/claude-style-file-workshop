@@ -320,6 +320,14 @@
       "css": ".ds-ground { background: #1E3A2F; padding: 48px 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-sys { position: relative; padding-left: 44px; } .ds-sys::before { content: \"\"; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: currentColor; } .ds-sys::after, .ds-wing { content: \"\"; position: absolute; left: 0; width: 26px; height: 14px; border-right: 4px solid currentColor; } .ds-sys::after { top: -12px; border-top: 4px solid currentColor; border-top-right-radius: 16px; } .ds-wing { bottom: -12px; border-bottom: 4px solid currentColor; border-bottom-right-radius: 16px; } .ds-sys-h { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 14px; } .ds-sys-h span { font-size: 24px; color: rgba(236,239,230,0.68); } .ds-sys-h strong { color: #ECEFE6; font-size: 30px; margin-right: 10px; } .ds-sys pre { font: inherit; font-size: 24px; line-height: 1.5; white-space: pre-wrap; word-break: keep-all; margin: 0; } .ds-slot { color: #F3D35B; border-bottom: 2px solid #F3D35B; } .ds-copy { font: inherit; font-size: 26px; font-weight: 700; color: #1E3A2F; background: #F3D35B; padding: 10px 30px; border: 0; cursor: pointer; } .ds-copy:hover { background: #F7DF85; } .ds-copy:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; }"
     },
     {
+      "name": "프롬프트 예시 탭",
+      "kind": "tabs",
+      "refersTo": "prompt-system",
+      "description": "프롬프트 단 머리 줄의 '빈칸 / 예시: 골목 한그릇' 글자 탭. 고른 탭은 노랑 3px 밑줄. 복사는 보이는 판, E 키로 전환, 인쇄는 빈칸판만.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-tabs\"><button class=\"on\">빈칸</button><button>예시: 골목 한그릇</button></div></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; } .ds-tabs { display: flex; gap: 28px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-tabs button { font: inherit; font-size: 24px; color: rgba(236,239,230,0.68); background: none; border: 0; border-bottom: 3px solid transparent; padding: 4px 0; } .ds-tabs button.on { color: #ECEFE6; font-weight: 700; border-bottom-color: #F3D35B; }"
+    },
+    {
       "name": "확실도 선 줄",
       "kind": "card",
       "refersTo": "line-official",
