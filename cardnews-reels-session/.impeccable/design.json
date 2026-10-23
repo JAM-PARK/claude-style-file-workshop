@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T03:44:56.319651+00:00",
+  "title": "Design System: 카드 뉴스·릴스 세션 자료",
+  "extensions": {
+    "colorMeta": {
+      "board": {
+        "role": "neutral",
+        "displayName": "음악실 칠판",
+        "canonical": "oklch(32.2% 0.040 166.7)",
+        "tonalRamp": [
+          "#001008",
+          "#0F2B21",
+          "#2D493D",
+          "#4B695C",
+          "#6C8A7D",
+          "#8EADA0",
+          "#B2D2C4",
+          "#D6F8E9"
+        ]
+      },
+      "board-deep": {
+        "role": "neutral",
+        "displayName": "칠판 그늘",
+        "canonical": "oklch(25.7% 0.030 166.6)",
+        "tonalRamp": [
+          "#000F08",
+          "#162A22",
+          "#32473E",
+          "#51675D",
+          "#72887E",
+          "#94ABA1",
+          "#B7D0C5",
+          "#DCF5EA"
+        ]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "분필 흰색",
+        "canonical": "oklch(94.7% 0.012 121.7)",
+        "tonalRamp": [
+          "#0A0C07",
+          "#24261F",
+          "#41433C",
+          "#60625B",
+          "#81847B",
+          "#A4A69E",
+          "#C8CAC2",
+          "#EDF0E7"
+        ]
+      },
+      "yellow-chalk": {
+        "role": "primary",
+        "displayName": "노랑 분필",
+        "canonical": "oklch(87.2% 0.142 94.3)",
+        "tonalRamp": [
+          "#1E0200",
+          "#3B1E00",
+          "#5B3D00",
+          "#7C5D00",
+          "#9E7F00",
+          "#C2A31B",
+          "#E7C74E",
+          "#FFED76"
+        ]
+      },
+      "yellow-chalk-hover": {
+        "role": "primary",
+        "displayName": "밝은 노랑 분필",
+        "canonical": "oklch(90.4% 0.113 94.9)",
+        "tonalRamp": [
+          "#1A0500",
+          "#372100",
+          "#553F00",
+          "#765F00",
+          "#988120",
+          "#BBA44A",
+          "#E0C96F",
+          "#FFEE94"
+        ]
+      },
+      "pink-chalk": {
+        "role": "secondary",
+        "displayName": "분홍 분필",
+        "canonical": "oklch(78.7% 0.098 19.5)",
+        "tonalRamp": [
+          "#280000",
+          "#4A0510",
+          "#6D282C",
+          "#91484A",
+          "#B6696A",
+          "#DC8C8C",
+          "#FFAFAF",
+          "#FFD4D4"
+        ]
+      },
+      "chalk-dim": {
+        "role": "neutral",
+        "displayName": "흐린 분필",
+        "canonical": "rgba(236, 239, 230, 0.68)",
+        "tonalRamp": [
+          "#0A0C07",
+          "#24261F",
+          "#41433C",
+          "#60625B",
+          "#81847B",
+          "#A4A69E",
+          "#C8CAC2",
+          "#EDF0E7"
+        ]
+      },
+      "paint": {
+        "role": "neutral",
+        "displayName": "페인트 선",
+        "canonical": "rgba(236, 239, 230, 0.42)",
+        "tonalRamp": [
+          "#0A0C07",
+          "#24261F",
+          "#41433C",
+          "#60625B",
+          "#81847B",
+          "#A4A69E",
+          "#C8CAC2",
+          "#EDF0E7"
+        ]
+      },
+      "dim-on-yellow": {
+        "role": "neutral",
+        "displayName": "노랑 위 흐린 글",
+        "canonical": "rgba(30, 58, 47, 0.78)",
+        "tonalRamp": [
+          "#001008",
+          "#0F2B21",
+          "#2D493D",
+          "#4B695C",
+          "#6C8A7D",
+          "#8EADA0",
+          "#B2D2C4",
+          "#D6F8E9"
+        ]
+      },
+      "dim-on-pink": {
+        "role": "neutral",
+        "displayName": "분홍 위 흐린 글",
+        "canonical": "rgba(30, 58, 47, 0.9)",
+        "tonalRamp": [
+          "#001008",
+          "#0F2B21",
+          "#2D493D",
+          "#4B695C",
+          "#6C8A7D",
+          "#8EADA0",
+          "#B2D2C4",
+          "#D6F8E9"
+        ]
+      },
+      "paint-on-fill": {
+        "role": "neutral",
+        "displayName": "전면 위 페인트",
+        "canonical": "rgba(30, 58, 47, 0.45)",
+        "tonalRamp": [
+          "#001008",
+          "#0F2B21",
+          "#2D493D",
+          "#4B695C",
+          "#6C8A7D",
+          "#8EADA0",
+          "#B2D2C4",
+          "#D6F8E9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "cover-display": {
+        "displayName": "표지 제목",
+        "purpose": "표지 제목 한 곳."
+      },
+      "headline": {
+        "displayName": "장표 제목",
+        "purpose": "모든 장표 제목. 오선 띠 바로 아래 왼쪽, 위에 라벨 없음."
+      },
+      "rehearsal-letter": {
+        "displayName": "리허설 문자",
+        "purpose": "파트 오프너 오른쪽 위 상자 속 A~D."
+      },
+      "diagram-node": {
+        "displayName": "흐름 그림 칸 (큰)",
+        "purpose": "세 칸 흐름 그림의 칸 이름, 아래 4px 실선."
+      },
+      "diagram-step": {
+        "displayName": "흐름 그림 칸",
+        "purpose": "공식 3단 그림의 칸 이름, 아래 4px 실선."
+      },
+      "lede": {
+        "displayName": "리드",
+        "purpose": "제목 아래 한두 문장 설명."
+      },
+      "body": {
+        "displayName": "본문",
+        "purpose": "본문과 기준선 줄 설명."
+      },
+      "row-label": {
+        "displayName": "줄 이름",
+        "purpose": "기준선 줄의 왼쪽 이름 칸."
+      },
+      "step": {
+        "displayName": "번호 단계",
+        "purpose": "실습 단계 목록. 번호는 900 36px."
+      },
+      "table": {
+        "displayName": "표",
+        "purpose": "괘선 표 칸. 머리글은 700 26px 흐린 분필."
+      },
+      "note": {
+        "displayName": "주석",
+        "purpose": "주석과 기준 시점 표시."
+      },
+      "prompt": {
+        "displayName": "프롬프트",
+        "purpose": "프롬프트 단 본문. 같은 고딕, 고정폭 아님. 짧은 단은 28px까지."
+      },
+      "label": {
+        "displayName": "라벨",
+        "purpose": "쪽 번호 줄, 범례."
+      },
+      "button": {
+        "displayName": "버튼",
+        "purpose": "복사 버튼."
+      },
+      "strip-mark": {
+        "displayName": "띠 마크",
+        "purpose": "오선 띠 위 파트 이름, 작은 복사 버튼."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "current-measure-slide",
+        "value": "transform 320ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "바로 옆 장표로 넘길 때만 지금 마디 칸이 한 마디 미끄러짐. 건너뛰기·주소 이동·prefers-reduced-motion·인쇄에서는 즉시(전환 없음)."
+      },
+      {
+        "name": "copy-feedback",
+        "value": "성공 1800ms, 실패 4000ms 뒤 원래 글자로",
+        "purpose": "복사 버튼 상태 표시 시간. 움직임 없이 글자와 바탕만 바뀜."
+      }
+    ],
+    "breakpoints": [],
+    "stage": {
+      "width": "1920px",
+      "height": "1080px",
+      "fit": "창에 맞춰 비율 유지 scale, 가운데 정렬, 바깥은 board-deep",
+      "print": "@page 1920px 1080px, margin 0; 장표마다 page break; print-color-adjust: exact; 복사 버튼과 .sr 숨김"
+    },
+    "fontFace": {
+      "family": "Slide Sans",
+      "source": "Noto Sans KR, 쓰인 글자만 잘라 base64 (tools/build.py)",
+      "weights": [
+        400,
+        700,
+        900
+      ],
+      "fontDisplay": "block",
+      "textRules": "word-break: keep-all"
+    },
+    "focus": {
+      "value": "outline: 3px solid #F3D35B; outline-offset: 4px",
+      "onFill": "노랑·분홍 전면 장표에서는 outline-color #1E3A2F"
+    },
+    "selection": {
+      "onBoard": "background #F3D35B, color #1E3A2F",
+      "onFill": "background #1E3A2F, color #F3D35B"
+    },
+    "certaintyLines": [
+      {
+        "name": "official",
+        "value": "3px solid var(--fg)",
+        "meaning": "공식 안내"
+      },
+      {
+        "name": "reported",
+        "value": "1px solid chalk-dim",
+        "meaning": "이런 보고가 있어요"
+      },
+      {
+        "name": "unsure",
+        "value": "2px dashed chalk-dim",
+        "meaning": "[확인 필요] / TODO"
+      },
+      {
+        "name": "neutral",
+        "value": "2px solid paint",
+        "meaning": "보통 구분"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "복사 버튼",
+      "kind": "button",
+      "refersTo": "copy-button",
+      "description": "프롬프트 단 머리줄 오른쪽 끝. 누르면 1.8초 동안 \"복사했어요\".",
+      "html": "<div class=\"ds-ground\"><button class=\"ds-copy\" type=\"button\">복사</button> <button class=\"ds-copy ds-done\" type=\"button\">복사했어요</button></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; display: flex; gap: 24px; align-items: center; } .ds-copy { font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; font-size: 26px; font-weight: 700; color: #1E3A2F; background: #F3D35B; padding: 10px 30px; border: 0; border-radius: 0; white-space: nowrap; cursor: pointer; } .ds-copy:hover { background: #F7DF85; } .ds-copy:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; } .ds-copy.ds-done { background: #ECEFE6; }"
+    },
+    {
+      "name": "작은 복사 버튼",
+      "kind": "button",
+      "refersTo": "copy-button-small",
+      "description": "한 줄짜리 문장 옆, 페인트 기준선 위.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-mini\"><span>훅 글자를 더 크게 해 주세요</span><button class=\"ds-copy-s\" type=\"button\">복사</button></div></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-mini { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 12px 0; border-bottom: 2px solid rgba(236,239,230,0.42); } .ds-mini span { font-size: 26px; } .ds-copy-s { font: inherit; font-size: 24px; font-weight: 700; color: #1E3A2F; background: #F3D35B; padding: 6px 20px; border: 0; cursor: pointer; } .ds-copy-s:hover { background: #F7DF85; } .ds-copy-s:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; }"
+    },
+    {
+      "name": "프롬프트 단",
+      "kind": "custom",
+      "refersTo": "slot",
+      "description": "왼쪽 브래킷으로 묶은 악보 한 단. [대괄호] 자리는 노랑 글자와 밑줄.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-sys\"><div class=\"ds-sys-h\"><span><strong>프롬프트</strong>Claude에게 보내는 요청 문장</span><button class=\"ds-copy\" type=\"button\">복사</button></div><pre>오늘 주제는 <span class=\"ds-slot\">[주제]</span>예요. 카드 뉴스 6장 구성을 장마다 한 줄로 먼저 보여 주세요.</pre><span class=\"ds-wing\"></span></div></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 48px 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-sys { position: relative; padding-left: 44px; } .ds-sys::before { content: \"\"; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: currentColor; } .ds-sys::after, .ds-wing { content: \"\"; position: absolute; left: 0; width: 26px; height: 14px; border-right: 4px solid currentColor; } .ds-sys::after { top: -12px; border-top: 4px solid currentColor; border-top-right-radius: 16px; } .ds-wing { bottom: -12px; border-bottom: 4px solid currentColor; border-bottom-right-radius: 16px; } .ds-sys-h { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 14px; } .ds-sys-h span { font-size: 24px; color: rgba(236,239,230,0.68); } .ds-sys-h strong { color: #ECEFE6; font-size: 30px; margin-right: 10px; } .ds-sys pre { font: inherit; font-size: 24px; line-height: 1.5; white-space: pre-wrap; word-break: keep-all; margin: 0; } .ds-slot { color: #F3D35B; border-bottom: 2px solid #F3D35B; } .ds-copy { font: inherit; font-size: 26px; font-weight: 700; color: #1E3A2F; background: #F3D35B; padding: 10px 30px; border: 0; cursor: pointer; } .ds-copy:hover { background: #F7DF85; } .ds-copy:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; }"
+    },
+    {
+      "name": "확실도 선 줄",
+      "kind": "card",
+      "refersTo": "line-official",
+      "description": "상자 없는 기준선 줄. 선 모양 = 공식(3px)·보고(1px)·확인 필요(2px 끊긴 선)·보통(2px 페인트).",
+      "html": "<div class=\"ds-ground\"><ul class=\"ds-rows\"><li class=\"ds-row ds-off\"><b>공식 안내</b><p>Claude Motion은 Team·Enterprise 전용 베타예요.</p></li><li class=\"ds-row ds-rep\"><b>이런 보고가 있어요</b><p>6~10장을 권해요.</p></li><li class=\"ds-row ds-unsure\"><b>확인 필요</b><p>예약 메뉴 이름 <span class=\"ds-u\">[확인 필요]</span></p></li><li class=\"ds-row\"><b>보통 줄</b><p>의미 없는 구분이에요.</p></li></ul></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; word-break: keep-all; } .ds-rows { list-style: none; margin: 0; padding: 0; } .ds-row { display: grid; grid-template-columns: 220px 1fr; gap: 48px; padding: 24px 0 22px; border-bottom: 2px solid rgba(236,239,230,0.42); font-size: 24px; line-height: 1.5; } .ds-row p { margin: 0; } .ds-row b { font-weight: 700; } .ds-off { border-bottom: 3px solid #ECEFE6; } .ds-rep { border-bottom: 1px solid rgba(236,239,230,0.68); } .ds-unsure { border-bottom: 2px dashed rgba(236,239,230,0.68); } .ds-u { border-bottom: 2px dashed currentColor; padding-bottom: 2px; white-space: nowrap; }"
+    },
+    {
+      "name": "오선 띠",
+      "kind": "nav",
+      "refersTo": "current-measure",
+      "description": "장표 수만큼의 마디. 지금 마디는 노랑 칸, 파트 시작에 상자 문자와 한글 이름, 실습 마디 아래 늘임표.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-score\"><span class=\"ds-mk ds-past\" style=\"left:0\">시작</span><span class=\"ds-mk\" style=\"left:80px\"><span class=\"ds-box\">A</span>카드 뉴스</span><span class=\"ds-mk\" style=\"left:320px\"><svg viewBox=\"0 0 40 40\" aria-hidden=\"true\"><ellipse cx=\"20\" cy=\"20\" rx=\"10\" ry=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.4\"/><path d=\"M2 20 H38 M20 2 V38\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>마무리</span><span class=\"ds-ln\" style=\"top:0\"></span><span class=\"ds-ln\" style=\"top:15.5px\"></span><span class=\"ds-ln\" style=\"top:31px\"></span><span class=\"ds-ln\" style=\"top:46.5px\"></span><span class=\"ds-ln\" style=\"top:62px\"></span><div class=\"ds-bars\"><button class=\"ds-bar\" aria-label=\"1장\"></button><button class=\"ds-bar\" aria-label=\"2장\"></button><button class=\"ds-bar\" aria-label=\"3장\"></button><button class=\"ds-bar\" aria-current=\"page\" aria-label=\"4장\"></button><button class=\"ds-bar\" aria-label=\"5장\"></button><button class=\"ds-bar\" aria-label=\"6장\"></button><button class=\"ds-bar\" aria-label=\"7장\"></button><button class=\"ds-bar\" aria-label=\"8장\"></button></div><span class=\"ds-now\"></span><span style=\"position:absolute;top:70px;left:205px;width:30px;height:18px;color:#F3D35B\"><svg class=\"ds-fe\" viewBox=\"0 0 40 26\" aria-hidden=\"true\"><path d=\"M4 3 A16 16 0 0 0 36 3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.6\" stroke-linecap=\"round\"/><circle cx=\"20\" cy=\"7\" r=\"3.4\" fill=\"currentColor\"/></svg></span></div></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 64px 32px 40px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-score { position: relative; width: 400px; height: 64px; } .ds-ln { position: absolute; left: 0; right: 0; height: 2px; background: rgba(236,239,230,0.42); } .ds-bars { position: absolute; inset: 0; display: flex; } .ds-bar { width: 50px; height: 64px; background: none; border: 0; border-left: 2px solid rgba(236,239,230,0.42); cursor: pointer; padding: 0; } .ds-bar:last-child { border-right: 7px double currentColor; } .ds-bar:hover { background: rgba(236,239,230,0.12); } .ds-bar:focus-visible { outline: 3px solid #F3D35B; outline-offset: 4px; } .ds-now { position: absolute; top: 2px; left: 154px; height: 60px; width: 44px; background: #F3D35B; pointer-events: none; transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-mk { position: absolute; top: -50px; display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; white-space: nowrap; } .ds-mk.ds-past { color: rgba(236,239,230,0.68); } .ds-box { display: inline-grid; place-items: center; width: 32px; height: 32px; border: 2px solid currentColor; font-size: 20px; } .ds-mk svg { width: 26px; height: 26px; } .ds-fe, span > svg { width: 30px; height: 18px; } @media (prefers-reduced-motion: reduce) { .ds-now { transition: none; } }"
+    },
+    {
+      "name": "파트 오프너 리허설 문자",
+      "kind": "custom",
+      "refersTo": "rehearsal-letter-opener",
+      "description": "노랑 전면 오프너 오른쪽 위의 8px 테두리 150px 상자 문자.",
+      "html": "<div class=\"ds-fill\"><h2>잘 되는 카드 뉴스 공식</h2><span class=\"ds-rh\" role=\"img\" aria-label=\"파트 A\">A</span></div>",
+      "css": ".ds-fill { position: relative; background: #F3D35B; color: #1E3A2F; padding: 40px; min-height: 230px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-fill h2 { font-size: 56px; font-weight: 900; line-height: 1.15; letter-spacing: -0.01em; margin: 0; max-width: 60%; } .ds-rh { position: absolute; right: 40px; top: 40px; width: 150px; height: 150px; border: 8px solid currentColor; display: grid; place-items: center; font-size: 104px; font-weight: 900; line-height: 1; box-sizing: border-box; }"
+    },
+    {
+      "name": "분홍 체크 오프너",
+      "kind": "card",
+      "refersTo": "check-opener-pink",
+      "description": "금지 표현을 다루는 체크 파트 오프너. 분홍 전면, 칠판색 글자와 선.",
+      "html": "<div class=\"ds-pink\"><h2>이 표현은 안 돼요</h2><ul><li><b>절대적 표현</b><span>최고, 최상</span></li></ul></div>",
+      "css": ".ds-pink { background: #F2A0A0; color: #1E3A2F; padding: 40px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-pink h2 { font-size: 56px; font-weight: 900; line-height: 1.15; margin: 0 0 28px; } .ds-pink ul { list-style: none; margin: 0; padding: 0; } .ds-pink li { display: grid; grid-template-columns: 220px 1fr; gap: 48px; padding: 24px 0 22px; font-size: 26px; line-height: 1.5; border-bottom: 1px solid rgba(30,58,47,0.8); }"
+    },
+    {
+      "name": "실습 표시",
+      "kind": "chip",
+      "refersTo": "practice-mark",
+      "description": "실습 장표 제목 오른쪽의 늘임표와 시간, 노랑 700.",
+      "html": "<div class=\"ds-ground\"><p class=\"ds-hold\"><svg viewBox=\"0 0 40 26\" aria-hidden=\"true\"><path d=\"M4 23 A16 16 0 0 1 36 23\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.6\" stroke-linecap=\"round\"/><circle cx=\"20\" cy=\"19\" r=\"3.4\" fill=\"currentColor\"/></svg>실습 10분</p></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-hold { display: flex; align-items: center; gap: 14px; color: #F3D35B; font-size: 36px; font-weight: 700; white-space: nowrap; margin: 0; } .ds-hold svg { width: 64px; height: 40px; }"
+    },
+    {
+      "name": "흐름 그림",
+      "kind": "custom",
+      "refersTo": "diagram-step",
+      "description": "굵은 칸 이름과 4px 실선, 직접 그린 화살표로 잇는 세 칸.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-formula\"><div><b>1장은 훅</b><p>멈추게 하는 첫 문장</p></div><span class=\"ds-arr\"><svg viewBox=\"0 0 64 32\" aria-hidden=\"true\"><path d=\"M4 16 H56 M44 5 L58 16 L44 27\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><div><b>메시지 하나</b><p>제목 1줄, 본문 2줄</p></div></div></div>",
+      "css": ".ds-ground { background: #1E3A2F; padding: 32px; color: #ECEFE6; font-family: \"Slide Sans\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", sans-serif; } .ds-formula { display: grid; grid-template-columns: 1fr 80px 1fr; align-items: start; } .ds-formula b { display: block; font-size: 44px; font-weight: 900; line-height: 1.2; padding-bottom: 20px; border-bottom: 4px solid currentColor; } .ds-formula p { margin: 24px 0 0; font-size: 24px; } .ds-arr { padding-top: 14px; } .ds-arr svg { width: 64px; height: 32px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "음악실 오선 칠판",
+    "overview": "초록 칠판 바탕에 분필 흰색 글자를 쓰고, 반투명 흰 페인트로 오선과 마디줄을 그은 세계예요. 진행 위치는 악보 기호로 읽어요: 지금 장표는 오선 띠의 칠한 마디, 실습 장표는 늘임표가 걸린 마디, 예약 작업처럼 매일 되풀이하는 구간은 도돌이표로 묶인 마디, 끝부분은 코다, 파트의 시작은 상자 문자 A~D예요. 기호에는 언제나 한글 이름이 붙어서, 악보를 읽을 줄 몰라도 \"지금 어디쯤인지\"를 읽을 수 있어요.\n\n화면은 평평해요. 그림자, 그라디언트, 둥근 카드가 없고, 글자 묶음은 상자 안이 아니라 기준선 위에 앉아요. 순위와 의미는 선의 굵기와 모양, 그리고 분필 색 세 가지(흰색, 노랑, 분홍)로만 나눠요. 색은 역할이 정해져 있고, 역할 밖에서는 쓰지 않아요.\n\n밀도는 \"한 화면에 메시지 하나\"를 따라요. 큰 제목(84px, 900) 하나, 그 아래 기준선 줄 몇 개나 프롬프트 단 하나가 기본이에요. 악보 기호는 모두 직접 그린 SVG이고, 아이콘 세트는 쓰지 않아요.\n\n이 이름과 아래 색 이름은 이번 기록에서 붙인 것이고, 진행자가 바꿀 수 있어요.",
+    "keyCharacteristics": [
+      "맨 위 오선 띠가 길잡이: 장표 수만큼의 마디, 지금 마디만 칠함",
+      "분필 세 색: 흰색은 글, 노랑은 \"지금·바꿔 쓸 자리·누를 것\", 분홍은 \"하지 마세요\"",
+      "선 모양 = 사실의 확실도 (굵은 실선, 가는 실선, 끊긴 선)",
+      "상자·카드·그림자 없이 기준선 위에 앉은 줄",
+      "프롬프트는 왼쪽 브래킷으로 묶은 악보 한 단, 오른쪽 위에 노란 복사 버튼",
+      "Noto Sans KR 한 벌(400·700·900), 오프라인용으로 파일 안에 넣음"
+    ],
+    "rules": [
+      {
+        "name": "The 세 분필 Rule",
+        "body": "노랑은 지금 위치, 바꿔 쓸 자리, 누를 버튼, 실습 표시(그리고 포커스 테두리)에만 써요. 분홍은 금지와 주의에만 써요. 강조하고 싶다는 이유만으로 노랑이나 분홍을 쓰지 않아요. 강조는 흰색 700으로 해요.",
+        "section": "colors"
+      },
+      {
+        "name": "The 전면 오프너 Rule",
+        "body": "파트를 여는 장표만 한 색으로 전면을 칠해요. A~D와 코다는 노랑, 체크 파트는 분홍. 전면 장표에서는 글자, 지금 마디 칸, 늘임표, 포커스 테두리가 모두 칠판색으로 뒤집혀요.",
+        "section": "colors"
+      },
+      {
+        "name": "The 브랜드 색은 손님 Rule",
+        "body": "가상 브랜드 예시 카드(루미엘, 골목 한그릇)는 각 브랜드 자신의 색으로 그려요. 그 색들은 이 시스템의 팔레트가 아니라 내용물이고, 세션 화면의 다른 곳에 쓰지 않아요. 카드 뉴스·릴스 완성 예시 자체는 이 시스템 전체(색, 글꼴, 모양, 규칙) 밖에 있고 각 브랜드의 모습을 따라요.",
+        "section": "colors"
+      },
+      {
+        "name": "The 한 벌 Rule",
+        "body": "글꼴은 Noto Sans KR 하나뿐이에요. 프롬프트도 고정폭이 아니라 같은 고딕으로 써요. 위계는 크기와 400·700·900 무게로만 나눠요.",
+        "section": "typography"
+      },
+      {
+        "name": "The 기준선 Rule",
+        "body": "글 묶음은 상자 안에 넣지 않고 기준선 위에 앉혀요. 줄과 줄은 아래 선 하나로 나눠요. 선의 모양이 그 줄의 의미예요(Components의 확실도 선 참고).",
+        "section": "layout"
+      },
+      {
+        "name": "The 한 장 한 페이지 Rule",
+        "body": "인쇄하면 장표 한 장이 한 페이지(1920×1080, 여백 0)가 되고, 색은 화면 그대로 찍혀요. 복사 버튼과 화면 읽기 전용 글은 인쇄에서 숨기고, 지금 마디 칸은 움직임 없이 제자리에 찍혀요.",
+        "section": "layout"
+      },
+      {
+        "name": "The 칠판은 평평하다 Rule",
+        "body": "그림자, 흐림, 빛 번짐, 그라디언트를 쓰지 않아요. 떠 보이게 하고 싶을 때는 선을 굵게 하거나 색면을 바꿔요.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 모든 장표 맨 위에 오선 띠를 두고, 지금 마디만 노랑으로 칠해요.",
+      "**Do** 파트에는 상자 문자 A~D와 한글 이름을 함께 붙여요. 기호(늘임표, 도돌이표, 코다)에도 처음 나올 때 한글 이름을 달아요.",
+      "**Do** 사실의 확실도를 선 모양으로 나눠요: 공식 3px 실선, 보고 1px 흐린 실선, [확인 필요] 2px 흐린 끊긴 선. 그 장표에 범례를 달아요.",
+      "**Do** 프롬프트는 왼쪽 브래킷 단에 넣고, 오른쪽 위에 노란 복사 버튼을, 바꿔 쓸 자리는 노랑 글자와 밑줄로 표시해요.",
+      "**Do** 악보 기호와 화살표는 currentColor로 그린 SVG로 넣어요.",
+      "**Do** 동작 줄이기 설정을 지키고, 인쇄에서는 한 장 한 페이지로, 복사 버튼은 숨겨요."
+    ],
+    "donts": [
+      "**Don't** 노랑을 강조색으로 쓰지 마세요. 지금 위치, 바꿔 쓸 자리, 누를 버튼, 실습 표시, 포커스 테두리에만 써요.",
+      "**Don't** 분홍을 금지·주의 밖에서 쓰지 마세요.",
+      "**Don't** 내용 줄을 상자나 카드에 넣거나, 그림자·그라디언트를 쓰지 마세요. 버튼, 줄, 면의 모서리는 직각이에요. 곡선은 프롬프트 브래킷 갈고리와 악보 기호의 점·호에만 있어요.",
+      "**Don't** 아이콘 세트, 이모지, 글리프 아이콘을 쓰지 마세요. 필요한 기호는 직접 그려요.",
+      "**Don't** 제목 위에 작은 라벨(키커)을 달지 마세요.",
+      "**Don't** 두 번째 글꼴(고정폭 포함)을 들이지 마세요."
+    ]
+  }
+}

@@ -10,3 +10,6 @@ HANDOFF.md
 
 # 브라우저 자동화 기록
 .playwright-mcp/
+
+# impeccable 스킬 설치본 (npx impeccable install로 다시 받는다)
+.claude/

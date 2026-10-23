@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "#e3f1ee",
+        "createdAt": "2026-10-23T03:48:14.635Z",
+        "reason": "builder decision: 7번 장표의 가상 브랜드(루미엘, 골목 한그릇) 예시 카드 색. 세션 팔레트가 아닌 콘텐츠 색 (DESIGN.md '브랜드 색은 손님' 규칙)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#24403c",
+        "createdAt": "2026-10-23T03:48:14.655Z",
+        "reason": "builder decision: 7번 장표의 가상 브랜드(루미엘, 골목 한그릇) 예시 카드 색. 세션 팔레트가 아닌 콘텐츠 색 (DESIGN.md '브랜드 색은 손님' 규칙)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#6b3a22",
+        "createdAt": "2026-10-23T03:48:14.671Z",
+        "reason": "builder decision: 7번 장표의 가상 브랜드(루미엘, 골목 한그릇) 예시 카드 색. 세션 팔레트가 아닌 콘텐츠 색 (DESIGN.md '브랜드 색은 손님' 규칙)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#fff1dc",
+        "createdAt": "2026-10-23T03:48:14.686Z",
+        "reason": "builder decision: 7번 장표의 가상 브랜드(루미엘, 골목 한그릇) 예시 카드 색. 세션 팔레트가 아닌 콘텐츠 색 (DESIGN.md '브랜드 색은 손님' 규칙)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f2b541",
+        "createdAt": "2026-10-23T03:48:14.701Z",
+        "reason": "builder decision: 7번 장표의 가상 브랜드(루미엘, 골목 한그릇) 예시 카드 색. 세션 팔레트가 아닌 콘텐츠 색 (DESIGN.md '브랜드 색은 손님' 규칙)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(0, 0, 0)",
+        "createdAt": "2026-10-23T03:48:14.716Z",
+        "reason": "builder evidence: 오탐. 브라우저 계산값으로 'A' 상자 테두리는 모두 분필색 또는 칠판색(currentColor), 검정은 어디에도 없음"
+      }
+    ]
+  }
+}

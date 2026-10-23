@@ -4,6 +4,7 @@
 
 - `style-file-session/`: 끝난 세션. 규칙은 `style-file-session/CLAUDE.md`
 - `cowork-session/`: 준비 중인 세션. 명세는 `cowork-session/HANDOFF.md`
+- `cardnews-reels-session/`: 준비 중인 세션. 명세는 `cardnews-reels-session/HANDOFF.md`, 규칙은 `cardnews-reels-session/CLAUDE.md`
 
 ## 작업 규칙
 - 한 번에 한 폴더 안에서만 작업한다. 다른 세션 폴더의 디자인 규칙이나 파일을 가져다 쓰지 않는다.
