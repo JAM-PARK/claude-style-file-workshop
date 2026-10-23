@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- 아침 욕실 선반: 토너, 접은 수건, 작은 화분 (카드 4장: 세안 직후) -->
+  <rect width="1080" height="1080" fill="#E3F1EE"/>
+  <!-- 타일 줄눈 -->
+  <g stroke="#FFFFFF" stroke-width="3" opacity="0.55">
+    <path d="M 0 180 H 1080 M 0 360 H 1080 M 0 540 H 1080 M 0 720 H 1080 M 0 900 H 1080"/>
+    <path d="M 180 0 V 1080 M 360 0 V 1080 M 540 0 V 1080 M 720 0 V 1080 M 900 0 V 1080"/>
+  </g>
+  <!-- 창으로 들어오는 아침 빛 -->
+  <polygon points="520,0 780,0 460,1080 200,1080" fill="#FFFFFF" opacity="0.32"/>
+  <polygon points="840,0 940,0 620,1080 520,1080" fill="#FFFFFF" opacity="0.32"/>
+  <!-- 선반 -->
+  <rect x="244" y="726" width="16" height="74" fill="#6E9F95"/>
+  <rect x="820" y="726" width="16" height="74" fill="#6E9F95"/>
+  <rect x="150" y="700" width="780" height="28" rx="6" fill="#FFFFFF"/>
+  <rect x="150" y="718" width="780" height="10" fill="#B4DCD3"/>
+  <!-- 접은 수건 두 장 -->
+  <path d="M 236 620 H 420 Q 432 620 432 632 V 688 Q 432 700 420 700 H 236 A 40 40 0 0 1 236 620 Z" fill="#B4DCD3"/>
+  <path d="M 236 660 H 432" stroke="#6E9F95" stroke-width="4" opacity="0.35"/>
+  <path d="M 248 548 H 408 Q 420 548 420 560 V 608 Q 420 620 408 620 H 248 A 36 36 0 0 1 248 548 Z" fill="#FFFFFF"/>
+  <rect x="380" y="548" width="16" height="72" fill="#B4DCD3"/>
+  <path d="M 248 584 H 420" stroke="#E3F1EE" stroke-width="4"/>
+  <!-- 병 -->
+  <use href="lumiel-parts.svg#bottle" transform="translate(580 700) scale(0.58)"/>
+  <!-- 작은 화분 -->
+  <g>
+    <path d="M 790 588 C 770 520 740 470 700 440 C 760 452 796 512 790 588 Z" fill="#6E9F95"/>
+    <path d="M 792 588 C 812 516 842 470 884 452 C 852 506 830 556 792 588 Z" fill="#24403C"/>
+    <path d="M 790 588 C 776 516 780 448 800 400 C 826 456 816 530 790 588 Z" fill="#B4DCD3"/>
+    <path d="M 790 588 C 760 540 720 520 680 524 C 712 560 752 584 790 588 Z" fill="#24403C"/>
+    <path d="M 792 588 C 828 548 866 536 900 540 C 872 572 836 590 792 588 Z" fill="#6E9F95"/>
+    <path d="M 730 600 H 850 L 838 700 H 742 Z" fill="#FFFFFF"/>
+    <rect x="720" y="580" width="140" height="26" rx="8" fill="#FFFFFF"/>
+    <rect x="720" y="600" width="140" height="6" fill="#B4DCD3"/>
+  </g>
+</svg>

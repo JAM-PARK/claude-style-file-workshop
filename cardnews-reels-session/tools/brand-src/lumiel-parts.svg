@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <!-- 루미엘(가상 브랜드) 부품. 색: 민트 #E3F1EE, 진한 회색 #24403C, 중간 민트 #B4DCD3, 세이지 #6E9F95, 흰색 -->
+  <!-- 부품은 밑면 가운데가 (0,0)이다. 다른 그림에서 <use href="lumiel-parts.svg#bottle"/>로 넣는다. -->
+  <rect width="600" height="900" fill="#E3F1EE"/>
+  <g transform="translate(300 860)">
+    <g id="bottle" stroke="none">
+      <!-- 뚜껑 -->
+      <rect x="-76" y="-800" width="152" height="160" rx="20" fill="#24403C"/>
+      <!-- 목 -->
+      <rect x="-58" y="-644" width="116" height="34" fill="#6E9F95"/>
+      <!-- 몸통 -->
+      <path d="M -72 -614 H 72 C 132 -614 160 -584 160 -524 V -30 Q 160 0 130 0 H -130 Q -160 0 -160 -30 V -524 C -160 -584 -132 -614 -72 -614 Z" fill="#B4DCD3"/>
+      <!-- 빛 한 줄 -->
+      <rect x="-140" y="-520" width="13" height="450" rx="6.5" fill="#FFFFFF" opacity="0.6"/>
+      <!-- 라벨 -->
+      <rect x="-112" y="-440" width="224" height="300" rx="10" fill="#FFFFFF"/>
+      <path d="M 0 -390 C 8 -379 15 -370 15 -361 A 15 15 0 0 1 -15 -361 C -15 -370 -8 -379 0 -390 Z" fill="#6E9F95"/>
+      <text x="0" y="-302" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans KR" font-weight="500" font-size="38" letter-spacing="8" fill="#24403C">LUMIEL</text>
+      <rect x="-20" y="-265" width="40" height="3" fill="#24403C"/>
+      <text x="0" y="-226" dominant-baseline="central" text-anchor="middle" font-family="Noto Sans KR" font-weight="500" font-size="34" fill="#24403C">진정 토너</text>
+    </g>
+  </g>
+</svg>

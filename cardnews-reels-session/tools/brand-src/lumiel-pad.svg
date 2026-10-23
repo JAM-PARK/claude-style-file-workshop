@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- 루미엘 토너와 화장솜 (카드 1, 2장) -->
+  <rect width="1080" height="1080" fill="#E3F1EE"/>
+  <circle cx="560" cy="520" r="340" fill="#FFFFFF" opacity="0.45"/>
+  <!-- 바닥 그림자 -->
+  <ellipse cx="410" cy="884" rx="150" ry="16" fill="#B4DCD3" opacity="0.6"/>
+  <ellipse cx="740" cy="884" rx="140" ry="20" fill="#B4DCD3" opacity="0.6"/>
+  <!-- 병 -->
+  <use href="lumiel-parts.svg#bottle" transform="translate(410 884) scale(0.8)"/>
+  <!-- 화장솜 더미 -->
+  <g>
+    <ellipse cx="740" cy="874" rx="124" ry="36" fill="#B4DCD3"/>
+    <ellipse cx="740" cy="862" rx="124" ry="36" fill="#FFFFFF"/>
+    <ellipse cx="734" cy="846" rx="124" ry="36" fill="#B4DCD3"/>
+    <ellipse cx="734" cy="834" rx="124" ry="36" fill="#FFFFFF"/>
+    <ellipse cx="744" cy="818" rx="124" ry="36" fill="#B4DCD3"/>
+    <ellipse cx="744" cy="806" rx="124" ry="36" fill="#FFFFFF"/>
+    <ellipse cx="738" cy="790" rx="124" ry="36" fill="#B4DCD3"/>
+    <ellipse cx="738" cy="778" rx="124" ry="36" fill="#FFFFFF"/>
+    <ellipse cx="738" cy="778" rx="100" ry="27" fill="none" stroke="#B4DCD3" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.1 14"/>
+  </g>
+  <!-- 앞에 놓인 화장솜 한 장 (토너를 적신 자리) -->
+  <ellipse cx="590" cy="962" rx="118" ry="34" fill="#B4DCD3"/>
+  <ellipse cx="590" cy="950" rx="118" ry="34" fill="#FFFFFF"/>
+  <ellipse cx="590" cy="950" rx="94" ry="25" fill="none" stroke="#B4DCD3" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.1 14"/>
+  <ellipse cx="600" cy="950" rx="56" ry="15" fill="#B4DCD3" opacity="0.8"/>
+</svg>

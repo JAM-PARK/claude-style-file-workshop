@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="440" viewBox="0 0 1240 440">
+  <!-- 골목 한그릇(가상 브랜드) 부품. 색: 뚝배기 갈색 #6B3A22, 크림 #FFF1DC, 노란 간판색 #F2B541, 테두리 #3A1F12 -->
+  <!-- 부품은 가운데가 (0,0)이다. 다른 그림에서 <use href="golmok-parts.svg#badge"/>로 넣는다. -->
+  <g transform="translate(620 220)">
+    <g id="badge" stroke="none">
+      <!-- 간판 -->
+      <rect x="-588" y="-188" width="1176" height="376" rx="56" fill="#6B3A22"/>
+      <rect x="-560" y="-160" width="1120" height="320" rx="36" fill="none" stroke="#F2B541" stroke-width="7"/>
+      <!-- 김 나는 그릇 -->
+      <g fill="none" stroke="#FFF1DC" stroke-width="12" stroke-linecap="round">
+        <path d="M -446 -58 C -466 -80 -426 -96 -446 -120"/>
+        <path d="M -400 -58 C -420 -80 -380 -96 -400 -120"/>
+        <path d="M -354 -58 C -374 -80 -334 -96 -354 -120"/>
+      </g>
+      <path d="M -492 -26 H -308 C -308 34 -350 74 -400 74 C -450 74 -492 34 -492 -26 Z" fill="#FFF1DC"/>
+      <rect x="-438" y="78" width="76" height="16" rx="6" fill="#FFF1DC"/>
+      <!-- 가게 이름 -->
+      <text x="112" y="2" dominant-baseline="central" text-anchor="middle" font-family="Noto Serif KR" font-weight="900" font-size="150" fill="#F2B541">골목 한그릇</text>
+    </g>
+  </g>
+</svg>

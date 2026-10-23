@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>릴스 예시: 골목 한그릇(가상 브랜드)</title>
+<!-- tools/render_examples.py가 tools/brand-src/reels-golmok.html 틀과 examples/copy.md 문구로 만든 파일이에요. 고칠 때는 틀을 고치고 다시 실행해요. -->
+<style>
+/* FONTS:BEGIN */ /* FONTS:END */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; background: #14100D; }
+
+/* 9:16 무대. 창 높이에 맞추고, 무대 밖은 녹화 뒤 잘라 내기 쉽게 한 가지 어두운 색 */
+.stage { position: absolute; inset: 0; margin: auto; overflow: hidden; container-type: size;
+  width: min(100vw, calc(100vh * 9 / 16)); height: min(100vh, calc(100vw * 16 / 9));
+  background: #6B3A22; font-family: "Slide Sans", sans-serif; word-break: keep-all; --m: 1; }
+/* 움직임 줄이기: 장면 시간은 그대로, 미끄러지거나 커지는 움직임만 빼고 서서히 나타나고 사라지게 */
+@media (prefers-reduced-motion: reduce) { .stage { --m: 0; } }
+
+/* 15초에 한 번 처음부터 다시. 모든 움직임이 같은 15초 시간표를 쓴다 (1초 = 6.667%) */
+.scene { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.s1 { background: #6B3A22; animation: s1 15s infinite; }
+.s2 { background: #FFF1DC; animation: s2 15s infinite; }
+.s3 { background: #6B3A22; animation: s3 15s infinite; }
+@keyframes s1 { 0%, 17.33% { opacity: 1; } 20%, 100% { opacity: 0; } }
+@keyframes s2 { 0%, 18.67% { opacity: 0; } 21.33%, 64% { opacity: 1; } 66.67%, 100% { opacity: 0; } }
+@keyframes s3 { 0%, 65.33% { opacity: 0; } 68%, 96% { opacity: 1; } 100% { opacity: 0; } }
+
+/* 장면 1 (0~3초): 훅 */
+.puff { width: 22cqw; margin-bottom: 6cqw; animation: hook 15s infinite; }
+.puff path { fill: none; stroke: #F2B541; stroke-width: 6; stroke-linecap: round; }
+.hook { max-width: 6.2em; font-family: "Brand Serif", serif; font-weight: 900; font-size: 12cqw; line-height: 1.28;
+  color: #FFF1DC; text-align: center; animation: hook 15s infinite; }
+@keyframes hook { 0% { opacity: 0; translate: 0 calc(var(--m) * 5cqw); } 5%, 100% { opacity: 1; translate: 0 0; } }
+
+/* 장면 2 (3~10초): 국밥 그림, 특징 두 개가 차례로 */
+.art { width: 100cqw; margin-top: -8cqh; animation: art 15s infinite; }
+.art svg { display: block; width: 100%; height: auto; }
+.steam path { transform-box: fill-box; transform-origin: 50% 100%; animation: steam 3s ease-in-out infinite; }
+.steam path:nth-child(2) { animation-delay: -1s; }
+.steam path:nth-child(3) { animation-delay: -2s; }
+@keyframes steam { 0%, 100% { opacity: 0.55; translate: 0 0; } 50% { opacity: 1; translate: 0 calc(var(--m) * -14px); } }
+.feats { display: flex; flex-direction: column; align-items: center; gap: 3.4cqw; margin-top: -4cqw; }
+.feat { display: flex; align-items: center; gap: 2.6cqw; padding: 2.6cqw 5.2cqw; border: 0.6cqw solid #3A1F12; border-radius: 999px;
+  background: #F2B541; color: #3A1F12; font-size: 5cqw; font-weight: 700; line-height: 1.3; }
+.feat::before { content: ""; flex: none; width: 2cqw; height: 2cqw; border-radius: 50%; background: #6B3A22; }
+.f1 { animation: f1 15s infinite; }
+.f2 { animation: f2 15s infinite; }
+@keyframes art { 0%, 20% { opacity: 0; translate: 0 calc(var(--m) * 6cqw); } 26.67%, 100% { opacity: 1; translate: 0 0; } }
+@keyframes f1 { 0%, 29.33% { opacity: 0; translate: 0 calc(var(--m) * 4cqw); } 33.33%, 100% { opacity: 1; translate: 0 0; } }
+@keyframes f2 { 0%, 42.67% { opacity: 0; translate: 0 calc(var(--m) * 4cqw); } 46.67%, 100% { opacity: 1; translate: 0 0; } }
+
+/* 장면 3 (10~15초): 로고와 행동 요청 */
+.logo { width: 88cqw; animation: logo 15s infinite; }
+.logo svg { display: block; width: 100%; height: auto; }
+.mark { width: 7cqw; margin-top: 14cqw; animation: cta 15s infinite; }
+.mark path { fill: #F2B541; }
+.cta { max-width: 10.5em; margin-top: 4cqw; font-size: 7cqw; font-weight: 700; line-height: 1.35; color: #FFF1DC; text-align: center;
+  animation: cta 15s infinite; }
+@keyframes logo { 0%, 68% { opacity: 0; scale: calc(1 - var(--m) * 0.08); } 73.33%, 100% { opacity: 1; scale: 1; } }
+@keyframes cta { 0%, 74.67% { opacity: 0; translate: 0 calc(var(--m) * 4cqw); } 78.67%, 100% { opacity: 1; translate: 0 0; } }
+</style>
+</head>
+<body>
+<main class="stage" aria-label="15초 릴스 예시">
+  <section class="scene s1">
+    <svg class="puff" viewBox="0 0 120 70" aria-hidden="true"><path d="M 30 64 C 18 50 42 40 30 26 C 22 16 34 10 30 4"/><path d="M 60 64 C 48 50 72 40 60 26 C 52 16 64 10 60 4"/><path d="M 90 64 C 78 50 102 40 90 26 C 82 16 94 10 90 4"/></svg>
+    <h1 class="hook"><!--HOOK--></h1>
+  </section>
+  <section class="scene s2">
+    <div class="art" aria-hidden="true"><!--ART--></div>
+    <ul class="feats" role="list">
+      <li class="feat f1"><!--F1--></li>
+      <li class="feat f2"><!--F2--></li>
+    </ul>
+  </section>
+  <section class="scene s3">
+    <div class="logo" role="img" aria-label="골목 한그릇 로고"><!--LOGO--></div>
+    <svg class="mark" viewBox="0 0 30 40" aria-hidden="true"><path d="M 2 4 Q 2 0 6 0 H 24 Q 28 0 28 4 V 38 L 15 29 L 2 38 Z"/></svg>
+    <p class="cta"><!--CTA--></p>
+  </section>
+</main>
+</body>
+</html>

@@ -4,6 +4,7 @@
 각 파일의 /* FONTS:BEGIN */ ~ /* FONTS:END */ 사이를 다시 쓴다. 글을 고친 뒤 다시 실행한다.
     tools/.venv/bin/python tools/build.py              # 기본: slides/index.html
     tools/.venv/bin/python tools/build.py practice/index.html
+EXTRA에 적은 파일에는 Noto Serif KR 같은 글꼴을 따로 이름 붙여 더 넣는다.
 """
 import base64
 import io
@@ -20,6 +21,11 @@ SRC = ROOT / "tools" / "fonts-src" / "NotoSansKR[wght].ttf"
 DEFAULT_TARGETS = ["slides/index.html"]
 WEIGHTS = (400, 700, 900)
 FAMILY = "Slide Sans"
+SERIF = ROOT / "tools" / "fonts-src" / "NotoSerifKR[wght].ttf"
+# 파일별로 더 넣을 글꼴: (원본, 글꼴 이름, 굵기, 이름, 라이선스 파일)
+EXTRA = {
+    "examples/reels-golmok/index.html": [(SERIF, "Brand Serif", 900, "Noto Serif KR", "OFL-notoserifkr.txt")],
+}
 BEGIN, END = "/* FONTS:BEGIN */", "/* FONTS:END */"
 BLOCK = re.compile(re.escape(BEGIN) + ".*?" + re.escape(END), re.S)
 
@@ -31,8 +37,8 @@ def used_chars(html: str) -> str:
     return "".join(sorted(c for c in chars if c == " " or c.isprintable()))
 
 
-def face(weight: int, text: str) -> str:
-    font = TTFont(SRC)
+def face(weight: int, text: str, src: Path = SRC, family: str = FAMILY) -> str:
+    font = TTFont(src)
     opts = subset.Options()
     opts.flavor = "woff2"
     opts.hinting = False
@@ -46,7 +52,7 @@ def face(weight: int, text: str) -> str:
     static.save(buf)
     data = base64.b64encode(buf.getvalue()).decode("ascii")
     return (
-        f'@font-face {{ font-family: "{FAMILY}"; font-weight: {weight}; font-style: normal; '
+        f'@font-face {{ font-family: "{family}"; font-weight: {weight}; font-style: normal; '
         f"font-display: block; src: url(data:font/woff2;base64,{data}) format(\"woff2\"); }}"
     )
 
@@ -59,6 +65,9 @@ def build(rel: str) -> None:
     text = used_chars(html)
     faces = "\n".join(face(w, text) for w in WEIGHTS)
     note = "/* Noto Sans KR, SIL Open Font License 1.1 (fonts/OFL-notosanskr.txt) */"
+    for src, family, weight, name, ofl in EXTRA.get(rel, []):
+        faces += "\n" + face(weight, text, src, family)
+        note += f"\n/* {name}, SIL Open Font License 1.1 (fonts/{ofl}) */"
     html = BLOCK.sub(lambda _: f"{BEGIN}\n{note}\n{faces}\n{END}", html, count=1)
     path.write_text(html, encoding="utf-8")
     print(f"{rel}: 글자 {len(text)}개, {path.stat().st_size // 1024} KB")

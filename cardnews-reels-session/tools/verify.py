@@ -3,7 +3,7 @@
 
     tools/.venv/bin/python tools/verify.py
 
-참석자에게 나가는 파일(장표, 실습 가이드, 템플릿, 체크리스트, README)을 훑는다.
+참석자에게 나가는 파일(장표, 실습 가이드, 템플릿, 체크리스트, 완성 예시, README)을 훑는다.
 진행자 노트(speaker-notes.md)는 가격·크레딧이 들어가도 되므로 금지 문장만 본다.
 마지막에 남은 TODO와 [확인 필요] 목록을 뽑는다.
 """
@@ -19,6 +19,8 @@ ATTENDEE = [
     "slides/index.html",
     "practice/index.html",
     "README.md",
+    "examples/copy.md",
+    "examples/reels-golmok/index.html",
     *[str(p.relative_to(ROOT)) for p in sorted((ROOT / "templates").glob("*.md"))],
     *[str(p.relative_to(ROOT)) for p in sorted((ROOT / "checklists").glob("*.md"))],
 ]
@@ -70,17 +72,16 @@ def main() -> int:
             for m in re.finditer(r"TODO[^<\n]*|\[확인 필요[^\]]*\]", line):
                 todos.append(f"{rel}:{line_no}: {m.group(0).strip()}")
 
-    # 장표와 실습 가이드: 인터넷 없이 열림, 복사 버튼 수
-    for rel in ("slides/index.html", "practice/index.html"):
+    # 장표, 실습 가이드, 릴스 예시: 인터넷 없이 열림, 복사 버튼 수
+    for rel in ("slides/index.html", "practice/index.html", "examples/reels-golmok/index.html"):
         if not (ROOT / rel).exists():
             continue
         body = text_of(rel)
-        if True:  # 장표와 실습 가이드 모두 인터넷 없이 열려야 한다
-            for m in EXTERNAL.finditer(body):
-                problems.append(f"{rel}: 외부 주소를 불러와요 ({m.group(0)})")
-            for word in ("speaker", "발표자 노트", "Direction contract", "seed:"):
-                if word in body:
-                    problems.append(f"{rel}: 참석자 자료에 들어가면 안 되는 '{word}'")
+        for m in EXTERNAL.finditer(body):
+            problems.append(f"{rel}: 외부 주소를 불러와요 ({m.group(0)})")
+        for word in ("speaker", "발표자 노트", "Direction contract", "seed:"):
+            if word in body:
+                problems.append(f"{rel}: 참석자 자료에 들어가면 안 되는 '{word}'")
         pres = len(re.findall(r'<div class="sys"', body))
         copies = len(re.findall(r'<div class="sys-h">.*?class="copy', body))
         if pres != copies:

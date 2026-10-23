@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 카드 뉴스 완성 예시 틀. render_examples.py가 copy.md 문구와 assets/ 그림으로 카드 6장을 채워 그린다. -->
+<style>
+/* FONTS:BEGIN */ /* FONTS:END */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #000000; }
+body { width: 1080px; }
+
+.card { position: relative; width: 1080px; height: 1350px; overflow: hidden; display: flex; flex-direction: column;
+  padding: 64px 72px 84px; font-family: "Slide Sans", sans-serif; word-break: keep-all; }
+.top { flex: none; display: flex; justify-content: space-between; align-items: center; height: 76px; }
+.page { font-size: 28px; letter-spacing: 0.1em; }
+.art { flex: none; align-self: center; position: relative; overflow: hidden; }
+.art img { position: relative; display: block; width: 100%; height: 100%; }
+.copy { flex: none; margin-top: auto; }
+.save { display: inline-flex; align-items: center; gap: 20px; margin-top: 52px; padding: 26px 52px; border-radius: 999px; line-height: 1.3; }
+.save svg { flex: none; width: 30px; height: 40px; }
+.save span { display: block; }
+
+/* 마지막 장: 로고와 행동 요청 하나, 그림 없음 */
+.cta { justify-content: center; align-items: center; text-align: center; }
+.cta .top { position: absolute; top: 64px; left: 72px; right: 72px; }
+.cta .logo svg { display: block; height: auto; }
+
+/* 루미엘(가상 브랜드): 민트 바탕, 진한 회색 글자, 가벼운 굵기, 여백 넉넉히 */
+.lumiel { background: #E3F1EE; color: #24403C; }
+.lumiel .mark { font-size: 30px; font-weight: 300; letter-spacing: 0.32em; }
+.lumiel .page { font-weight: 300; }
+.lumiel .art { width: 760px; height: 760px; margin-top: 16px; border-radius: 48px; }
+.lumiel .art.cutout::before { content: ""; position: absolute; inset: 70px; border-radius: 50%; background: #FFFFFF; opacity: 0.45; }
+.lumiel .rule { width: 56px; height: 3px; background: #6E9F95; margin-bottom: 36px; }
+.lumiel h1 { font-size: 64px; line-height: 1.3; font-weight: 400; letter-spacing: -0.01em; }
+.lumiel .body { margin-top: 22px; }
+.lumiel .body p { font-size: 38px; line-height: 1.55; font-weight: 300; }
+.lumiel.hook .copy { margin-top: 64px; }
+.lumiel.hook h1 { font-size: 76px; }
+.lumiel.hook .body p { font-size: 40px; }
+.lumiel.hook .art { margin-top: auto; width: 680px; height: 680px; }
+.lumiel.cta .logo svg { width: 600px; }
+.lumiel.cta .rule { margin: 88px auto 40px; }
+.lumiel .save { background: #24403C; color: #FFFFFF; font-size: 40px; font-weight: 400; }
+
+/* 골목 한그릇(가상 브랜드): 크림 바탕에 갈색 글자, 첫 장과 마지막 장은 갈색 간판처럼 */
+.golmok { background: #FFF1DC; color: #6B3A22; }
+.golmok.hook, .golmok.cta { background: #6B3A22; color: #FFF1DC; }
+.golmok .mark svg { display: block; width: 230px; height: auto; }
+.golmok .page { font-weight: 500; }
+.golmok .art { width: 740px; height: 740px; margin-top: 20px; border-radius: 40px; border: 6px solid #3A1F12; }
+.golmok .bar { width: 72px; height: 10px; border-radius: 5px; background: #F2B541; margin-bottom: 30px; }
+.golmok h1 { font-family: "Brand Serif", serif; font-size: 68px; line-height: 1.3; font-weight: 900; }
+.golmok .body { margin-top: 22px; }
+.golmok .body p { font-size: 38px; line-height: 1.55; font-weight: 500; }
+.golmok.hook .copy { margin-top: 60px; }
+.golmok.hook h1 { font-size: 80px; }
+.golmok.hook .body p { font-size: 40px; }
+.golmok.hook .art { margin-top: auto; width: 680px; height: 680px; border: 8px solid #F2B541; }
+.golmok.cta .logo svg { width: 820px; }
+.golmok.cta .bar { margin: 88px auto 40px; }
+.golmok .save { background: #F2B541; color: #3A1F12; font-size: 40px; font-weight: 700; }
+</style>
+</head>
+<body>
+<!-- CARDS -->
+<script>
+// 글자 덩어리마다 몇 줄로 그려졌는지 잰다. render_examples.py가 결과를 읽고 넘치면 멈춘다.
+document.fonts.ready.then(() => {
+  const items = [];
+  document.querySelectorAll(".card").forEach((card, i) => {
+    const box = card.getBoundingClientRect();
+    card.querySelectorAll("[data-line]").forEach((el) => {
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const tops = new Set([...range.getClientRects()].filter((r) => r.width > 0).map((r) => Math.round(r.top)));
+      const r = el.getBoundingClientRect();
+      items.push({
+        card: i + 1,
+        kind: el.dataset.line,
+        text: el.textContent,
+        rects: tops.size,
+        byHeight: Math.round(r.height / parseFloat(getComputedStyle(el).lineHeight)),
+        inside: r.top >= box.top && r.bottom <= box.bottom && r.left >= box.left && r.right <= box.right,
+        overflow: el.scrollWidth > el.clientWidth,
+      });
+    });
+  });
+  const faces = [...document.fonts].map((f) => `${f.family.replace(/"/g, "")} ${f.weight} ${f.status}`);
+  document.body.dataset.report = JSON.stringify({ faces, items });
+});
+</script>
+</body>
+</html>

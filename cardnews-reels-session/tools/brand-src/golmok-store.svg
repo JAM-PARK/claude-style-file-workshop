@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- 아침의 가게 앞: 노란 글자 갈색 간판, 불 켜진 창, 지붕 위 김 (카드 5장: 국물은 아침마다) -->
+  <rect width="1080" height="1080" fill="#FFF1DC"/>
+  <!-- 아침 해 -->
+  <circle cx="930" cy="150" r="64" fill="#F2B541" opacity="0.55"/>
+  <g stroke="#3A1F12" stroke-linejoin="round" stroke-linecap="round">
+    <!-- 골목 양옆 담 -->
+    <path d="M -10 330 H 96 V 910 H -10 Z" fill="#E9C99E" stroke-width="8"/>
+    <path d="M 984 380 H 1090 V 910 H 984 Z" fill="#E9C99E" stroke-width="8"/>
+    <!-- 굴뚝과 김 -->
+    <rect x="764" y="172" width="40" height="110" fill="#8A5232" stroke-width="8"/>
+    <rect x="754" y="160" width="60" height="22" rx="4" fill="#6B3A22" stroke-width="8"/>
+    <g fill="none" stroke="#6B3A22" stroke-width="10" opacity="0.35">
+      <path d="M 770 140 C 740 112 800 92 770 60 C 752 42 778 30 772 16"/>
+      <path d="M 800 140 C 830 112 790 90 830 58"/>
+    </g>
+    <!-- 벽 -->
+    <rect x="150" y="300" width="780" height="610" fill="#F3D2A2" stroke-width="10"/>
+    <!-- 처마 -->
+    <path d="M 118 248 H 962 L 940 312 H 140 Z" fill="#6B3A22" stroke-width="10"/>
+    <g fill="#6B3A22" stroke-width="8">
+      <path d="M 140 312 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 48 0 a 24 24 0 0 0 32 0"/>
+    </g>
+    <!-- 간판 -->
+    <use href="golmok-parts.svg#badge" transform="translate(540 448) scale(0.56)"/>
+    <rect x="210.7" y="342.7" width="658.6" height="210.6" rx="31" fill="none" stroke-width="8"/>
+    <!-- 불 켜진 창 -->
+    <rect x="196" y="590" width="330" height="236" rx="8" fill="#6B3A22" stroke-width="10"/>
+    <rect x="216" y="610" width="290" height="196" fill="#F2B541" stroke-width="6"/>
+    <path d="M 361 610 V 806 M 216 708 H 506" stroke="#6B3A22" stroke-width="12" stroke-linecap="butt"/>
+    <path d="M 216 610 H 506 V 642 C 470 662 440 642 409 642 C 378 662 346 642 316 642 C 284 662 252 642 216 642 Z" fill="#FFF1DC" stroke-width="6"/>
+    <rect x="182" y="826" width="358" height="22" rx="6" fill="#6B3A22" stroke-width="8"/>
+    <!-- 문 -->
+    <rect x="600" y="578" width="268" height="332" fill="#8A5232" stroke-width="10"/>
+    <rect x="626" y="604" width="216" height="150" rx="6" fill="#F2B541" stroke-width="6"/>
+    <path d="M 734 604 V 754" stroke="#8A5232" stroke-width="10" stroke-linecap="butt"/>
+    <rect x="626" y="778" width="216" height="104" rx="6" fill="#6B3A22" stroke-width="6"/>
+    <rect x="700" y="770" width="14" height="44" rx="7" fill="#F2B541" stroke-width="5"/>
+    <rect x="754" y="770" width="14" height="44" rx="7" fill="#F2B541" stroke-width="5"/>
+    <!-- 화분 -->
+    <path d="M 896 840 C 880 800 880 770 900 740 C 914 776 912 810 896 840 Z" fill="#7E9F3F" stroke-width="6"/>
+    <path d="M 900 842 C 920 812 944 798 966 800 C 952 826 930 842 900 842 Z" fill="#9DB85A" stroke-width="6"/>
+    <path d="M 892 842 C 872 816 850 808 830 812 C 846 836 868 846 892 842 Z" fill="#9DB85A" stroke-width="6"/>
+    <path d="M 858 840 H 938 L 928 910 H 868 Z" fill="#C8553A" stroke-width="8"/>
+    <!-- 바닥 -->
+    <rect x="-10" y="906" width="1100" height="190" fill="#EAD3B2" stroke-width="10"/>
+    <path d="M 120 910 L 90 1080 M 360 910 L 350 1080 M 600 910 L 610 1080 M 840 910 L 870 1080" stroke="#D7BB93" stroke-width="6"/>
+  </g>
+</svg>

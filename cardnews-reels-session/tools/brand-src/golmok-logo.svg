@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <!-- 골목 한그릇(가상 브랜드) 로고. 갈색 간판에 노란 글자, 간판 바깥은 투명 -->
+  <use href="golmok-parts.svg#badge" transform="translate(600 200)"/>
+</svg>

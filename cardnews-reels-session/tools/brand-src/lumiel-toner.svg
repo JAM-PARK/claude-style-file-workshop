@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <!-- 배경을 지운 제품 이미지(실습 5). 그림자 없이 병만 둔다. -->
+  <use href="lumiel-parts.svg#bottle" transform="translate(500 900)"/>
+</svg>
