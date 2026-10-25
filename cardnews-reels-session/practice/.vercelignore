@@ -1,0 +1,5 @@
+# 배포에는 index.html, fonts/, downloads/만 올린다
+.omc
+.env*
+.gitignore
+.vercelignore

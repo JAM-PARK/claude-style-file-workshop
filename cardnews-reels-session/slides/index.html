@@ -137,6 +137,9 @@ p, li { font-size: 36px; line-height: 1.5; }
 .qr .q { width: 220px; height: 220px; border: 2px dashed var(--chalk-dim); display: grid; place-items: center; font-size: 24px; color: var(--chalk-dim); text-align: center; }
 .qr .q svg { width: 220px; height: 220px; background: var(--chalk); padding: 12px; }
 .qr p { font-size: 24px; margin-top: 16px; line-height: 1.4; }
+.qr .q:has(svg) { border: 0; }
+.qr .url { color: var(--chalk-dim); text-decoration: none; }
+.qr .url:hover { color: var(--fg); }
 
 /* 파트 오프너의 리허설 마크 */
 .rh { position: absolute; right: 96px; top: 192px; width: 150px; height: 150px; border: 8px solid currentColor; display: grid; place-items: center; font-size: 104px; font-weight: 900; line-height: 1; }
@@ -256,8 +259,8 @@ p, li { font-size: 36px; line-height: 1.5; }
   <p class="cover-meta">AI 스터디 모임 · 초급<br>2026년 10월 28일(수) · 진행 페이블조아(박재민)</p>
   <p class="cover-note">2026년 10월 기준 자료예요. Claude 기능과 플랜 조건은 자주 바뀌어요.</p>
   <div class="qr">
-    <div class="q" data-qr="practice">실습 페이지 QR<br>TODO 배포 후 넣기</div>
-    <p>실습 페이지를 노트북에서 열어 두세요</p>
+    <div class="q" data-qr="practice"><svg role="img" aria-label="실습 페이지 QR 코드" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="segno"><path class="qrline" stroke="#142820" d="M0 0.5h7m2 0h2m2 0h2m3 0h1m1 0h1m1 0h7m-29 1h1m5 0h1m1 0h5m1 0h1m1 0h1m3 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h2m2 0h2m4 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h4m2 0h1m2 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m2 0h1m2 0h1m1 0h1m3 0h1m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h2m5 0h1m2 0h1m1 0h1m-21 1h1m5 0h1m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m1 0h2m2 0h3m-28 1h2m1 0h1m3 0h1m2 0h1m2 0h3m3 0h1m3 0h2m1 0h2m-27 1h1m2 0h7m2 0h6m1 0h1m1 0h1m1 0h1m-25 1h1m1 0h1m1 0h1m3 0h1m1 0h3m3 0h1m1 0h1m1 0h1m1 0h4m-26 1h1m3 0h3m1 0h1m1 0h1m1 0h1m2 0h2m2 0h2m1 0h2m4 0h1m-28 1h2m1 0h2m1 0h2m2 0h1m3 0h2m1 0h3m1 0h3m2 0h2m-29 1h4m2 0h6m3 0h1m2 0h1m1 0h1m4 0h2m-27 1h5m5 0h1m4 0h1m5 0h2m1 0h1m1 0h1m1 0h1m-29 1h1m1 0h1m3 0h2m1 0h1m1 0h7m5 0h1m1 0h2m-27 1h3m2 0h1m1 0h1m2 0h1m3 0h3m1 0h7m1 0h3m-29 1h2m1 0h5m2 0h1m2 0h4m1 0h3m1 0h1m1 0h2m2 0h1m-29 1h1m6 0h1m2 0h1m1 0h1m2 0h2m2 0h1m1 0h2m1 0h1m-25 1h1m1 0h1m1 0h6m2 0h3m2 0h1m2 0h5m1 0h3m-21 1h1m1 0h2m3 0h2m2 0h2m3 0h2m-26 1h7m2 0h2m1 0h1m2 0h2m2 0h2m1 0h1m1 0h3m-27 1h1m5 0h1m2 0h1m2 0h1m3 0h1m1 0h3m3 0h1m3 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m2 0h4m2 0h7m1 0h1m-28 1h1m1 0h3m1 0h1m2 0h2m1 0h2m1 0h5m1 0h1m3 0h2m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h3m2 0h2m1 0h3m1 0h6m-28 1h1m5 0h1m3 0h2m3 0h2m5 0h2m1 0h2m1 0h1m-29 1h7m1 0h4m3 0h1m1 0h1m4 0h1m1 0h1m1 0h1"/></svg></div>
+    <p>실습 페이지를 노트북에서 열어 두세요<br><a class="url" href="https://cardnews-reels-practice.vercel.app">cardnews-reels-practice<wbr>.vercel.app</a></p>
   </div>
 </section>
 
@@ -849,8 +852,8 @@ p, li { font-size: 36px; line-height: 1.5; }
   <p class="lede" style="max-width:1100px">도돌이표처럼, 한 번 걸어 두면 매일 아침 초안이 돌아와요.</p>
   <p class="note">오늘 쓴 프롬프트는 실습 페이지에 모두 있어요.</p>
   <div class="qr">
-    <div class="q" data-qr="practice">실습 페이지 QR<br>TODO 배포 후 넣기</div>
-    <p>실습 페이지</p>
+    <div class="q" data-qr="practice"><svg role="img" aria-label="실습 페이지 QR 코드" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="segno"><path class="qrline" stroke="#142820" d="M0 0.5h7m2 0h2m2 0h2m3 0h1m1 0h1m1 0h7m-29 1h1m5 0h1m1 0h5m1 0h1m1 0h1m3 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h2m2 0h2m4 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h4m2 0h1m2 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m2 0h1m2 0h1m1 0h1m3 0h1m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h2m5 0h1m2 0h1m1 0h1m-21 1h1m5 0h1m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m1 0h2m2 0h3m-28 1h2m1 0h1m3 0h1m2 0h1m2 0h3m3 0h1m3 0h2m1 0h2m-27 1h1m2 0h7m2 0h6m1 0h1m1 0h1m1 0h1m-25 1h1m1 0h1m1 0h1m3 0h1m1 0h3m3 0h1m1 0h1m1 0h1m1 0h4m-26 1h1m3 0h3m1 0h1m1 0h1m1 0h1m2 0h2m2 0h2m1 0h2m4 0h1m-28 1h2m1 0h2m1 0h2m2 0h1m3 0h2m1 0h3m1 0h3m2 0h2m-29 1h4m2 0h6m3 0h1m2 0h1m1 0h1m4 0h2m-27 1h5m5 0h1m4 0h1m5 0h2m1 0h1m1 0h1m1 0h1m-29 1h1m1 0h1m3 0h2m1 0h1m1 0h7m5 0h1m1 0h2m-27 1h3m2 0h1m1 0h1m2 0h1m3 0h3m1 0h7m1 0h3m-29 1h2m1 0h5m2 0h1m2 0h4m1 0h3m1 0h1m1 0h2m2 0h1m-29 1h1m6 0h1m2 0h1m1 0h1m2 0h2m2 0h1m1 0h2m1 0h1m-25 1h1m1 0h1m1 0h6m2 0h3m2 0h1m2 0h5m1 0h3m-21 1h1m1 0h2m3 0h2m2 0h2m3 0h2m-26 1h7m2 0h2m1 0h1m2 0h2m2 0h2m1 0h1m1 0h3m-27 1h1m5 0h1m2 0h1m2 0h1m3 0h1m1 0h3m3 0h1m3 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m2 0h4m2 0h7m1 0h1m-28 1h1m1 0h3m1 0h1m2 0h2m1 0h2m1 0h5m1 0h1m3 0h2m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h3m2 0h2m1 0h3m1 0h6m-28 1h1m5 0h1m3 0h2m3 0h2m5 0h2m1 0h2m1 0h1m-29 1h7m1 0h4m3 0h1m1 0h1m4 0h1m1 0h1m1 0h1"/></svg></div>
+    <p>실습 페이지<br><a class="url" href="https://cardnews-reels-practice.vercel.app">cardnews-reels-practice<wbr>.vercel.app</a></p>
   </div>
 </section>
 

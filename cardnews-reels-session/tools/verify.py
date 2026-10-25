@@ -46,7 +46,8 @@ DECIDED_OUT = [
 ]
 # 가격·크레딧 수치 (진행자 노트에만)
 PRICE = re.compile(r"\d[\d,]*\s?(?:크레딧|원\b|달러)|크레딧\s?\d|\$\s?\d|월\s?[\d,]+\s?원")
-EXTERNAL = re.compile(r"""(?:src|href)\s*=\s*["'](?:https?:)?//""")
+# 외부에서 불러오는 것만 본다(src, <link href>). 누르면 열리는 <a href> 링크는 괜찮다
+EXTERNAL = re.compile(r"""(?:\bsrc|<link\b[^>]*\bhref)\s*=\s*["'](?:https?:)?//""")
 
 
 def text_of(rel: str) -> str:
