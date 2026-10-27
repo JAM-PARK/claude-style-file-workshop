@@ -60,6 +60,12 @@ web
 | 개인 플랜 대안 | 채팅에서 애니메이션 페이지를 요청하면 약 2분, MP4는 없음(화면 녹화 필요). Claude Code + 애니메이션 스킬은 렌더링 포함 약 13분 | 서드파티 | https://www.iart.ai/blog/claude-motion-alternative |
 | 채팅 렌더링 제한 | 일반 채팅은 명령 하나가 약 5분에서 끊겨 렌더링을 나눠 진행한 사례. 완성 MP4는 비율을 바꿀 수 없어 처음에 필요한 비율을 모두 요청 | 서드파티 | https://aimeetsgirlboss.substack.com/p/make-animations-claude |
 | 예약 작업 메뉴 이름 | 한국어 화면은 왼쪽 사이드바 "예약됨" (영어 "Scheduled") | 진행자 확인 | 2026-10-23 |
+| 예약 작업 만드는 곳 | Chat에서는 예약이 걸리지 않고 Cowork에서 걸린다. 실습 1 프로젝트를 먼저 고르고, 그 안에서 Cowork로 예약 작업을 만든다 | 진행자 확인 | 2026-10-27 |
+| Cowork 시작과 예약 | 메시지 입력창에서 "Cowork"를 고른다(Chat과 같은 화면). 예약은 Cowork 작업에서 /schedule을 입력하거나 왼쪽 "Scheduled"에서 만든다. 예약 작업은 클라우드에서 실행된다. Cowork는 유료 플랜(Pro, Max, Team, Enterprise) 전용 | 공식 | https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork |
+| Cowork 프로젝트 | 프로젝트마다 파일·맥락·지침·메모리가 있고, 예약 작업도 프로젝트별로 있다. 기존 Claude 프로젝트를 가져오면 파일과 지침이 옮겨진다 | 공식 | https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork |
+| 프로젝트 예약 작업의 맥락 | 프로젝트의 예약 작업은 실행할 때마다 그 프로젝트의 맥락으로 돈다("지침"이라고 따로 적지는 않음) | 공식 교육 자료 | https://academy.claude.com/courses/introduction-to-claude-cowork/giving-cowork-context |
+| 카드 뉴스 PNG 저장 | Claude Design에서 PDF로 내보내고, 그 PDF를 Claude에게 첨부해 장마다 PNG로 바꿔 달라고 하면 된다 | 진행자 확인 | 2026-10-27 |
+| Windows 화면 녹화 | Windows 기본 앱 캡처 도구(Snipping Tool)의 녹화 기능을 쓴다. Xbox Game Bar는 자료에서 뺀다 | 진행자 확인 | 2026-10-27 |
 | Claude Code 플랜 | Free 플랜은 못 쓰고 Pro부터 쓴다 | 진행자 확인 | 2026-10-23 |
 | 무료 플랜 한도 | 공식 메시지 수는 없고 수요에 따라 바뀌며 5시간마다 리셋 | 공식 | support.claude.com |
 
@@ -126,9 +132,9 @@ HANDOFF와 다르면 이쪽을 따른다.
 - 17번에서 빠진 "2026년 4월 광고업무정지 2개월 처분" 보도는 진행자 노트로 옮긴다.
 
 ### 강의 전 진행자가 확인할 것 (자료에는 TODO로 남긴다)
-1. 카드 뉴스를 PNG로 저장하는 경로: Design → PDF 내보내기 → Claude에게 장별 PNG 변환 요청이 실제로 되는지
-2. 예약 작업: 프로젝트 안에서 예약이 걸리는지 (메뉴 이름은 "예약됨"으로 확인됨)
-3. Windows 화면 녹화 방법: 캡처 도구(Snipping Tool) 녹화 또는 Xbox Game Bar(Win+Alt+R) 중 실제로 되는 것
+1. ~~카드 뉴스를 PNG로 저장하는 경로~~ 확인함(2026-10-27): PDF → Claude에게 PNG 변환 요청이 된다
+2. ~~예약 작업이 프로젝트 안에서 걸리는지~~ 확인함(2026-10-27): Chat은 안 되고, 프로젝트를 고른 뒤 Cowork에서 된다. Windows 앱에서 Cowork를 여는 위치는 진행자가 다시 확인
+3. ~~Windows 화면 녹화 방법~~ 확인함(2026-10-27): 캡처 도구 녹화만 남긴다
 4. Motion 시연 여부: Team 계정으로 시연할 수 있는지 (안 되면 소개만)
 5. Remotion 시연 환경: 노트북에 Node.js 설치, 첫 렌더링 미리 해 두기
 6. Flow 크레딧 단가: 강의 직전 Flow 화면에서 최신 단가 확인
