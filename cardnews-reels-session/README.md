@@ -26,6 +26,7 @@ AI 스터디 모임 초급 세션(2026년 10월 28일) 자료예요. 내용은 2
 | `examples/cardnews-lumiel/`, `examples/cardnews-golmok/` | 카드 뉴스 완성 예시 6장씩 |
 | `examples/reels-golmok/index.html` | 15초 릴스 애니메이션 완성 예시 (브라우저로 열면 반복 재생) |
 | `examples/copy.md` | 완성 예시에 쓴 문구 |
+| `examples/practice5-source-fixed-shot.mp4`, `examples/practice5-source-handheld.mp4` | 실습 5 샘플 영상 10초 2개 (고정 샷, 손에 든 영상). Gemini로 만든 AI 영상이에요 |
 
 `tools/`, `PRODUCT.md`, `DESIGN.md`, `CLAUDE.md`는 자료를 만들고 고칠 때 쓰는 파일이라 참석자는 보지 않아도 돼요.
 

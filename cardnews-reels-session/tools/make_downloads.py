@@ -19,6 +19,8 @@ COPIES = [
     "templates/reels-brief.md",
     "templates/video-swap-decision.md",
     "checklists/before-posting.md",
+    "examples/practice5-source-fixed-shot.mp4",
+    "examples/practice5-source-handheld.mp4",
 ]
 ZIP_NAME = "practice-assets.zip"
 # Windows 탐색기에서 이름이 깨지지 않도록 zip 안 파일 이름은 영문만 쓴다
