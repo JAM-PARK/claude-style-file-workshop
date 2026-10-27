@@ -66,6 +66,8 @@ web
 | 프로젝트 예약 작업의 맥락 | 프로젝트의 예약 작업은 실행할 때마다 그 프로젝트의 맥락으로 돈다("지침"이라고 따로 적지는 않음) | 공식 교육 자료 | https://academy.claude.com/courses/introduction-to-claude-cowork/giving-cowork-context |
 | 카드 뉴스 PNG 저장 | Claude Design에서 PDF로 내보내고, 그 PDF를 Claude에게 첨부해 장마다 PNG로 바꿔 달라고 하면 된다 | 진행자 확인 | 2026-10-27 |
 | Windows 화면 녹화 | Windows 기본 앱 캡처 도구(Snipping Tool)의 녹화 기능을 쓴다. Xbox Game Bar는 자료에서 뺀다 | 진행자 확인 | 2026-10-27 |
+| Remotion 위치 | Claude Code로 작업하는 걸 권하는 심화 내용. 오늘은 시연만 한다. 만든 영상 모음은 https://www.remotion.dev/showcase (Remotion이 고른 사례 모음) | 진행자 결정 / 공식 | 2026-10-27 |
+| Google Flow | Google의 AI 영상·이미지 제작 도구(공식 페이지 제목 "AI Creative Studio for Video, Images & Custom Tools", https://flow.google.com). Gemini Omni Flash를 Flow에서도 쓸 수 있다는 보도. 영상 AI 생성을 본격적으로 할 때 Flow를 추천한다 | 공식 / 언론 / 진행자 추천 | 2026-10-27 |
 | Claude Code 플랜 | Free 플랜은 못 쓰고 Pro부터 쓴다 | 진행자 확인 | 2026-10-23 |
 | 무료 플랜 한도 | 공식 메시지 수는 없고 수요에 따라 바뀌며 5시간마다 리셋 | 공식 | support.claude.com |
 
