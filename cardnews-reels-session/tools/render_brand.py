@@ -46,6 +46,7 @@ JOBS = [
     "lumiel-shelf.svg",
     "golmok-logo.svg",
     "golmok-takeout.svg",
+    "golmok-takeout-cup.svg",  # 실습 5 시연 원본 영상의 키 큰 컵에 맞춘 비율
     "golmok-gukbap.svg",
     "golmok-table.svg",
     "golmok-store.svg",

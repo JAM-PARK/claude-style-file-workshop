@@ -30,6 +30,7 @@ ZIP_README = """실습용 그림 묶음
 - lumiel-*: 루미엘 진정 토너 (화장품)
 - golmok-*: 골목 한그릇 (동네 국밥집)
 - lumiel-toner.png, golmok-takeout.png: 배경을 지운 제품 그림 (실습 5)
+- golmok-takeout-cup.png: 같은 포장 용기의 키 큰 컵 모양 (영상 속 용기가 컵 모양일 때)
 
 실습용으로 만든 가상 브랜드라 실제 가게나 제품과 관계없어요.
 """

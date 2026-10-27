@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <!-- 배경을 지운 제품 이미지(실습 5 시연): 키 큰 컵 모양 포장 용기, 갈색 뚜껑, 노란 라벨에 "골목 한그릇" 글자. 시연 원본 영상의 흰 컵(가로:세로 약 1.34:1)에 맞춘 비율. 그림자 없음 -->
+  <g transform="translate(500 500) scale(1.15) translate(-500 -474)" stroke="#3A1F12" stroke-linejoin="round" stroke-linecap="round">
+    <!-- 용기 -->
+    <path d="M 176 300 H 824 L 778 686 C 775 704 764 712 744 714 Q 500 730 256 714 C 236 712 225 704 222 686 Z" fill="#FFFAF2" stroke-width="10"/>
+    <path d="M 240 690 Q 500 708 760 690" fill="none" stroke="#E9D9C2" stroke-width="7"/>
+    <!-- 노란 라벨 -->
+    <path d="M 185 384 Q 500 408 815 384 L 788 608 Q 500 632 212 608 Z" fill="#F2B541" stroke-width="8"/>
+    <text x="500" y="502" dominant-baseline="central" text-anchor="middle" font-family="Noto Serif KR" font-weight="900" font-size="96" fill="#6B3A22" stroke="none">골목 한그릇</text>
+    <!-- 뚜껑 -->
+    <path d="M 204 254 L 220 226 Q 224 218 234 218 H 766 Q 776 218 780 226 L 796 254 Z" fill="#6B3A22" stroke-width="10"/>
+    <rect x="160" y="250" width="680" height="56" rx="22" fill="#6B3A22" stroke-width="10"/>
+    <path d="M 204 270 H 400" stroke="#8A5232" stroke-width="9"/>
+    <path d="M 280 236 H 400" stroke="#8A5232" stroke-width="7"/>
+  </g>
+</svg>
