@@ -61,6 +61,7 @@ web
 | 채팅 렌더링 제한 | 일반 채팅은 명령 하나가 약 5분에서 끊겨 렌더링을 나눠 진행한 사례. 완성 MP4는 비율을 바꿀 수 없어 처음에 필요한 비율을 모두 요청 | 서드파티 | https://aimeetsgirlboss.substack.com/p/make-animations-claude |
 | 예약 작업 메뉴 이름 | 한국어 화면은 왼쪽 사이드바 "예약됨" (영어 "Scheduled") | 진행자 확인 | 2026-10-23 |
 | 예약 작업 만드는 곳 | Chat에서는 예약이 걸리지 않고 Cowork에서 걸린다. 실습 1 프로젝트를 먼저 고르고, 그 안에서 Cowork로 예약 작업을 만든다 | 진행자 확인 | 2026-10-27 |
+| Windows 앱의 Cowork 위치 | 왼쪽 위 "채팅 및 Cowork" 버튼(말풍선 아이콘, 옆은 Code), 입력창 아래 "채팅 / Cowork" 전환, 왼쪽 메뉴의 "프로젝트"와 "예약됨". 진행자 스크린샷을 잘라 장표 14번과 실습 3에 넣음(사이드바 대화 목록은 넣지 않음) | 진행자 확인 | 2026-10-28 |
 | Cowork 시작과 예약 | 메시지 입력창에서 "Cowork"를 고른다(Chat과 같은 화면). 예약은 Cowork 작업에서 /schedule을 입력하거나 왼쪽 "Scheduled"에서 만든다. 예약 작업은 클라우드에서 실행된다. Cowork는 유료 플랜(Pro, Max, Team, Enterprise) 전용 | 공식 | https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork |
 | Cowork 프로젝트 | 프로젝트마다 파일·맥락·지침·메모리가 있고, 예약 작업도 프로젝트별로 있다. 기존 Claude 프로젝트를 가져오면 파일과 지침이 옮겨진다 | 공식 | https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork |
 | 프로젝트 예약 작업의 맥락 | 프로젝트의 예약 작업은 실행할 때마다 그 프로젝트의 맥락으로 돈다("지침"이라고 따로 적지는 않음) | 공식 교육 자료 | https://academy.claude.com/courses/introduction-to-claude-cowork/giving-cowork-context |
@@ -68,6 +69,8 @@ web
 | Windows 화면 녹화 | Windows 기본 앱 캡처 도구(Snipping Tool)의 녹화 기능을 쓴다. Xbox Game Bar는 자료에서 뺀다 | 진행자 확인 | 2026-10-27 |
 | Remotion 위치 | Claude Code로 작업하는 걸 권하는 심화 내용. 오늘은 시연만 한다. 만든 영상 모음은 https://www.remotion.dev/showcase (Remotion이 고른 사례 모음) | 진행자 결정 / 공식 | 2026-10-27 |
 | Google Flow | Google의 AI 영상·이미지 제작 도구(공식 페이지 제목 "AI Creative Studio for Video, Images & Custom Tools", https://flow.google.com). Gemini Omni Flash를 Flow에서도 쓸 수 있다는 보도. 영상 AI 생성을 본격적으로 할 때 Flow를 추천한다 | 공식 / 언론 / 진행자 추천 | 2026-10-27 |
+| Higgsfield AI, Seedance | Higgsfield AI(https://higgsfield.ai)는 여러 영상·이미지 AI 모델을 한곳에서 쓰는 서비스. Seedance는 ByteDance의 영상 AI 모델(Dreamina·CapCut에서 쓸 수 있다는 서드파티 안내, 공식 소비자 주소는 확인 못 함). 장표 29번·실습 5에서 Flow와 함께 추천 | 서드파티 / 진행자 추천 | 2026-10-28 |
+| 실습 5 영상 AI 프롬프트 | "쓸 영상 AI 모델" 칸에서 모델명 예시를 뺀다. 빈칸은 [영상 AI 모델 이름], 예시판은 Gemini | 진행자 결정 | 2026-10-28 |
 | Claude Code 플랜 | Free 플랜은 못 쓰고 Pro부터 쓴다 | 진행자 확인 | 2026-10-23 |
 | 무료 플랜 한도 | 공식 메시지 수는 없고 수요에 따라 바뀌며 5시간마다 리셋 | 공식 | support.claude.com |
 
